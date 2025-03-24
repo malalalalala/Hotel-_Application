@@ -2,16 +2,16 @@
 --       POBLAR TABLA CATEGORIES
 -- ============================
 INSERT INTO categories (title, description, image_url)
-  VALUES ('Hoteles', 'Hotel 5 estrellas', 'https://0521ptc6n2-g01-products-images.s3.us-east-2.amazonaws.com/categories_images/Hoteles.png');
+  VALUES ('Hoteles', 'Hotel 5 estrellas', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/categories/hoteles.png');
 
 INSERT INTO categories (title, description, image_url)
-  VALUES ('Departamentos', 'Departamento en el centro de la ciudad', 'https://0521ptc6n2-g01-products-images.s3.us-east-2.amazonaws.com/categories_images/Departamentos.png');
+  VALUES ('Departamentos', 'Departamento en el centro de la ciudad', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/categories/hostels.png');
 
 INSERT INTO categories (title, description, image_url)
-  VALUES ('Hostels', 'Hermoso hostal con todas la comodidades que necesitas', 'https://0521ptc6n2-g01-products-images.s3.us-east-2.amazonaws.com/categories_images/Hostales.png');
+  VALUES ('Hostels', 'Hermoso hostal con todas la comodidades que necesitas', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/categories/departamentos.png');
 
 INSERT INTO categories (title, description, image_url)
-  VALUES ('Bed and Breakfast', 'Ven y relajate en la mejor estadía', 'https://0521ptc6n2-g01-products-images.s3.us-east-2.amazonaws.com/categories_images/Bed+and+Breakfast.png');
+  VALUES ('Bed and Breakfast', 'Ven y relajate en la mejor estadía', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/categories/bedAndBreakfast.png');
 
 
 -- ============================
@@ -252,7 +252,7 @@ INSERT INTO features (name, icon)
 --       POBLAR TABLA IMAGES
 -- ============================
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Gran Plaza', 'https://0521ptc6n2-g01-products-images.s3.us-east-2.amazonaws.com/hoteles_images/hotel_1.png', 1);
+  VALUES ('Hotel Gran Plaza', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/hotel_1.png', 1);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Gran Plaza', 'https://0521ptc6n2-g01-products-images.s3.us-east-2.amazonaws.com/galery_images/galery+(1).jpg', 1);
