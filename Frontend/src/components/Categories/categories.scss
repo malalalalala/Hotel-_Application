@@ -1,0 +1,90 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+
+/* Categories */
+.categories_container {
+  background-color: $bgColor;
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
+.categories_container_content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1366px;
+  padding: 17px 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include mv(768px) {
+    padding: 17px 30px;
+    max-width: 768px;
+  }
+  @include mv {
+    padding: 17px 10px;
+    max-width: 414px;
+  }
+}
+
+.categories_container_header {
+  padding-top: 7px;
+  align-self: start;
+}
+
+.category_cards_container {
+  display: flex;
+  flex-flow: nowrap;
+  gap: 15px;
+  padding: 10px 0;
+  justify-content: center;
+  @include mv(1000px) {
+    flex-flow:wrap;
+  }
+  @include mv(768px) {
+    gap: 14px;
+  }
+}
+
+.category_card_container {
+  width: 310px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  :hover {
+    cursor: pointer;
+    background-color: $white;
+    opacity: 0.8;
+    // transition: border 0.1s ease-out;
+  }
+   @include mv(768px) {
+    width: 347px;
+    flex: 45%;
+    min-width: 200px;
+  }
+  @include mv {
+    width: 392px;
+  }
+}
+
+.category_card_image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0px 0px;
+  height: 184px;
+  width: 100%;
+  background-image: url("src/assets/categories/hoteles.png");
+  :hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.category_card_info_container {
+  padding: 12px;
+}
+
+.category_card_info_length {
+  color: $dark;
+  opacity: 0.6;
+}

@@ -1,0 +1,52 @@
+$sm: 414px;
+$md: 768px;
+$lg: 1366px;
+
+// main container
+@mixin fluid-container($color: $bgColor, $color2: $bgColor) {
+  background-color: $color;
+  display: flex;
+  height: auto;
+  width: 100%;
+  @include mv {
+    background-color: $color2;
+  }
+}
+
+@mixin fluid-container-main() {
+  @include fluid-container($main, $main);
+}
+
+@mixin fluid-container-dark() {
+  @include fluid-container($dark, $dark);
+}
+
+@mixin fluid-container-white() {
+  @include fluid-container($white, $white);
+}
+
+@mixin fluid-container-bgColor-product() {
+  @include fluid-container($white, $bgColor);
+}
+
+// content
+@mixin fluid_container_content($color: $bgColor, $maxWidth: $lg) {
+  color: $color;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $maxWidth;
+  padding: 0.375rem 2.5rem;
+  width: 100%;
+  @include mv($md) {
+    max-width: $md;
+    padding: 0px 1.875rem;
+  }
+  @include mv {
+    max-width: $sm;
+    padding: 0px 0.625rem;
+  }
+}
+
+@mixin fluid-container-content-dark() {
+  @include fluid_container_content($dark);
+}

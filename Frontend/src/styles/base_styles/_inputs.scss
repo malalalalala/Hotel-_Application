@@ -1,0 +1,70 @@
+// input settings
+@mixin input($width: 218px, $bgColor: $bgColor, $border: none) {
+  width: $width;
+  height: 40px;
+  background-color: $bgColor;
+  border-radius: 5px;
+  border: $border;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  color: $dark;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+@mixin input1() {
+  @include input(300px, $bgColor);
+}
+
+@mixin input2() {
+  @include input(346px, $bgColor);
+}
+
+@mixin input3() {
+  @include input(448px, $bgColor);
+}
+
+@mixin input4() {
+  @include input(448px, #ffe1e1, #ff0000);
+}
+
+@mixin input5() {
+  @include input(100%, #dfe4ea, none);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  opacity: 0.4;
+  min-width: 388px;
+  @include mv(768px) {
+    @include input(320px, #dfe4ea, none);
+    min-width: 320px;
+  }
+  @include mv {
+    @include input(360px, #dfe4ea, none);
+    min-width: 360px;
+  }
+}
+
+// select settings
+@mixin select($width: 422px, $bgColor: $bgColor) {
+  width: $width;
+  height: 40px;
+  background-color: $bgColor;
+  border-radius: 5px;
+  color: $dark;
+  font-size: 1rem;
+  padding: 10px 30px 10px 40px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: left;
+  &:hover {
+    background-color: rgb(232, 102, 42);
+  }
+  position: relative;
+  @include mv(768px) {
+    width: 254px;
+  }
+  @include mv {
+    width: 394px;
+  }
+}

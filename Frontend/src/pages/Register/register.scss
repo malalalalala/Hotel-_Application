@@ -1,0 +1,200 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+@import "/src/styles/base_styles/buttons";
+
+/* Register */
+.register_container {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  // padding: 23px 0 26px 0;
+  height: calc(81vh); // revisar esto
+  @include mv(768px) {
+  }
+  @include mv {
+    // height: calc(100vh - 208px);
+  }
+}
+
+.register_password_icon {
+  top: 1.5rem;
+  position: absolute;
+  font-size: 1.5rem;
+  z-index: 10;
+  cursor: pointer;
+  left: 25rem;
+  padding-top: 0.5rem;
+  @include mv(768px) {
+    left: 19rem;
+  }
+  @include mv(414px) {
+    left: 16rem;
+  }
+}
+
+.register_container_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1366px;
+  width: 1366px;
+  padding: 30px 40px;
+  @include mv(768px) {
+    padding: 20px 30px;
+    max-width: 768px;
+  }
+  @include mv {
+    padding: 30px 10px;
+    max-width: 414px;
+  }
+}
+
+.register_header {
+  color: $main;
+  padding-bottom: 30px;
+  @include mv(768px) {
+    padding-bottom: 55px;
+  }
+  @include mv {
+    padding-bottom: 15px;
+  }
+}
+
+.register_error, .connection_error{
+  display: block;
+  color: red;
+  text-align: center;  
+  @include mv(768px) {
+    max-width: 346px;
+    }
+  @include mv() {
+      max-width: 300px;
+    }
+}
+
+.register_error_oculto {
+  display: none;
+}
+
+.register_form_container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  & input {
+    @include input3();
+    @include text2();
+    padding: 14px 13px 1px 13px;
+  }
+  & button {
+    @include button1();
+    gap: 10px;
+  }
+  @include mv(768px) {
+    & input {
+      @include input2();
+    }
+  }
+  @include mv {
+    flex-direction: column;
+    & input {
+      @include input1();
+    }
+    & button {
+      @include button2();
+    }
+  }
+}
+
+.register_form_container_medium {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  & input {
+    @include input();
+    @include text2();
+    padding: 14px 13px 1px 13px;
+  }
+  & button {
+    @include button1();
+    gap: 10px;
+  }
+  @include mv(768px) {
+    flex-direction: column;
+    & input {
+      @include input2();
+    }
+  }
+  @include mv {
+    flex-direction: column;
+    & input {
+      @include input1();
+    }
+  }
+}
+
+.register_form_group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  label {
+    @include text2();
+  }
+}
+
+.register_form_group_medium {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  label {
+    @include text2();
+  }
+}
+
+.register_form_group_confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  label {
+    @include text2();
+  }
+  & input {
+    @include input4();
+    @include text2();
+    padding: 14px 13px 1px 13px;
+  }
+  @include mv(768px) {
+  }
+  @include mv {
+  }
+}
+
+.register_form_sucess {
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  & span {
+    margin-left: 1rem;
+  }
+}
+
+.register_form_group_submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  label {
+    @include text2();
+  }
+  p {
+    @include text2();
+    a {
+      color: #4285f4;
+    }
+  }
+}

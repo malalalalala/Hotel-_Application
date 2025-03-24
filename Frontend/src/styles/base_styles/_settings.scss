@@ -1,0 +1,93 @@
+// color settings
+$main: #f0572d; // cambiar a primary
+$main-dark: #f1592f;
+$secondary: #425a7d;
+$dark: #2a3240;
+$white: #eeeeee;
+
+$bgColor: #ffffff;
+$placeholder: #bebebe;
+
+$alertBackgroud: #ffe1e1;
+$alertBorder: #f0572d;
+
+// media-queries breakpoints
+$sm: 414px;
+$md: 768px;
+$lg: 1366px;
+
+// delete default settings
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+// delete custom select
+select {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  background-color: red;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+
+  // Stack above custom arrow
+  z-index: 1;
+
+  // Remove dropdown arrow in IE10 & IE11
+  // @link https://www.filamentgroup.com/lab/select-css.html
+  &::-ms-expand {
+    display: none;
+  }
+
+  // Remove focus outline, will add on alternate element
+  outline: none;
+}
+
+input:required:invalid {
+  background-color: $alertBackgroud;
+  border: 2px solid $alertBorder;
+}
+
+// alignment settings
+@mixin direction-flex($displ, $direc) {
+  display: $displ;
+  flex-direction: $direc;
+}
+
+@mixin direction-flex-align($displ, $direc: row, $just, $alig) {
+  display: $displ;
+  flex-direction: $direc;
+  justify-content: $just;
+  align-items: $alig;
+}
+
+@mixin flex($displ, $direc: row, $just, $alig) {
+  display: $displ;
+  flex-direction: $direc;
+  justify-content: $just;
+  align-content: $alig;
+}
+
+// mixin for media queries - tablet 768px - mobile default 414px
+@mixin mv($medida: $sm) {
+  @media screen and (max-width: $medida) {
+    @content;
+  }
+}
+
+// social media
+@mixin socialMedia($width, $color, $size: 1.5rem) {
+  width: $width;
+  a {
+    color: $color;
+    font-size: $size;
+  }
+}

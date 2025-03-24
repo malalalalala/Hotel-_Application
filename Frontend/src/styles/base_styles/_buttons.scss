@@ -1,0 +1,196 @@
+// buttons settings
+@mixin button(
+  $width: 164px,
+  $bgcol: $bgColor,
+  $color: $main,
+  $boxsh: none,
+  $border: none,
+  $height: 40px
+) {
+  font-family: "Quicksand", sans-serif; // revisar esto, no aplica a los botones
+  width: $width;
+  background-color: $bgcol;
+  color: $color;
+  box-shadow: $boxsh;
+  border: $border;
+  height: $height;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 1;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $main-dark;
+  }
+  &:disabled {
+    background-color: $bgcol;
+    opacity: 0.5;
+  }
+}
+
+.button0 {
+  @include button();
+}
+
+@mixin button1() {
+  @include button(206px, $main, $bgColor, 0px 2px 4px 0px #0000001f);
+}
+
+@mixin button2() {
+  @include button(296px, $main, $bgColor, 0px 2px 4px 0px #0000001f);
+}
+
+@mixin button3() {
+  @include button(346px, $main, $bgColor, 0px 2px 4px 0px #0000001f);
+}
+
+@mixin button4() {
+  @include button(362px, $main, $bgColor, 0px 2px 4px 0px #0000001f);
+}
+
+@mixin button5() {
+  @include button(164px, $white, $main);
+  border: 1px solid $main;
+}
+
+@mixin button6() {
+  @include button(206px, $white, $main);
+  border: 1px solid $main;
+}
+
+// added button for iniciar reserva
+@mixin button7() {
+  @include button(379px, $main, $bgColor);
+}
+
+@mixin button8() {
+  @include button(
+    // 362px,
+    100%,
+    $main,
+    $bgColor,
+    0px 2px 4px 0px #0000001f,
+    none,
+    50px
+  );
+  @include mv(768px) {
+    @include button(
+      100%,
+      $main,
+      $bgColor,
+      0px 2px 4px 0px #0000001f,
+      none,
+      50px
+    );
+  }
+  @include mv() {
+    @include button(
+      100%,
+      $main,
+      $bgColor,
+      0px 2px 4px 0px #0000001f,
+      none,
+      50px
+    );
+  }
+}
+
+@mixin button9() {
+  @include button(115px, $white, $main);
+  border: 1px solid $main;
+  font-size: 0.9rem;
+}
+
+.button1 {
+  @include button1();
+  @include mv(768px) {
+    @include button(
+      166px,
+      $main,
+      $bgColor,
+      0px 2px 4px 0px #0000001f,
+      none,
+      40px
+    );
+  }
+  @include mv() {
+    @include button(
+      394px,
+      $main,
+      $bgColor,
+      0px 2px 4px 0px #0000001f,
+      none,
+      40px
+    );
+  }
+}
+
+.button2 {
+  width: 100%;
+  @include button2();
+  @include mv(768px) {
+    @include button(331px, $main, $white, 0px 2px 4px 0px #0000001f);
+    width: 100%;
+  }
+  @include mv {
+    @include button4();
+    width: 100%;
+  }
+}
+
+.button3 {
+  @include button3();
+}
+
+.button4 {
+  @include button4();
+}
+
+.button5 {
+  @include button5();
+}
+
+.button6 {
+  @include button6();
+}
+
+.button7 {
+  @include button7();
+  @include mv(768px) {
+    @include button3();
+  }
+  @include mv() {
+    @include button(
+      394px,
+      $main,
+      $bgColor,
+      0px 2px 4px 0px #0000001f,
+      none,
+      40px
+    );
+  }
+}
+
+.button8 {
+  @include button8();
+}
+
+.button9 {
+  @include button1();
+  @include mv(768px) {
+    @include button(500px, $main, $bgColor, 0px 2px 4px 0px #0000001f);
+  }
+  @include mv() {
+    @include button(300px, $main, $bgColor, 0px 2px 4px 0px #0000001f);
+  }
+}
+
+// close button
+@mixin closeButton() {
+  border: none;
+  color: $dark;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
