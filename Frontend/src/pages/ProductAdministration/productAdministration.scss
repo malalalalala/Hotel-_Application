@@ -1,0 +1,47 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+@import "/src/styles/base_styles/buttons";
+
+.product_heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  @include mv($md) {
+    padding: 0.4rem 0;
+  }
+}
+
+.product_back {
+  display: flex;
+  align-items: center;
+  color: $bgColor;
+  a:hover {
+    color: $white;
+  }
+}
+
+.product_title {
+  padding: 2.25rem 0 0.8rem 0;
+}
+
+.product_container {
+  background-color: $bgColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  height: auto;
+  min-height: 1321px;
+  max-width: 1286px;
+  margin-bottom: 7rem;
+  padding: 2.12rem 1.5rem 3.68rem 1.5rem;
+  width: 100%;
+  @include mv {
+    padding: 1.5rem 1rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.product_button {
+  margin: 3rem auto 0;
+}

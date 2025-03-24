@@ -1,0 +1,31 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+@import "/src/styles/base_styles/buttons";
+
+/* SearchBar */
+.searchBar_header {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  @include mv(768px) {
+    font-size: 1.8rem;
+  }
+}
+
+.searchBar_form_container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding-top: 0.9rem;
+  @include mv(768px) {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+  }
+    @include mv {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

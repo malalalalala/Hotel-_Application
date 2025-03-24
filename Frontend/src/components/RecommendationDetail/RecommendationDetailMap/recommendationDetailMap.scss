@@ -1,0 +1,31 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+
+.map_container {
+  padding: 1rem 0;
+  @include mv(768px) {
+    padding: 1rem 0;
+  }
+}
+
+.map_title {
+  padding-top: 2rem;
+}
+
+.map_city_subtitle {
+  padding: 1.5rem 0 0 0;
+  @include mv(768px) {
+    padding: 1rem 0 0 0;
+  }
+}
+
+.map_iframe {
+  width: 100%;
+  border: 0;
+  height: 540px;
+  border-radius: 0.5rem;
+  @include mv(768px) {
+    height: 500px;
+  }
+}

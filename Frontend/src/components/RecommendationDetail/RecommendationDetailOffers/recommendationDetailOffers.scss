@@ -1,0 +1,23 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+
+.offers_row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  @include mv(768px) {
+    padding: 0.5rem 0 1rem 0;
+  }
+  @include mv {
+  }
+}
+
+.offers_column_s {
+  flex: 25%;
+  max-width: 25%;
+  @include mv(768px) {
+    flex: 50%;
+    max-width: 50%;
+  }
+}

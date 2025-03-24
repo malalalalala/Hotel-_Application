@@ -1,0 +1,13 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+
+.detail_description {
+  &_title {
+    padding: 2.25rem 0;
+  }
+  &_body {
+    padding: 0 0 2.25rem 0;
+    font-size: 0.875rem;
+  }
+}

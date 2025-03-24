@@ -1,0 +1,19 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+
+.recommendation_heading {
+  display: flex;
+  justify-content: space-between;
+  @include mv(768px) {
+    padding: 0.4rem 0;
+  }
+}
+
+.recommendation_back_home {
+  display: flex;
+  align-items: center;
+  color: $bgColor;
+  a:hover {
+    color: $white;
+  }
+}

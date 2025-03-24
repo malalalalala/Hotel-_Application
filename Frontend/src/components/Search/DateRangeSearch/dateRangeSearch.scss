@@ -1,0 +1,155 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+@import "/src/styles/base_styles/buttons";
+
+.home {
+  &.rdp {
+    --rdp-cell-size: 42px;
+    --rdp-accent-color: #f0572d;
+    --rdp-background-color: #e7edff;
+    /* Switch to dark colors for dark themes */
+    --rdp-accent-color-dark: #e10a03af;
+    // --rdp-background-color-dark: #180270;
+    /* Outline border for focused elements */
+    // --rdp-outline: 2px solid var(--rdp-accent-color);
+    /* Outline border for focused and selected elements */
+    --rdp-outline-selected: 1px solid rgba(0, 0, 0, 0.75);
+    margin: 0.2em;
+    @include mv(768px) {
+      --rdp-cell-size: 32px;
+    }
+    @include mv() {
+      --rdp-cell-size: 42px;
+    }
+  }
+}
+
+.date_search_input {
+  background-color: $bgColor;
+  border-radius: 0.312rem;
+  height: 40px;
+  width: 422px;
+  @include mv(768px) {
+    width: 254px;
+  }
+  @include mv() {
+    width: 394px;
+  }
+}
+
+.date_search_select {
+  border: none;
+  font-size: 0.9rem;
+  outline: none;
+  appearance: none;
+  width: 100%;
+  color: $dark;
+  font-weight: 500;
+  position: relative;
+}
+
+.date_search_option {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  color: $placeholder;
+  &.selected {
+    color: $dark;
+  }
+  @include mv(768px) {
+    padding: 8px 10px 8px 8px;
+  }
+  @include mv() {
+    padding: 8px 10px 8px 2px;
+  }
+}
+
+.icon_default {
+  color: $placeholder;
+  padding: 0 0.5rem;
+  &.selected {
+    color: $dark;
+    padding: 0 0.5rem;
+  }
+  @include mv(768px) {
+    padding: 0 5px;
+  }
+  @include mv() {
+    padding: 0 10px;
+  }
+}
+
+.date_range_search_container {
+  background-color: $bgColor;
+  width: 703px;
+  height: 389px;
+  position: absolute;
+  top: 43px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem 0.5rem 2rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 5px 5px;
+  @include mv(768px) {
+    width: 524px;
+    height: 320px;
+    right: 0;
+    padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+  }
+  @include mv() {
+    width: 394px;
+    height: 401px;
+    padding: 0rem 2rem;
+  }
+}
+
+.date_range_search_vertical_divider {
+  position: absolute;
+  width: 1px;
+  background-color: #a8a8a8;
+  height: 307px;
+  // left: 50%;
+  top: 3%;
+  @include mv(768px) {
+    height: 247px;
+    top: 4.39%;
+  }
+  @include mv {
+    display: none;
+  }
+}
+
+.date_range_search_button {
+  align-self: flex-end;
+  @include mv(768px) {
+    align-self: center;
+  }
+  @include mv() {
+    margin-bottom: 1rem;
+  }
+}
+
+.home {
+  &.rdp.rdp-multiple_months {
+    margin-top: 1rem;
+  }
+  .rdp-months {
+    gap: 30px;
+    @include mv(768px) {
+      gap: 20px;
+    }
+    @include mv() {
+    }
+  }
+  .rdp-caption {
+    font-size: 0.65rem;
+    text-transform: capitalize;
+  }
+  .rdp-nav_icon {
+    width: 10px;
+  }
+}

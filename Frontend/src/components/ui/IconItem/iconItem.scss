@@ -1,0 +1,13 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+
+.icon_item_container {
+  display: flex;
+  padding: 2rem 0;
+  @include mv(768px) {
+    padding: 2rem 0 1rem 0;
+  }
+  @include mv {
+  }
+}

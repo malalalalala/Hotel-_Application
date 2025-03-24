@@ -1,0 +1,44 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+
+.slider_container_tablet {
+  display: none;
+  @include mv(768px) {
+    padding: 0.5rem 0 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
+  @include mv() {
+    padding: 0;
+  }
+}
+
+.slider_item {
+  display: none;
+  @include mv(768px) {
+    height: 20rem;
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    object-fit: cover;
+  }
+}
+
+.slider_pagination {
+  @include mv(768px) {
+    color: $bgColor;
+    position: absolute;
+    bottom: 1.25rem;
+    right: 2rem;
+    font-size: 1rem;
+  }
+  @include mv() {
+    bottom: 0.875rem;
+    right: 1.5rem;
+  }
+}

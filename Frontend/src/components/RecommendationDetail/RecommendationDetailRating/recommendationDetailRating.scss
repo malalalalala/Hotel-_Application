@@ -1,0 +1,76 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+
+.recommendation_detail_location_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0 0 0;
+  @include mv(768px) {
+    padding: 0.75rem 0 0.3rem 0;
+  }
+  @include mv {
+    padding: 1rem 0 1rem 0;
+  }
+}
+
+.recommendation_detail_location {
+  display: flex;
+  flex-direction: row;
+  @include mv {
+    width: 50%;
+  }
+}
+
+.recommendation_detail_location_city {
+  margin-left: 0.3rem;
+  h4.meters {
+    @include mv {
+      display: none;
+    }
+  }
+}
+
+.recommendation_detail_container_points {
+  display: flex;
+  flex-direction: row;
+  @include mv {
+    width: 50%;
+    justify-content: flex-end;
+  }
+}
+
+.recommendation_detail_container_no_points {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  @include mv {
+    width: 50%;
+    justify-content: flex-end;
+  }
+}
+
+.recommendation_detail_point {
+  text-align: center;
+  background-color: $dark;
+  color: $white;
+  border-radius: 0.625rem;
+  height: 34px;
+  width: 34px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.187rem;
+  margin-left: 0.25rem;
+}
+
+.full {
+  color: $main;
+  padding-right: 0.15rem;
+}
+
+.full_ligth {
+  color: rgb(202, 199, 199);
+  border: "1px solid";
+  padding-right: 0.15rem;
+}

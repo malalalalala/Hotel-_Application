@@ -1,0 +1,20 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/variables";
+
+.divider_detail_main {
+  border-bottom-color: $main;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-top: 0.5rem;
+}
+
+.divider_detail_grey {
+  border-bottom-color: #bebebe;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding: 1rem 0;
+  @include mv(768px) {
+    padding: 0;
+    margin: 1.05rem 0;
+  }
+}
