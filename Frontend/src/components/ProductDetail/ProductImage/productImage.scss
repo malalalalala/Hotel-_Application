@@ -1,0 +1,71 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+@import "/src/styles/base_styles/buttons";
+
+.product_container_images_add_icons {
+  background-color: $white;
+  border-radius: 0.31rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  // height: auto;
+  max-width: 1286px;
+  margin-top: 0.5rem;
+  padding: 1.25rem 1.75rem 2.25rem 1.75rem;
+  width: 100%;
+  @include mv(768px) {
+    margin-top: 1.5rem;
+  }
+}
+
+.product_add_images {
+  display: flex;
+  width: 100%;
+  gap: 0.55rem;
+  :nth-of-type(1) {
+    min-width: calc(100% - 56px);
+  }
+  :nth-of-type(2) {
+    min-width: 40px;
+  }
+  @include mv(768px) {
+    gap: 0.3rem;
+  }
+}
+
+.product_add_images_icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.image_create_icon {
+  height: 42px;
+  width: 42px;
+  &.success {
+    color: $main;
+  }
+  &.delete {
+    color: $dark;
+  }
+  &.limit {
+    color: $main;
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+}
+
+.product_button {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  max-width: 362px;
+}
+
+.product_fail_message_container {
+  color: $main;
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.3rem;
+}

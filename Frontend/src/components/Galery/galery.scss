@@ -1,0 +1,63 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+
+.galery_favourites_container {
+  width: 60px;
+  display: flex;
+  padding: 0.5rem 0;
+  justify-content: space-around;
+  gap: 0.5rem;
+  @include mv() {
+    display: none;
+  }
+}
+
+.galery_row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  @include mv(768px) {
+    display: none;
+  }
+}
+
+.galery_column {
+  padding: 0.2rem;
+  &.md {
+    flex: 50%;
+  }
+  &.s {
+    flex: 25%;
+  }
+}
+
+.galery_column_image {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 0.2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &.l {
+    height: 99.5%;
+  }
+  &.md {
+    height: 49%;
+  }
+}
+
+.open_modal {
+  position: relative;
+}
+
+.open_modal_a {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    color: grey;
+    opacity: 0.8;
+  }
+}

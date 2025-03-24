@@ -1,0 +1,105 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/typography";
+@import "/src/styles/base_styles/inputs";
+@import "/src/styles/base_styles/buttons";
+
+.product_container_atributes {
+}
+
+.product_container_atributes_add_icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  height: auto;
+  max-width: 1286px;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.product_add_icons {
+  background-color: $white;
+  border-radius: 0.31rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.5rem 2.25rem 1.5rem;
+  width: 100%;
+  :nth-of-type(1) {
+    min-width: calc(100% - 42px);
+  }
+  :nth-of-type(2) {
+    min-width: 48px;
+  }
+  @include mv($md) {
+    gap: 0.3rem;
+    :nth-of-type(1) {
+      min-width: calc(100% - 56px);
+    }
+    :nth-of-type(2) {
+      min-width: 65px;
+    }
+  }
+  @include mv {
+  }
+}
+
+.product_add_component {
+  display: flex;
+  flex-direction: row;
+}
+
+.product_add_icons_inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  width: 100%;
+  :nth-of-type(1) {
+    min-width: 69.5%;
+  }
+  @include mv(768px) {
+    flex-direction: column;
+  }
+}
+
+.product_add_icons_input_autocomplete {
+  position: relative;
+}
+
+.product_add_icons_icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  @include mv(768px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.product_icon {
+  height: 42px;
+  width: 42px;
+  &.success {
+    color: $main;
+  }
+  &.delete {
+    color: $dark;
+  }
+  &.limit {
+    color: $main;
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+}
+
+.selected-icon {
+  margin-top: 1rem;
+}
+
+.product_fail_message_attribute_container {
+  color: $main;
+  display: flex;
+  flex-direction: row;
+  padding-left: 1.5rem;
+  & h4 {
+    padding-left: 0.5rem;
+  }
+}

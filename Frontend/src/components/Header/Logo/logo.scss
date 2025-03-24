@@ -1,0 +1,26 @@
+@import "/src/styles/base_styles/settings";
+
+.logo_container {
+  @include direction-flex(flex, row);
+  align-items: flex-end;
+  svg {
+    @include mv {
+      width: 68px;
+      height: 50px;
+    }
+  }
+}
+
+.logo_container_text {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  padding-left: 12px;
+  margin-bottom: 5px;
+  @include mv(768px) {
+    display: none;
+  }
+  @include mv {
+    display: none;
+  }
+}

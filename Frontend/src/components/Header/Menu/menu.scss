@@ -1,0 +1,102 @@
+@import "/src/styles/base_styles/settings";
+@import "/src/styles/base_styles/buttons";
+
+.menu_container_login {
+  // min-width: 444px;
+  display: flex;
+  justify-content: flex-end;
+  @include mv(768px) {
+    min-width: 0px;
+  }
+  button:first-child {
+    margin-left: 16px;
+    @include button6();
+    @include mv(768px) {
+      @include button5();
+    }
+    @include mv(504px) {
+      @include button9();
+    }
+    @include mv {
+      display: none;
+    }
+  }
+}
+
+.menu_navigation {
+  display: none;
+  @include mv {
+    display: inline;
+  }
+}
+
+.menu_navigation ul {
+  display: flex;
+  padding: 0;
+  @include mv(414px) {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: white;
+    border-top: 1px solid black;
+    display: none;
+  }
+}
+
+.menu_navigation div {
+  @include mv(414px) {
+    // flex-direction: column;
+    // position: absolute;
+    // top: 60px;
+    // left: 0;
+    // width: 100%;
+    // height: calc(100vh - 60px);
+    // background-color: white;
+    // border-top: 1px solid black;
+    // display: none;
+  }
+}
+
+.menu_navigation li {
+  @include mv(414px) {
+    text-align: right;
+    margin-right: 15px;
+  }
+}
+
+.menu_navigation li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  @include mv(414px) {
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+}
+
+.menu_container_hamburger {
+  display: none;
+  @include mv(414px) {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    display: block;
+  }
+}
+
+.menu_hamburger_icon {
+  color: $dark;
+  margin: 0 1.5rem;
+}
+
+@media screen and (max-width: 414px) {
+  .menu_navigation.expanded ul {
+    display: block;
+  }
+  .menu_navigation.expanded div {
+    display: block;
+  }
+}

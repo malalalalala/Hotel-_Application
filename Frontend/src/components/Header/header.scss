@@ -1,0 +1,60 @@
+@import "/src/styles/base_styles/settings";
+
+.header_container {
+  background-color: $white;
+  display: flex;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  @include mv(768px) {
+    height: 98px;
+  }
+  @include mv {
+    height: 93px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 4px 5px rgba(0, 0, 0, 0.12),
+      0px 1px 10px rgba(0, 0, 0, 0.2);
+  }
+  &_admin {
+    background-color: $bgColor;
+    padding: 13px 0;
+  }
+}
+
+.header_container_content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1366px;
+  padding: 0px 40px;
+  width: 100%;
+  @include direction-flex-align(flex, row, space-between, center);
+  @include mv(768px) {
+    padding: 0px 30px;
+  }
+  @include mv {
+    padding: 0px 10px;
+  }
+}
+
+.admin_header_container {
+  display: flex;
+  align-items: center;
+  :hover {
+    color: $main;
+  }
+  @include mv {
+    display: none;
+  }
+}
+
+.header_user_info {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin_divider {
+  border: 0.5px solid $main;
+  height: 41px;
+  margin: 0 20px;
+}
