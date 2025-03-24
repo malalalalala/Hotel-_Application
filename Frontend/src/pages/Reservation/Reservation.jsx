@@ -211,7 +211,7 @@ const Reservation = () => {
                     <div
                       className="reservation_container_check_img"
                       style={{
-                        backgroundImage: `url(${item?.imageList[0].url})`,
+                        backgroundImage: `url(${item?.imageList?.[0]?.url})`,
                       }}
                     />
                     <div className="reservation_container_check_body">

@@ -285,8 +285,14 @@ INSERT INTO roles (name)
 -- ============================
 --       POBLAR TABLA USERS
 -- ============================
-INSERT INTO users (name, last_name, email, password)
-  VALUES ('Bruno', 'Rodriguez', 'brodriguez@gmail.com', 'a123');
+INSERT INTO users (name, last_name, email, password,role_id)
+  VALUES ('Bruno', 'Rodriguez', 'brodriguez@gmail.com', '$2a$12$zGAXSVRkhPwAzVuLhV2sJOQnyNFQxNBVobFlEUFdyer6qZMhpJ/EW',2);
+  --abc1234
+
+-- Inserta un usuario con rol User (role_id = 2) y password de 7 caracteres
+INSERT INTO users (name, last_name, email, password, role_id)
+  VALUES ('Laura', 'Ramos', 'lalo@gmail.com', '$2a$12$PAox1AJUWXrPnM.62kICguJk.ppd110tgTAU2lhvX/MD6fx78jQ0e', 1);
+  --1234567
 
 
 -- ============================
@@ -294,3 +300,16 @@ INSERT INTO users (name, last_name, email, password)
 -- ============================
 INSERT INTO reservations (check_in, check_out, product_id, user_id)
   VALUES ('2022-11-20', '2022-11-30', 1, 1);
+
+
+-- ============================
+--       SELECT * FROM CATEGORIES;
+--         SELECT * FROM CITIES;
+--         SELECT * FROM FEATURES;
+--         SELECT * FROM IMAGES;
+--         SELECT * FROM PRODUCTS_HAS_FEATURES;
+--         SELECT * FROM RESERVATIONS;
+ --        SELECT * FROM ROLES;
+ --        SELECT * FROM USERS;
+
+-- ============================

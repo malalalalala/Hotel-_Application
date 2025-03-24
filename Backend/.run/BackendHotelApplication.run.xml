@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BackendHotelApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="grupo6.backendHotel.BackendHotelApplication" />
+    <module name="backendHotel" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="grupo6.backendHotel.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

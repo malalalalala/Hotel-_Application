@@ -6,6 +6,7 @@ import UserContext from "../../context/UserContext";
 import GlobalContext from "../../context/GlobalContext";
 import getRoleStyle from "../../helpers/getRoleStyle";
 import Admin from "./Admin/Admin";
+import { roles } from "../../constants/roles";
 
 const Header = () => {
   const { setLogged, setUserInfo, userInfo, userLogged, setFromBookingFlow } =
@@ -30,7 +31,7 @@ const Header = () => {
       <div className="header_container_content">
         <Logo role={userInfo.role} />
         <div className="header_user_info">
-          {userInfo.role === "ROLE_ADMIN" && userLogged ? <Admin /> : ""}
+          {userInfo.role === roles.ROLE_ADMIN && userLogged ? <Admin /> : ""}
           <Menu />
         </div>
       </div>

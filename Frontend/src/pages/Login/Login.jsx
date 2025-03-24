@@ -10,6 +10,7 @@ import GlobalContext from "../../context/GlobalContext";
 import { parseJwt } from "../../utils/stringConvertions";
 import LoginAlert from "./LoginAlert/LoginAlert";
 import Spinner from "../../components/ui/Spinner/Spinner";
+import { roles } from "../../constants/roles";
 
 const initialValues = {
   email: "",
@@ -69,9 +70,7 @@ const Login = () => {
       });
       console.log("cabeza", userData);
 
-      if (userData.authorities[0].authority === "User") {
-        console.log("carro", userData.authorities[0].authority === "ROLE_USER");
-
+      if (userData.authorities[0].authority === roles.ROLE_USER) {
         setLoading(false);
         if (fromBookingFlow && itemId) {
           navigate(`/products/${itemId}`);
@@ -79,7 +78,7 @@ const Login = () => {
           navigate("/");
         }
       }
-      if (userData.authorities[0].authority === "Admin") {
+      if (userData.authorities[0].authority === roles.ROLE_ADMIN) {
         setLoading(false);
         navigate("/");
       }

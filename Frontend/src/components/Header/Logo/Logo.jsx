@@ -1,13 +1,14 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./logo.scss";
+import { roles } from "../../../constants/roles";
 
 const Logo = ({ role }) => {
   const getLogoColor = (role) => {
     switch (role) {
-      case "ROLE_ADMIN":
+      case roles.ROLE_ADMIN:
         return "#2A3240";
-      case "ROLE_USER":
+      case roles.ROLE_USER:
         return "#F0572D";
       default:
         return "#F0572D";

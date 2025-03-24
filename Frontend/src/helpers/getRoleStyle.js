@@ -1,8 +1,10 @@
+import { roles } from "../constants/roles";
+
 const getRoleStyle = (role) => {
   switch (role) {
-    case "ROLE_USER":
+    case roles.ROLE_USER:
       return "";
-    case "ROLE_ADMIN":
+    case roles.ROLE_ADMIN:
       return "_admin";
     default:
       return "";

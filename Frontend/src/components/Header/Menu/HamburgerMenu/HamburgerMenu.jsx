@@ -7,11 +7,12 @@ import BottomMenuLogin from "./BottomMenu/BottomMenuLogin";
 import BottomMenuRegister from "./BottomMenu/BottomMenuRegister";
 import SocialMedia from "../../../../shared-components/SocialMedia/SocialMedia";
 import UserContext from "../../../../context/UserContext";
+import { roles } from "../../../../constants/roles";
 
 const HamburgerMenu = ({ logged, handleClick, pathname }) => {
   const { userInfo, logOut } = useContext(UserContext);
 
-  const roleAdmin = userInfo.role === "ROLE_ADMIN";
+  const roleAdmin = userInfo.role === roles.ROLE_ADMIN;
 
   const BottomMenu = () => {
     if (pathname !== "/login" && pathname !== "/register" && logged) {

@@ -12,6 +12,7 @@ import RecommendationContent from "./pages/RecommendationContent/RecommendationC
 import Confirmed from "../src/pages/Confirmed/Confirmed";
 import ProductAdministration from "./pages/ProductAdministration/ProductAdministration";
 import ProtectedRoute from "./helpers/ProtectedRoute";
+import { roles } from "./constants/roles";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
               <Route
                 path="/reservation"
                 element={
-                  <ProtectedRoute role="ROLE_USER" from="reservation">
+                  <ProtectedRoute role={roles.ROLE_USER} from="reservation">
                     <Reservation />
                   </ProtectedRoute>
                 }
@@ -40,7 +41,7 @@ function App() {
               <Route
                 path="/administration"
                 element={
-                  <ProtectedRoute role="ROLE_ADMIN" from="administration">
+                  <ProtectedRoute role={roles.ROLE_ADMIN} from="administration">
                     <ProductAdministration />
                   </ProtectedRoute>
                 }
