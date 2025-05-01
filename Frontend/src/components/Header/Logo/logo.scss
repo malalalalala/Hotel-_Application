@@ -2,7 +2,7 @@
 
 .logo_container {
   @include direction-flex(flex, row);
-  align-items: flex-end;
+  align-items: center;
   svg {
     @include mv {
       width: 68px;
