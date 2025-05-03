@@ -117,9 +117,9 @@ M217.000000,124.000000
 	C213.947418,115.097023 215.473709,119.548508 217.000000,124.000000 
 z"/>
 s
-' // <-- recorta o reemplaza por ruta simplificada
+'
             />
-            {/* Letras PA sobre el mapa */}
+
             <text
               x="70"
               y="160"

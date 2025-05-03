@@ -91,3 +91,10 @@ input:required:invalid {
     font-size: $size;
   }
 }
+
+.search_error {
+  color: #f44336;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: block;
+}

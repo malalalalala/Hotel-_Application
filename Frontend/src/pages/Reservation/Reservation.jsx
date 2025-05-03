@@ -231,8 +231,14 @@ const Reservation = () => {
                       <div className="reservation_container_check_body_location">
                         <FontAwesomeIcon icon={faLocationDot} size="sm" />
                         <h5 className="bold">
-                          {`${item.address}, ${item.city.name}
-                          ${item.city.state}, ${item.city.country}`}
+                          {[
+                            item.address,
+                            item.city?.name,
+                            item.city?.state,
+                            item.city?.country,
+                          ]
+                            .filter(Boolean)
+                            .join(", ")}
                         </h5>
                       </div>
                       <Divider color="grey" />

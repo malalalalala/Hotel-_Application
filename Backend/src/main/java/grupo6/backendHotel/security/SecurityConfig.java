@@ -41,6 +41,8 @@ import java.util.Arrays;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
 
+    public static final String ROLE_ADMIN = "Admin";
+    public static final String ROLE_USER = "User";
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
 
@@ -90,24 +92,24 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
                         "/categories/**", "/cities/**", "/features/**", "/images/**",
                         "/products/**", "/reservations/**", "products/city/**", "products/category/**",
                         "/findByDate/**", "/users/**").permitAll()
-                .antMatchers(HttpMethod.GET, "/roles/**").hasAnyAuthority("ROLE_ADMIN")
+                .antMatchers(HttpMethod.GET, "/roles/**").hasAnyAuthority(ROLE_ADMIN)
 
                 // POST - (por ejemplo, admin no puede reservar, según pedido de PO)
                 .antMatchers(HttpMethod.POST, "/auth/login/**", "/users/**").permitAll()
                 .antMatchers(HttpMethod.POST,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**", "/roles/**")
-                .hasAnyAuthority("ROLE_ADMIN")
-                .antMatchers(HttpMethod.POST, "/reservations/**").hasAnyAuthority("ROLE_USER")
+                .hasAnyAuthority(ROLE_ADMIN)
+                .antMatchers(HttpMethod.POST, "/reservations/**").hasAnyAuthority(ROLE_USER)
 
                 // PUT
                 .antMatchers(HttpMethod.PUT,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**",
-                        "/reservations/**", "/roles/**", "/users/**").hasAnyAuthority("ROLE_ADMIN")
+                        "/reservations/**", "/roles/**", "/users/**").hasAnyAuthority(ROLE_ADMIN)
 
                 // DELETE
                 .antMatchers(HttpMethod.DELETE,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**",
-                        "/reservations/**", "/roles/**", "/users/**").hasAnyAuthority("ROLE_ADMIN")
+                        "/reservations/**", "/roles/**", "/users/**").hasAnyAuthority(ROLE_ADMIN)
                 .and()
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPointConfig)
                 .and()
