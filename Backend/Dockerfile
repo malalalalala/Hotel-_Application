@@ -4,9 +4,6 @@ COPY . .
 RUN chmod +x mvnw
 RUN ./mvnw clean package -Dmaven.test.skip=true
 RUN ls -la target/
-ENTRYPOINT ["java", "-jar", "target/backendHotel-0.0.1-SNAPSHOT.jar", \
-             "--server.port=${PORT:8081}", \
-             "--spring.sql.init.mode=never",
-             "--spring.jpa.hibernate.ddl-auto=update"]
+ENTRYPOINT ["java","-jar","target/backendHotel-0.0.1-SNAPSHOT.jar","--server.port=${PORT:8081}"]
 
 #CMD ["java", "-jar", "target/backendHotel-0.0.1-SNAPSHOT.jar","--logging.level.root=DEBUG", "--logging.level.grupo6=TRACE"]
