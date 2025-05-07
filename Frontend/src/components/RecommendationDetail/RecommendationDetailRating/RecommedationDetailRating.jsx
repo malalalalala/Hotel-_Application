@@ -32,7 +32,7 @@ const RecommedationDetailRating = ({ item }) => {
                     <FontAwesomeIcon
                       key={index}
                       icon={faStar}
-                      color="red"
+                      color="green"
                       size="xs"
                       className="full"
                     />

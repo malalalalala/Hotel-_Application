@@ -39,6 +39,18 @@ const ProtectedRoute = (props) => {
       return navigate("/login");
     }
     if (userInfo.role !== props.role) {
+      if (props.from === "reservation") {
+        sessionStorage.setItem(
+          "alertmessage",
+          "No tienes permisos para realizar una reserva."
+        );
+      }
+      if (props.from === "administration") {
+        sessionStorage.setItem(
+          "alertmessage",
+          "No tienes permisos para acceder a la administración."
+        );
+      }
       return navigate("/");
     }
 

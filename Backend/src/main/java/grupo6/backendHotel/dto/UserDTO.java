@@ -29,7 +29,7 @@ public class UserDTO {
                 .lastName(user.getLastName())
                 .email(user.getEmail())
                 .password(user.getPassword())
-                .role(RoleDTO.fromEntity(user.getRole()))
+                .role(user.getRole() != null ? RoleDTO.fromEntity(user.getRole()) : null)
                 .build();
     }
 

@@ -8,6 +8,8 @@ const Recommendations = () => {
   const { recommendations, title, loadingRecommendations } =
     useContext(GlobalContext);
 
+  console.log("recommendations", recommendations);
+
   return (
     <section className="recommendations_container">
       <div className="recommendations_container_content">
