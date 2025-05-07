@@ -108,6 +108,7 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
                 .antMatchers(HttpMethod.DELETE,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**",
                         "/reservations/**", "/roles/**", "/users/**").hasAnyAuthority("ROLE_ADMIN")
+                .antMatchers("/actuator/**").permitAll()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPointConfig)
                 .and()
@@ -137,12 +138,24 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
         return cors;
     }
 
+    @Bean
+    public CorsFilter corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowedOriginPatterns(Arrays.asList("*"));
+        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        config.setAllowCredentials(true);
+        config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
+        source.registerCorsConfiguration("/**", config);
+        return new CorsFilter(source);
+    }
+
     /**
      * Registro los filtros configurados anteriormente para que sea un filter implementado por sprinb
      * de esta manera uso e implemento el registro y apertura de los cors
      */
     @Bean
-    public FilterRegistrationBean<CorsFilter> corsFilter() {
+    public FilterRegistrationBean<CorsFilter> corsFilterRegistration() {
         FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<CorsFilter>(new CorsFilter(corsConfigurationSource()));
         bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return bean;
