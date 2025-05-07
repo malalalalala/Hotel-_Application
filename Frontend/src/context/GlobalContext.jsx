@@ -71,13 +71,30 @@ export function GlobalContextProvider({ children }) {
   useEffect(() => {
     if (selectedOption.cityName) {
       setLoadingRecommendations(true);
+
       const fetchProductsByCityName = async () => {
-        const productsByCityName = await getProductsByCityName(
-          selectedOption.cityName
-        );
-        setRecommendations(productsByCityName.data);
-        setTitle(`Recomendaciones de ${productsByCityName.data[0].city.name}`);
-        setLoadingRecommendations(false);
+        try {
+          const productsByCityName = await getProductsByCityName(
+            selectedOption.cityName
+          );
+
+          if (productsByCityName.data.length === 0) {
+            setTitle(
+              `No se encontraron recomendaciones para ${selectedOption.cityName}`
+            );
+            setRecommendations([]);
+          } else {
+            setRecommendations(productsByCityName.data);
+            setTitle(
+              `Recomendaciones de ${productsByCityName.data[0].city.name}`
+            );
+          }
+        } catch (error) {
+          console.error("Error al obtener productos:", error);
+          setTitle("Ocurrió un error al buscar recomendaciones");
+        } finally {
+          setLoadingRecommendations(false);
+        }
       };
 
       fetchProductsByCityName();

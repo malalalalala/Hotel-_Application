@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer_container">
       <div className="footer_container_content">
-        <h6 className="footer_container_legal">©2022 Digital Booking</h6>
+        <h6 className="footer_container_legal">©2025 Parchear en Antioquia</h6>
         <SocialMedia footer={true} />
       </div>
     </footer>

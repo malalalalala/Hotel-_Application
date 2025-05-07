@@ -18,6 +18,7 @@ import lombok.*;
 
 
         public static RoleDTO fromEntity(Role role) {
+            if (role == null) return null;
             return RoleDTO.builder().id(role.getId())
                     .name(role.getName())
                     .build();

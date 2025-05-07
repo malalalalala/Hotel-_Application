@@ -71,7 +71,7 @@ const RecommendationCard = ({
                     <FontAwesomeIcon
                       key={index}
                       icon={faStar}
-                      color="red"
+                      color="green"
                       size="xs"
                       className="star"
                     />
