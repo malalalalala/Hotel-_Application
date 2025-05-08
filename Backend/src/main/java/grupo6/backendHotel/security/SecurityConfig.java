@@ -74,7 +74,7 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
      * seguridad a nuestra aplicación
      */
 
-    @Primary
+/*    @Primary
     @Bean
     protected HttpSecurity configure(HttpSecurity http) throws Exception {
 
@@ -119,9 +119,20 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
         return http;
+    }*/
+
+    @Primary
+    @Bean
+    protected HttpSecurity configure(HttpSecurity http) throws Exception {
+        http
+                .csrf().disable()
+                .authorizeRequests()
+                .antMatchers("/**").permitAll()
+                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        return http;
     }
-
-
 
     /**
      * Se registran los cors origin para que el ecosistema permita el libre consumo de los endpoints desde
