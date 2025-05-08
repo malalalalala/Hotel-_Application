@@ -1,6 +1,3 @@
--- ============================
---       POBLAR TABLA CATEGORIES
--- ============================
 INSERT INTO categories (title, description, image_url)
   VALUES ('Hoteles', 'Hotel 5 estrellas', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/categories/hoteles.png');
 
@@ -13,10 +10,6 @@ INSERT INTO categories (title, description, image_url)
 INSERT INTO categories (title, description, image_url)
   VALUES ('Bed and Breakfast', 'Ven y relajate en la mejor estadía', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/categories/bedAndBreakfast.png');
 
-
--- ============================
---       POBLAR TABLA CITIES
--- ============================
 INSERT INTO cities (name, country, state)
   VALUES ('Buenos Aires', 'Argentina', 'Buenos Aires');
 
@@ -47,10 +40,6 @@ INSERT INTO cities (name, country, state)
 INSERT INTO cities (name, country, state)
   VALUES ('Villa Gesell', 'Argentina', 'Buenos Aires');
 
-
--- ============================
---       POBLAR TABLA PRODUCTS
--- ============================
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
     'Hotel Grande',
@@ -222,10 +211,6 @@ INSERT INTO products (title, short_description, policy, location, point, opinion
     1
   );
 
-
--- ============================
---       POBLAR TABLA FEATURES
--- ============================
 INSERT INTO features (name, icon)
   VALUES ('Wifi', 'faWifi');
 
@@ -247,22 +232,12 @@ INSERT INTO features (name, icon)
 INSERT INTO features (name, icon)
   VALUES ('Estacionamiento gratuito', 'faCar');
 
-
--- ============================
---       POBLAR TABLA IMAGES
--- ============================
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Gran Plaza', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/hotel_1.png', 1);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Gran Plaza', 'https://0521ptc6n2-g01-products-images.s3.us-east-2.amazonaws.com/galery_images/galery+(1).jpg', 1);
 
--- Agrega aquí el resto de los INSERT para la tabla images, siguiendo el mismo formato.
-
-
--- ============================
---  POBLAR TABLA PRODUCTS_HAS_FEATURES
--- ============================
 INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 1);
 INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 1);
 INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 1);
@@ -271,45 +246,17 @@ INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 1);
 INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 1);
 INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 1);
 
-
--- ============================
---       POBLAR TABLA ROLES
--- ============================
 INSERT INTO roles (name)
   VALUES ('Admin');
 
 INSERT INTO roles (name)
   VALUES ('User');
 
-
--- ============================
---       POBLAR TABLA USERS
--- ============================
 INSERT INTO users (name, last_name, email, password,role_id)
   VALUES ('Bruno', 'Rodriguez', 'brodriguez@gmail.com', '$2a$12$zGAXSVRkhPwAzVuLhV2sJOQnyNFQxNBVobFlEUFdyer6qZMhpJ/EW',2);
-  --abc1234
 
--- Inserta un usuario con rol User (role_id = 2) y password de 7 caracteres
 INSERT INTO users (name, last_name, email, password, role_id)
   VALUES ('Laura', 'Ramos', 'lalo@gmail.com', '$2a$12$PAox1AJUWXrPnM.62kICguJk.ppd110tgTAU2lhvX/MD6fx78jQ0e', 1);
-  --1234567
 
-
--- ============================
---       POBLAR TABLA RESERVATIONS
--- ============================
 INSERT INTO reservations (check_in, check_out, product_id, user_id)
   VALUES ('2022-11-20', '2022-11-30', 1, 1);
-
-
--- ============================
---       SELECT * FROM CATEGORIES;
---         SELECT * FROM CITIES;
---         SELECT * FROM FEATURES;
---         SELECT * FROM IMAGES;
---         SELECT * FROM PRODUCTS_HAS_FEATURES;
---         SELECT * FROM RESERVATIONS;
- --        SELECT * FROM ROLES;
- --        SELECT * FROM USERS;
-
--- ============================
