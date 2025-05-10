@@ -2,50 +2,50 @@
 --       POBLAR TABLA CATEGORIES
 -- ============================
 INSERT INTO categories (title, description, image_url)
-  VALUES ('Hoteles', 'Hotel 5 estrellas', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/categories/hoteles.png');
+  VALUES ('Hoteles',  'Confortables con todos los servicios y comodidades ', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/455745951.jpg?k=d45ca051f70646f85e7b59163f71a6d9657d5b2c6a6c75dd081a88f49eb91010&o=');
 
 INSERT INTO categories (title, description, image_url)
-  VALUES ('Departamentos', 'Departamento en el centro de la ciudad', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/categories/hostels.png');
+  VALUES ('Glamping', 'Campamentos de lujo que te permiten disfrutar de la naturaleza con estilo y confort.', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/457216177.jpg?k=9ae8bf04077993531772f6d3837fe59f1333eef8e70c17dfb439a74e3c9a7628&o=&hp=1');
 
 INSERT INTO categories (title, description, image_url)
-  VALUES ('Hostels', 'Hermoso hostal con todas la comodidades que necesitas', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/categories/departamentos.png');
+  VALUES ('Airbnb', 'Alojamientos únicos ofrecidos por anfitriones locales', 'https://a0.muscache.com/im/pictures/miso/Hosting-1063889573195406074/original/79b858a9-b10f-409b-b7c8-bc44e9389364.jpeg?im_w=1200');
 
 INSERT INTO categories (title, description, image_url)
-  VALUES ('Bed and Breakfast', 'Ven y relajate en la mejor estadía', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/categories/bedAndBreakfast.png');
+  VALUES ('Hosterias', 'Ven y relajate en la mejor estadía', 'https://cincohorizontes.com/wp-content/uploads/2021/06/image_6487327-3.jpg');
 
 
 -- ============================
 --       POBLAR TABLA CITIES
 -- ============================
 INSERT INTO cities (name, country, state)
-  VALUES ('Buenos Aires', 'Argentina', 'Buenos Aires');
+  VALUES ('Guatape', 'Antioquia', 'Colombia');
 
 INSERT INTO cities (name, country, state)
-  VALUES ('Mar de Plata', 'Argentina', 'Buenos Aires');
+  VALUES ('Jardín', 'Antioquia', 'Colombia');
 
 INSERT INTO cities (name, country, state)
-  VALUES ('Cordoba', 'Argentina', 'Cordoba');
+  VALUES ('Santa Fe de Antioquia', 'Antioquia', 'Colombia');
 
 INSERT INTO cities (name, country, state)
-  VALUES ('Rosario', 'Argentina', 'Santa Fe');
+  VALUES ('Jericó', 'Antioquia', 'Colombia');
 
 INSERT INTO cities (name, country, state)
-  VALUES ('San Miguel de Tucumán', 'Argentina', 'Tucumán');
+  VALUES ('Rionegro', 'Antioquia', 'Colombia');
 
 INSERT INTO cities (name, country, state)
-  VALUES ('Salta', 'Argentina', 'Salta');
+  VALUES ('San Rafael', 'Antioquia', 'Colombia');
 
 INSERT INTO cities (name, country, state)
-  VALUES ('San Carlos de Bariloche', 'Argentina', 'Río Negro');
+  VALUES ('San Carlos', 'Antioquia', 'Colombia');
 
 INSERT INTO cities (name, country, state)
-  VALUES ('Mendoza', 'Argentina', 'Mendoza');
+  VALUES ('Sopetrán', 'Antioquia', 'Colombia');
 
 INSERT INTO cities (name, country, state)
-  VALUES ('San Salvador de Jujuy', 'Argentina', 'Jujuy');
+  VALUES ('La Ceja', 'Antioquia', 'Colombia');
 
 INSERT INTO cities (name, country, state)
-  VALUES ('Villa Gesell', 'Argentina', 'Buenos Aires');
+  VALUES ('San Ronque', 'Antioquia', 'Colombia');
 
 
 -- ============================
@@ -53,133 +53,133 @@ INSERT INTO cities (name, country, state)
 -- ============================
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
-    'Hotel Grande',
-    'Gran hotel en el centro de la ciudad',
-    'Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.',
-    'A 1 km del centro de la ciudad',
+    'Hotel Los Recuerdos',
+    'Vistas panorámicas al embalse Peñol-Guatapé.',
+    'Consulta las políticas del hotel al reservar.',
+    'A orillas del embalse Peñol-Guatapé',
     85,
     'Muy bueno',
     4,
-    'Alójate en el corazón de Buenos Aires',
-    'Está situado a solo unas calles de la avenida Alvear, de la avenida Quintana, del parque San Martín y del distrito de Recoleta. En las inmediaciones también hay varios lugares de interés, como la calle Florida, el centro comercial Galerías Pacífico, la zona de Puerto Madero, la plaza de Mayo y el palacio Municipal. Nuestros clientes dicen que esta parte de Buenos Aires es su favorita, según los comentarios independientes. El Hotel es un hotel sofisticado de 4 estrellas que goza de una ubicación tranquila, a poca distancia de prestigiosas galerías de arte, teatros, museos y zonas comerciales. Además, hay WiFi gratuita. El establecimiento sirve un desayuno variado de 07:00 a 10:30.',
+        'Disfruta de la tranquilidad junto al embalse.',
+        'Ofrece vistas panorámicas al embalse, piscina, restaurante y habitaciones confortables.',
     -34.589716,
     -58.385892,
     'Check-out: 1.50:00 No se permiten fiestas No fumar',
-    'Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus Detector de humo',
+    'Consulta al hotel.',
     1,
     1
   );
 
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
-    'Hotel Hermitage',
-    'Espléndido en el centro de la ciudad',
-    'Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.',
-    'A 500 mts del centro de la ciudad',
+    'Hotel Hacienda Balandú',
+    'Amplias zonas verdes, piscina y spa en Jardín.',
+    'Consulta las políticas del hotel al reservar.',
+    'Kilómetro 1 vía Río sucio, Jardín, Antioquia',
     99,
     'Excelente',
     5,
-    'Alójate a pocos minutos de las sierras',
-    'Está situado a solo unas calles de la avenida San Martín y del paseo Guemes. En las inmediaciones también hay varios lugares de interés como el Shopping Patio Olmos, el parque de la ciudad y los edificios históricos. Nuestros clientes dicen que esta parte de Córdoba es su favorita, según los comentarios independientes. El Hotel es un hotel sofisticado de 5 estrellas que goza de una ubicación tranquila, a poca distancia de prestigiosas galerías de arte, teatros, museos y zonas comerciales. Además, hay WiFi gratuita. El establecimiento sirve un desayuno variado de 07:00 a 10:30.',
+    'Relájate en la naturaleza de Jardín.',
+    'Cuenta con amplias zonas verdes, piscina, spa y restaurante.',
     -31.424469,
     -64.187478,
     'Check-out: 1.50:00 No se permiten fiestas',
-    'Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus Detector de humo',
+    'Consulta al hotel',
     1,
     3
   );
 
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
-    'Hostel Viajeros',
-    'Hermoso hostel para quienes viajan solos',
-    'Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.',
-    'En pleno centro porteño',
+    'Hotel San Ángel',
+    'Estilo colonial con piscina y jacuzzi en Santa Fe de Antioquia.',
+    'Consulta las políticas del hotel al reservar.',
+    'calle 9 #1-110, Barrio Santa Lucia, Santa Fé de Antioquia, Antioquia',
     74,
     'Bueno',
     3,
-    'Alójate en el corazón de Buenos Aires',
-    'Está situado a solo unas calles de la avenida Alvear, de la avenida Quintana, del parque San Martín y del distrito de Recoleta. Las habitaciones comparten baño y otras facilidades. El Hotel es un hotel sofisticado de 4 estrellas que goza de una ubicación tranquila, a poca distancia de prestigiosas galerías de arte, teatros, museos y zonas comerciales. Además, hay WiFi gratuita. El establecimiento sirve un desayuno variado de 07:00 a 10:30.',
+    'Sumérgete en la historia de Santa Fe.',
+    'Estilo colonial, piscina para adultos, jacuzzi, solárium y restaurante.',
     -34.589716,
     -58.385892,
-    'Check-out: 1.50:00 No se permiten fiestas',
-    'Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus Detector de humo',
+    'Consulta al hotel.',
+    'Consulta al hotel.',
     3,
     1
   );
 
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
-    'Hostel Malevo',
-    'La mejor experiencia para tus viajes',
-    'Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.',
-    'En la mejor zona de cervecerías',
+    'Hotel Cauca Viejo Fundadores',
+    'Arquitectura tradicional cerca de Jericó.',
+    'Consulta las políticas del hotel al reservar.',
+    'En el corregimiento de Cauca Viejo, cerca de Jericó',
     93,
     'Muy bueno',
     4,
-    'Alójate en el corazón de Buenos Aires',
-    'Está situado a solo unas calles de la avenida Alvear, de la avenida Quintana, del parque San Martín y del distrito de Recoleta. El Hostel es un hotel sofisticado de 4 estrellas que goza de una ubicación tranquila, a poca distancia de prestigiosas galerías de arte, teatros, museos y zonas comerciales. Además, hay WiFi gratuita. El establecimiento sirve un desayuno variado de 07:00 a 10:30.',
+    'Ideal para eventos y escapadas románticas.',
+    'rquitectura tradicional, ideal para eventos y escapadas románticas.',
     -34.589716,
     -58.385892,
-    'Check-out: 1.50:00 No se permiten fiestas',
-    'Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus Detector de humo',
+    'Consulta al hotel.',
+    'Consulta al hotel.',
     3,
     4
   );
 
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
-    'Duplex Recoleta',
-    'Increible departamento en el centro de Recoleta',
-    'Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.',
-    'A 700 m del Jardín Japonés',
+    'Hotel Las Lomas',
+    'Hotel de lujo cerca del Aeropuerto José María Córdova.',
+    'Consulta las políticas del hotel al reservar.',
+    'Glorieta Aeropuerto José María Córdova, Rionegro, Antioquia',
     85,
     'Muy bueno',
     4,
-    'Alójate en el corazón de Buenos Aires',
-    'Está situado a solo unas calles de la avenida Alvear, de la avenida Quintana, del parque San Martín y del distrito de Recoleta. El Duplex es un elegante departamento que goza de una ubicación privilegiada, cerca de prestigiosas galerías de arte y zonas comerciales. Además, cuenta con WiFi gratuita y un desayuno variado de 07:00 a 10:30.',
+    'Disfruta de servicios de alta calidad cerca del aeropuerto.',
+    'Hotel de lujo con spa, piscina, gimnasio y restaurante gourmet.',
     -34.589716,
     -58.385892,
-    'Check-out: 1.50:00 No se permiten fiestas',
-    'Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus Detector de humo',
+    'Consulta al hotel.',
+    'Consulta al hotel.',
     2,
     1
   );
 
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
-    'Bristol',
-    'Con una hermosa vista al mar',
-    'Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.',
-    'A 200 m del Casino Plata',
+    'Hotel San Rafael',
+    'Ofrece actividades al aire libre, piscina natural y cabañas.',
+    'Consulta las políticas del hotel al reservar.',
+    'Calle 20 #19-61 san rafael, 053830 San Rafael, Colombia',
     97,
     'Excelente',
     5,
-    'Alójate en el corazón de Buenos Aires',
-    'Está situado a solo unas calles de la avenida Alvear, de la avenida Quintana, del parque San Martín y del distrito de Recoleta. El Bristol es un lujoso hotel con vista al mar, ideal para disfrutar de una experiencia única y exclusiva. Además, ofrece WiFi gratuita y un variado desayuno de 07:00 a 10:30.',
+    'Destino ecológico por excelencia.',
+    'Ofrece actividades al aire libre, piscina natural y alojamiento en cabañas.',
     -34.589716,
     -58.385892,
-    'Check-out: 1.50:00 No se permiten fiestas',
-    'Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus Detector de humo',
+    'Consulta al hotel.',
+    'Consulta al hotel.',
     2,
     2
   );
 
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
-    'Riu',
-    'Como la sencillez de tu hogar',
-    'Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.',
-    'Frente al parque central',
+    'Hotel El Mirador',
+    'Alojamiento tradicional con fácil acceso a la naturaleza.',
+    'Consulta las políticas del hotel al reservar.',
+    'Centro del municipio, San Carlos, Antioquia',
     65,
     'Bueno',
     2,
-    'Alójate en el corazón de Buenos Aires',
-    'Está situado a solo unas calles de la avenida Alvear, de la avenida Quintana, del parque San Martín y del distrito de Recoleta. El Riu es un cómodo hotel con todas las facilidades, ideal para viajeros que buscan comodidad y una experiencia acogedora. Además, cuenta con WiFi gratuita y un desayuno variado de 07:00 a 10:30.',
+    'El paraíso turístico de Antioquia.',
+    'Alojamiento tradicional con fácil acceso a las principales atracciones naturales.',
     -34.589716,
     -58.385892,
-    'Check-out: 1.50:00 No se permiten fiestas',
-    'Se aplican las pautas de distanciamiento social y otras normas relacionadas con el coronavirus Detector de humo',
+    'Consulta al hotel.',
+    'Consulta al hotel.',
     4,
     3
   );
@@ -252,7 +252,8 @@ INSERT INTO features (name, icon)
 --       POBLAR TABLA IMAGES
 -- ============================
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Gran Plaza', 'https://hotelappimages.s3.us-east-1.amazonaws.com/assets/hotel_1.png', 1);
+  VALUES ('Hotel Los Recuerdos ', 'https://cf.bstatic.com/xdata/images/xphoto/2560x1280/72900619.jpg?k=37c05aec9f8fc9cbd06fab0f9841b0d8d871c47ec0754faac6a5bada4fc385aa&o=
+', 1);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Gran Plaza', 'https://0521ptc6n2-g01-products-images.s3.us-east-2.amazonaws.com/galery_images/galery+(1).jpg', 1);
