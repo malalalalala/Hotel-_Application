@@ -5,7 +5,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Getter
 @Setter
@@ -26,9 +25,9 @@ public class Category implements Serializable{
     private String image_url;
 
 
-    @OneToMany(mappedBy = "category")
+/*    @OneToMany(mappedBy = "category")
     @JsonIgnoreProperties("category")
-    private List<Product> productList;
+    private List<Product> productList;*/
 
 
     //CONSTRUCTOR SIN ID
