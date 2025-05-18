@@ -40,6 +40,7 @@ public class  Product {
     //RELACIONES ENTRE TABLAS
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_category")
+    @JsonIgnoreProperties("productList")
     private Category category;
 
     //@Column(name = "id_category")
