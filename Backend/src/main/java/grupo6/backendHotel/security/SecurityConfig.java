@@ -79,6 +79,8 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
     protected HttpSecurity configure(HttpSecurity http) throws Exception {
 
         http
+                .cors().configurationSource(corsConfigurationSource())
+                .and()
                 .csrf().disable()
                 // Permite el uso de iframes (necesario para H2 Console)
                 .headers().frameOptions().sameOrigin()
@@ -128,7 +130,7 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantiquia.up.railway.app"));
+        config.setAllowedOrigins(Arrays.asList("https://parchearenantioquia.up.railway.app"));
         //config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "*"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowCredentials(true);
@@ -142,7 +144,7 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantiquia.up.railway.app"));
+        config.setAllowedOrigins(Arrays.asList("https://parchearenantioquia.up.railway.app"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowCredentials(true);
         config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
