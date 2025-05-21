@@ -98,6 +98,7 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
 
                 // POST - (por ejemplo, admin no puede reservar, según pedido de PO)
                 .antMatchers(HttpMethod.POST, "/auth/login/**", "/users/**").permitAll()
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers(HttpMethod.POST,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**", "/roles/**")
                 .hasAnyAuthority(ROLE_ADMIN)
@@ -130,8 +131,8 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        //config.setAllowedOriginPatterns(Arrays.asList("*"));
-        config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "*", "https://parchearenantioquia.up.railway.app"));
+        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200"));
+        //config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "https://parchearenantioquia.up.railway.app"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowCredentials(true);
         config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
@@ -144,8 +145,8 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        //config.setAllowedOriginPatterns(Arrays.asList("*"));
-        config.setAllowedOrigins(Arrays.asList("https://parchearenantioquia.up.railway.app","*"));
+        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200"));
+        //config.setAllowedOrigins(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowCredentials(true);
         config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
