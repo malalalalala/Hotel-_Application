@@ -87,7 +87,9 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
                 .and()
                 .authorizeRequests()
                 // Permite acceso libre a la consola H2
-                .antMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**", "/v3/api-docs.yaml", "/debug", "/actuator/**").permitAll()
+                .antMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**",
+                        "/swagger-resources/**", "/webjars/**", "/configuration/**",
+                        "/swagger-ui/index.html", "/api-docs/**", "/debug", "/actuator/**").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
