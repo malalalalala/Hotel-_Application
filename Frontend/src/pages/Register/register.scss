@@ -28,7 +28,7 @@
   @include mv(768px) {
     left: 19rem;
   }
-  @include mv(414px) {
+  @include mv(600px) {
     left: 16rem;
   }
 }
@@ -49,7 +49,7 @@
   }
   @include mv {
     padding: 30px 10px;
-    max-width: 414px;
+    max-width: 600px;
   }
 }
 
@@ -64,16 +64,17 @@
   }
 }
 
-.register_error, .connection_error{
+.register_error,
+.connection_error {
   display: block;
   color: red;
-  text-align: center;  
+  text-align: center;
   @include mv(768px) {
     max-width: 346px;
-    }
+  }
   @include mv() {
-      max-width: 300px;
-    }
+    max-width: 300px;
+  }
 }
 
 .register_error_oculto {

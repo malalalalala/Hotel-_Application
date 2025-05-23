@@ -12,7 +12,7 @@ $alertBackgroud: #ffe1e1;
 $alertBorder: #078930;
 
 // media-queries breakpoints
-$sm: 414px;
+$sm: 600px;
 $md: 768px;
 $lg: 1366px;
 
@@ -76,7 +76,7 @@ input:required:invalid {
   align-content: $alig;
 }
 
-// mixin for media queries - tablet 768px - mobile default 414px
+// mixin for media queries - tablet 768px - mobile default 600px
 @mixin mv($medida: $sm) {
   @media screen and (max-width: $medida) {
     @content;

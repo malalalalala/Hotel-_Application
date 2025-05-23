@@ -62,14 +62,14 @@ const AddAttribute = ({
           <div className="product_add_icons_inputs">
             <div className="product_add_icons_input_autocomplete">
               <Input
-                inputLabel="Nombre"
+                inputLabel="Nombre de la amenidad"
                 inputType="text"
                 inputName="propertyAutocomplete"
                 id="propertyAutocomplete"
                 placeholder={
                   limit === 8
                     ? "Llegaste al límite de features posibles de ingresar"
-                    : "Agrega un atributo válido"
+                    : "Empieza a escribir para ver opciones: WiFi, Piscina…"
                 }
                 inputValue={values ? values.iconName : searchTerm}
                 disabled={limit === 8 || componentAttributes}
@@ -92,7 +92,9 @@ const AddAttribute = ({
               inputName="propertyName"
               id="propertyName"
               placeholder={
-                limit === 8 ? "Llegaste al límite de íconos" : "fa-Wifi"
+                limit === 8
+                  ? "Llegaste al límite de íconos"
+                  : "Se autocompleta de acuerdo a tu selección anterior"
               }
               inputValue={values ? values.iconValue : selectedIcon}
               autoComplete="off"

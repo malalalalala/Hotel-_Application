@@ -37,7 +37,7 @@ const ProductData = ({
       </div>
       <div className="product_info">
         <Input
-          inputLabel="Ubicación"
+          inputLabel="Descripción Ubicación"
           inputType="text"
           inputName="location"
           id="location"
@@ -46,7 +46,7 @@ const ProductData = ({
           onChange={handleValueChange}
         />
         <Input
-          inputLabel="Invitación principal para el anfitrión"
+          inputLabel="Invitación principal para el huesped"
           inputType="text"
           inputName="subtitle"
           id="subtitle"
@@ -101,7 +101,7 @@ const ProductData = ({
           inputType="text"
           inputName="short_description"
           id="short_description"
-          placeholder="Escribir aquí una breve presentación"
+          placeholder="Gran hotel en el centro de la ciudad"
           value={newProduct.short_description}
           onChange={handleValueChange}
         />
@@ -111,7 +111,7 @@ const ProductData = ({
           inputLabel="Descripción"
           inputName="long_description"
           id="long_description"
-          placeholder="Escribir aquí"
+          placeholder="Está situado a solo unas calles de..., . En las inmediaciones también hay varios lugares de interés, como ... El Hotel es un hotel sofisticado de 4 estrellas que goza de una ubicación tranquila, a poca distancia de ... El establecimiento sirve un desayuno variado de 07:00 a 10:30."
           model="description"
           value={newProduct.long_description}
           onChange={handleValueChange}

@@ -45,12 +45,7 @@ const ProtectedRoute = (props) => {
           "No tienes permisos para realizar una reserva."
         );
       }
-      if (props.from === "administration") {
-        sessionStorage.setItem(
-          "alertmessage",
-          "No tienes permisos para acceder a la administración."
-        );
-      }
+
       return navigate("/");
     }
 

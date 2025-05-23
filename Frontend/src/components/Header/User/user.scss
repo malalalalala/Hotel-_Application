@@ -3,7 +3,7 @@
 
 .user_container {
   display: flex;
-  @include mv(414px) {
+  @include mv(600px) {
     display: none;
   }
 }

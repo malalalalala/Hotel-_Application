@@ -33,7 +33,7 @@
 .menu_navigation ul {
   display: flex;
   padding: 0;
-  @include mv(414px) {
+  @include mv(600px) {
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -47,7 +47,7 @@
 }
 
 .menu_navigation div {
-  @include mv(414px) {
+  @include mv(600px) {
     // flex-direction: column;
     // position: absolute;
     // top: 60px;
@@ -61,7 +61,7 @@
 }
 
 .menu_navigation li {
-  @include mv(414px) {
+  @include mv(600px) {
     text-align: right;
     margin-right: 15px;
   }
@@ -71,7 +71,7 @@
   text-decoration: none;
   display: block;
   width: 100%;
-  @include mv(414px) {
+  @include mv(600px) {
     width: 100%;
     padding: 1.5rem 0;
   }
@@ -79,7 +79,7 @@
 
 .menu_container_hamburger {
   display: none;
-  @include mv(414px) {
+  @include mv(600px) {
     background-color: transparent;
     cursor: pointer;
     border: none;
@@ -92,7 +92,7 @@
   margin: 0 1.5rem;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
   .menu_navigation.expanded ul {
     display: block;
   }
