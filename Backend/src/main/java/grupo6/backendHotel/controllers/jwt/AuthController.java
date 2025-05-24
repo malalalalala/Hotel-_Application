@@ -1,8 +1,8 @@
 package grupo6.backendHotel.controllers.jwt;
 
-
-
 import grupo6.backendHotel.dto.JwtDTO;
+import grupo6.backendHotel.dto.LoginRequest;
+import grupo6.backendHotel.dto.LoginResponse;
 import grupo6.backendHotel.dto.UserDTO;
 import grupo6.backendHotel.security.jwt.JwtProviderConfig;
 import lombok.extern.slf4j.Slf4j;
@@ -33,51 +33,59 @@ public class AuthController {
     private JwtProviderConfig jwtProviderConfig;
 
     /**
-     * Metodo para iniciar la obtención del token de acuerdo a la información del usuario
-     * UserDTO lo recibo completo, aquí ustedes pueden crear su propio objeto, pero ojo
-     * porque el envio de la información usuario y contraseña, estos dos deben si o si
+     * Metodo para iniciar la obtención del token de acuerdo a la información del
+     * usuario
+     * UserDTO lo recibo completo, aquí ustedes pueden crear su propio objeto, pero
+     * ojo
+     * porque el envio de la información usuario y contraseña, estos dos deben si o
+     * si
      * existir en el DTO.
      *
-     * */
+     */
     @PostMapping("/login")
-    public ResponseEntity<Map<String, Object>> token(@RequestBody UserDTO user) {
-        Map<String, Object> response = new HashMap<>();
+    public ResponseEntity<LoginResponse> token(@RequestBody LoginRequest loginRequest) {
+        LoginResponse loginResponse = new LoginResponse();
 
-        log.info("Auth/toke user " +user);
+        log.info("Auth/token loginRequest " + loginRequest);
         /**
          * Usare la autenticación registrada en el ecocsistema de spring boot, donde
          * UsernamePasswordAuthenticationToken tiene prestablecidas las formas y los
          * metodos de busqueda y de encripción para el password.
          *
-         * */
-        Authentication authentication = authenticationManager.authenticate
-                (new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword()));
+         */
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword()));
 
-        log.info("user.getEmail(), user.getPassword() " +user.getEmail() +user.getPassword());
-        log.info("authetication " +authentication);
+        log.info("user.getEmail(), user.getPassword() " + loginRequest.getEmail() + loginRequest.getPassword());
+        log.info("authetication " + authentication);
         /**
-         * Luego de realizar esa autenticación y de ver que el usuario si exista en bd, se procede
-         * a registrar ese scope o ese usuario en el request, esto con el fin de darle prioridad
+         * Luego de realizar esa autenticación y de ver que el usuario si exista en bd,
+         * se procede
+         * a registrar ese scope o ese usuario en el request, esto con el fin de darle
+         * prioridad
          * a la gestión del token
-         * */
+         */
         SecurityContextHolder.getContext().setAuthentication(authentication);
         /**
-         * Procedo a generar el token bajo el resultado de authentication, ya que aquí se encuentran los
-         * resultados que me serán posibles setear y/o getear para la utilización y con esto y la información
+         * Procedo a generar el token bajo el resultado de authentication, ya que aquí
+         * se encuentran los
+         * resultados que me serán posibles setear y/o getear para la utilización y con
+         * esto y la información
          * obtenida se envía a generar el token
-         * */
+         */
         String jwt = jwtProviderConfig.generateToken(authentication);
         /**
          * obtengo y casteo el usuario principal obtenido luego de la autenticación
-         * */
+         */
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         /**
-         * Devuelvo mi objeto, este objeto es creado por mi, ustedes pueden crear su propio objeto y pasarle
+         * Devuelvo mi objeto, este objeto es creado por mi, ustedes pueden crear su
+         * propio objeto y pasarle
          * la información que ustedes deseen pasarle.
-         * */
+         */
         JwtDTO jwtDTO = new JwtDTO(jwt, "Bearer", userDetails.getUsername(), userDetails.getAuthorities());
-        response.put("response", jwtDTO);
-        return ResponseEntity.ok(response);
+        loginResponse.setResponse(jwtDTO);
+        return ResponseEntity.ok(loginResponse);
     }
 
 }
