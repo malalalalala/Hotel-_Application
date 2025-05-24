@@ -26,8 +26,8 @@ import RecommendationDetailRules from "../../components/RecommendationDetail/Rec
  * @returns {JSX.Element} The rendered reservation page.
  */
 const Reservation = () => {
-  const [fromValue, setFromValue] = useState("__/__/__");
-  const [toValue, setToValue] = useState("__/__/__");
+  const [fromValue, setFromValue] = useState(() => sessionStorage.getItem("fromValue") || "__/__/__");
+  const [toValue, setToValue] = useState(() => sessionStorage.getItem("toValue") || "__/__/__");
   const [isDisabledRange, setIsDisabledRange] = useState(false);
   const [loadingItem, setLoadingItem] = useState(true);
   const [item, setItem] = useState();
@@ -179,6 +179,8 @@ const Reservation = () => {
                     setToValue={setToValue}
                     setIsDisabledRange={setIsDisabledRange}
                     itemId={itemId}
+                    initialFromValue={fromValue}
+                    initialToValue={toValue}
                   />
                 </div>
                 {isDisabledRange && (

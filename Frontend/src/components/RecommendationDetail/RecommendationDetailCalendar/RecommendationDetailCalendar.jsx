@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./recommendationDetailCalendar.scss";
 import DateRangePicker from "../../../components/Calendar/DateRangePicker";
 import Button from "../../../components/ui/Button/Button";
@@ -21,10 +21,17 @@ const RecommendationDetailCalendar = ({ item }) => {
   const { setItemId } = useContext(GlobalContext);
   const navigate = useNavigate();
 
+  // Estados locales para las fechas seleccionadas
+  const [fromValue, setFromValue] = useState("");
+  const [toValue, setToValue] = useState("");
+
   const handleClick = () => {
     setFromBookingFlow(sessionStorage.setItem("bookingFlow", true));
-    sessionStorage.setItem("alertmessage", "realizar una reserva");
+    sessionStorage.setItem("loginAlertMessage", "realizar una reserva");
     setItemId(sessionStorage.setItem("itemId", item.id));
+    // Guardar fechas seleccionadas en sessionStorage
+    sessionStorage.setItem("fromValue", fromValue);
+    sessionStorage.setItem("toValue", toValue);
     navigate(userLogged ? "/reservation" : "/login");
   };
 
@@ -33,7 +40,11 @@ const RecommendationDetailCalendar = ({ item }) => {
       <Fluid bgColor="white" color="dark">
         <h2 className="available_dates_title title">Fechas disponibles</h2>
         <div className="available_dates_container">
-          <DateRangePicker itemId={item.id} />
+          <DateRangePicker
+            itemId={item.id}
+            setFromValue={setFromValue}
+            setToValue={setToValue}
+          />
           <div className="available_dates_reservation">
             <h4>Agregá tus fechas de viaje para obtener precios exactos</h4>
             <Link to={userLogged ? "/reservation" : "/login"}>

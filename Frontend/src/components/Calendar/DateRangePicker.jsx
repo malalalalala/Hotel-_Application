@@ -15,6 +15,8 @@ import { getReservationsByProductId } from "../../api/services/services";
  * @param {function} props.setToValue - Function to set the end date value.
  * @param {function} props.setIsDisabledRange - Function to set if the selected range is disabled.
  * @param {string|number} props.itemId - The ID of the item to fetch reservations for.
+ * @param {string} props.initialFromValue - Initial value for the start date.
+ * @param {string} props.initialToValue - Initial value for the end date.
  * @returns {JSX.Element} The rendered date range picker component.
  */
 const DateRangePicker = ({
@@ -22,11 +24,26 @@ const DateRangePicker = ({
   setToValue,
   setIsDisabledRange,
   itemId,
+  initialFromValue = "",
+  initialToValue = ""
 }) => {
-  const [selectedRange, setSelectedRange] = useState();
   const [showMobile, setShowMobile] = useState(false);
   const [disabledDays, setDisabledDays] = useState([]);
   const today = new Date();
+
+  // Inicializar el rango seleccionado si se pasan valores iniciales
+  const parseDate = (str) => {
+    if (!str || str === "__/__/__") return undefined;
+    const [day, month, year] = str.split("/");
+    return new Date(Number(year), Number(month) - 1, Number(day));
+  };
+  const [selectedRange, setSelectedRange] = useState(() => {
+    const from = parseDate(initialFromValue);
+    const to = parseDate(initialToValue);
+    if (from && to) return { from, to };
+    if (from) return { from };
+    return undefined;
+  });
 
   useEffect(() => {
     const disabledRanges = [{ from: new Date(1900, 1, 1), to: today }];
@@ -96,6 +113,15 @@ const DateRangePicker = ({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // Si cambian los valores iniciales, actualiza el rango seleccionado
+  useEffect(() => {
+    const from = parseDate(initialFromValue);
+    const to = parseDate(initialToValue);
+    if (from && to) setSelectedRange({ from, to });
+    else if (from) setSelectedRange({ from });
+    else setSelectedRange(undefined);
+  }, [initialFromValue, initialToValue]);
 
   return (
     <div className="dateRangePicker_container">
