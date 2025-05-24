@@ -41,17 +41,17 @@ const ProtectedRoute = (props) => {
       setFromBookingFlow(sessionStorage.setItem("bookingFlow", true));
 
       if (props.from === "administration") {
-        sessionStorage.setItem("alertmessage", "crear un producto");
+        sessionStorage.setItem("globalAlertMessage", "crear un producto");
       }
       if (props.from === "reservation") {
-        sessionStorage.setItem("alertmessage", "realizar una reserva");
+        sessionStorage.setItem("loginAlertMessage", "realizar una reserva");
       }
       return navigate("/login");
     }
     if (userInfo.role !== props.role) {
       if (props.from === "reservation") {
         sessionStorage.setItem(
-          "alertmessage",
+          "globalAlertMessage",
           "No tienes permisos para realizar una reserva."
         );
       }

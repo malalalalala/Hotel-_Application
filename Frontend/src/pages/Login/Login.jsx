@@ -40,6 +40,13 @@ const Login = () => {
     setItemId(sessionStorage.getItem("itemId"));
   }, [fromBookingFlow]);
 
+  useEffect(() => {
+    // Clear loginAlertMessage after showing the alert
+    if (sessionStorage.getItem("loginAlertMessage")) {
+      sessionStorage.removeItem("loginAlertMessage");
+    }
+  }, []);
+
   const setStorageInfo = (info) => {
     sessionStorage.setItem("name", info.name);
     sessionStorage.setItem("lastname", info.lastname);

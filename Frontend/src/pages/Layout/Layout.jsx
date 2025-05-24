@@ -16,10 +16,10 @@ const Layout = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const message = sessionStorage.getItem("alertmessage");
+    const message = sessionStorage.getItem("globalAlertMessage");
     if (message) {
       setAlertMessage(message);
-      sessionStorage.removeItem("alertmessage");
+      sessionStorage.removeItem("globalAlertMessage");
     }
   }, [location.pathname]);
 
