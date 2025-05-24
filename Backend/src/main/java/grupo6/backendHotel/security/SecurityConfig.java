@@ -1,6 +1,5 @@
 package grupo6.backendHotel.security;
 
-
 import grupo6.backendHotel.security.jwt.JwtEntryPointConfig;
 import grupo6.backendHotel.security.jwt.JwtTokenFilterConfig;
 import grupo6.backendHotel.service.security.UserDetailsServiceImpl;
@@ -27,19 +26,20 @@ import org.springframework.web.filter.CorsFilter;
 
 import java.util.Arrays;
 
-
 /**
  * @author dpanquev
  * @version 2022-09-01
- * <p>
- * Clase encargada de orquestar la configuración del jwt token para temas de seguridad
- * Estaré trabajando sobre el componente websecurityConfigurerAdapter deprecado para
- * actualizarlo
+ *          <p>
+ *          Clase encargada de orquestar la configuración del jwt token para
+ *          temas de seguridad
+ *          Estaré trabajando sobre el componente websecurityConfigurerAdapter
+ *          deprecado para
+ *          actualizarlo
  */
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
+public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
 
     public static final String ROLE_ADMIN = "Admin";
     public static final String ROLE_USER = "User";
@@ -62,7 +62,6 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
         return new BCryptPasswordEncoder();
     }
 
-
     @Bean("authenticationManager")
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
             throws Exception {
@@ -70,7 +69,8 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
     }
 
     /**
-     * Registro de los endpoints, definiendo quien tiene acceso a cada uno de ellos, esto con el fin de darle
+     * Registro de los endpoints, definiendo quien tiene acceso a cada uno de ellos,
+     * esto con el fin de darle
      * seguridad a nuestra aplicación
      */
 
@@ -86,12 +86,18 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
                 .authorizeRequests()
                 // Permite acceso libre a la consola H2
                 .antMatchers("/h2-console/**").permitAll()
+                .antMatchers(
+                        "/v3/api-docs/**",
+                        "/swagger-ui/**",
+                        "/swagger-ui.html")
+                .permitAll()
 
                 // GET
                 .antMatchers(HttpMethod.GET,
                         "/categories/**", "/cities/**", "/features/**", "/images/**",
                         "/products/**", "/reservations/**", "products/city/**", "products/category/**",
-                        "/findByDate/**", "/users/**").permitAll()
+                        "/findByDate/**", "/users/**")
+                .permitAll()
                 .antMatchers(HttpMethod.GET, "/roles/**").hasAnyAuthority(ROLE_ADMIN)
 
                 // POST - (por ejemplo, admin no puede reservar, según pedido de PO)
@@ -104,12 +110,14 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
                 // PUT
                 .antMatchers(HttpMethod.PUT,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**",
-                        "/reservations/**", "/roles/**", "/users/**").hasAnyAuthority(ROLE_ADMIN)
+                        "/reservations/**", "/roles/**", "/users/**")
+                .hasAnyAuthority(ROLE_ADMIN)
 
                 // DELETE
                 .antMatchers(HttpMethod.DELETE,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**",
-                        "/reservations/**", "/roles/**", "/users/**").hasAnyAuthority(ROLE_ADMIN)
+                        "/reservations/**", "/roles/**", "/users/**")
+                .hasAnyAuthority(ROLE_ADMIN)
                 .and()
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPointConfig)
                 .and()
@@ -120,17 +128,16 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
         return http;
     }
 
-
-
     /**
-     * Se registran los cors origin para que el ecosistema permita el libre consumo de los endpoints desde
+     * Se registran los cors origin para que el ecosistema permita el libre consumo
+     * de los endpoints desde
      * el front
      */
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOriginPatterns(Arrays.asList("*"));
-        //config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "*"));
+        // config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "*"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowCredentials(true);
         config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
@@ -140,12 +147,14 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
     }
 
     /**
-     * Registro los filtros configurados anteriormente para que sea un filter implementado por sprinb
+     * Registro los filtros configurados anteriormente para que sea un filter
+     * implementado por sprinb
      * de esta manera uso e implemento el registro y apertura de los cors
      */
     @Bean
     public FilterRegistrationBean<CorsFilter> corsFilter() {
-        FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<CorsFilter>(new CorsFilter(corsConfigurationSource()));
+        FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<CorsFilter>(
+                new CorsFilter(corsConfigurationSource()));
         bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return bean;
     }
