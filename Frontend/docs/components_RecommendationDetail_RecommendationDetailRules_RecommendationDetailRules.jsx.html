@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/RecommendationDetail/RecommendationDetailRules/RecommendationDetailRules.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/RecommendationDetail/RecommendationDetailRules/RecommendationDetailRules.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from "react";
+import "./recommendationDetailRules.scss";
+import Fluid from "../../../components/ui/Fluid/Fluid";
+import Divider from "../../ui/Divider/Divider";
+
+/**
+ * RecommendationDetailRules component for displaying house rules, safety, and cancellation policy.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.item - The item containing rules, safety_security, and policy.
+ * @returns {JSX.Element} The rendered recommendation detail rules component.
+ */
+const RecommendationDetailRules = ({ item }) => {
+  return (
+    &lt;>
+      &lt;Fluid color="dark">
+        &lt;h2 className="title" style={{ padding: "1.5rem 0 0 0" }}>
+          Qué tenés que saber
+        &lt;/h2>
+      &lt;/Fluid>
+      &lt;Divider />
+      &lt;Fluid color="dark">
+        &lt;div className="knowing_row">
+          &lt;div className="knowing_row_s">
+            &lt;h2 style={{ padding: "1.5rem 0" }}>Normas de la casa&lt;/h2>
+            {item?.rules?.split("*").map((i, index) => (
+              &lt;p key={index} style={{ padding: "1rem 0" }}>
+                {i}
+              &lt;/p>
+            ))}
+          &lt;/div>
+          &lt;div className="knowing_row_s">
+            &lt;h2 style={{ padding: "1.5rem 0" }}>Salud y seguridad&lt;/h2>
+            {item?.safety_security?.split("*").map((i, index) => (
+              &lt;p key={index} style={{ padding: "1rem 0" }}>
+                {i}
+              &lt;/p>
+            ))}
+          &lt;/div>
+          &lt;div className="knowing_row_s">
+            &lt;h2 style={{ padding: "1.5rem 0" }}>Política de cancelación&lt;/h2>
+            {item?.policy?.split("*").map((i, index) => (
+              &lt;p key={index} style={{ padding: "1rem 0", maxWidth: "95%" }}>
+                {i}
+              &lt;/p>
+            ))}
+          &lt;/div>
+          &lt;div className="knowing_row_s">&lt;/div>
+        &lt;/div>
+      &lt;/Fluid>
+    &lt;/>
+  );
+};
+
+export default RecommendationDetailRules;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AddAttribute">AddAttribute</a></li><li><a href="global.html#AddImage">AddImage</a></li><li><a href="global.html#AutoComplete">AutoComplete</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#Categories">Categories</a></li><li><a href="global.html#CategoryCard">CategoryCard</a></li><li><a href="global.html#Confirmed">Confirmed</a></li><li><a href="global.html#Context">Context</a></li><li><a href="global.html#DateRangePicker">DateRangePicker</a></li><li><a href="global.html#Divider">Divider</a></li><li><a href="global.html#Fluid">Fluid</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#Galery">Galery</a></li><li><a href="global.html#GlobalContextProvider">GlobalContextProvider</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#IconItem">IconItem</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#Layout">Layout</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Map">Map</a></li><li><a href="global.html#Modal">Modal</a></li><li><a href="global.html#ProductAdministration">ProductAdministration</a></li><li><a href="global.html#ProductAttribute">ProductAttribute</a></li><li><a href="global.html#ProductData">ProductData</a></li><li><a href="global.html#ProductImage">ProductImage</a></li><li><a href="global.html#ProductPolicy">ProductPolicy</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RecommedationDetailRating">RecommedationDetailRating</a></li><li><a href="global.html#RecommendationContent">RecommendationContent</a></li><li><a href="global.html#RecommendationDetailCalendar">RecommendationDetailCalendar</a></li><li><a href="global.html#RecommendationDetailDescription">RecommendationDetailDescription</a></li><li><a href="global.html#RecommendationDetailHeader">RecommendationDetailHeader</a></li><li><a href="global.html#RecommendationDetailMap">RecommendationDetailMap</a></li><li><a href="global.html#RecommendationDetailRules">RecommendationDetailRules</a></li><li><a href="global.html#RecommendationDetails">RecommendationDetails</a></li><li><a href="global.html#Recommendations">Recommendations</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#Reservation">Reservation</a></li><li><a href="global.html#Search">Search</a></li><li><a href="global.html#Select">Select</a></li><li><a href="global.html#Slider">Slider</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#TextArea">TextArea</a></li><li><a href="global.html#ToggleIcon">ToggleIcon</a></li><li><a href="global.html#UserContextProvider">UserContextProvider</a></li><li><a href="global.html#capitalize">capitalize</a></li><li><a href="global.html#convertDate">convertDate</a></li><li><a href="global.html#convertDateEs">convertDateEs</a></li><li><a href="global.html#createProduct">createProduct</a></li><li><a href="global.html#createReservations">createReservations</a></li><li><a href="global.html#emailValidate">emailValidate</a></li><li><a href="global.html#fetchApi">fetchApi</a></li><li><a href="global.html#getAvailableProductsByDate">getAvailableProductsByDate</a></li><li><a href="global.html#getAvailableProductsByDateAndCity">getAvailableProductsByDateAndCity</a></li><li><a href="global.html#getCategories">getCategories</a></li><li><a href="global.html#getCities">getCities</a></li><li><a href="global.html#getFeatures">getFeatures</a></li><li><a href="global.html#getInitials">getInitials</a></li><li><a href="global.html#getProductById">getProductById</a></li><li><a href="global.html#getProducts">getProducts</a></li><li><a href="global.html#getProductsByCategories">getProductsByCategories</a></li><li><a href="global.html#getProductsByCategoryId">getProductsByCategoryId</a></li><li><a href="global.html#getProductsByCityName">getProductsByCityName</a></li><li><a href="global.html#getReservationsByProductId">getReservationsByProductId</a></li><li><a href="global.html#getRoleStyle">getRoleStyle</a></li><li><a href="global.html#loginUser">loginUser</a></li><li><a href="global.html#parseJwt">parseJwt</a></li><li><a href="global.html#passwordValidate">passwordValidate</a></li><li><a href="global.html#registerUser">registerUser</a></li><li><a href="global.html#toFontawesome">toFontawesome</a></li><li><a href="global.html#useOutsideClick">useOutsideClick</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sat May 24 2025 15:43:16 GMT-0500 (Colombia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

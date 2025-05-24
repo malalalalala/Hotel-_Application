@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: context/GlobalContext.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: context/GlobalContext.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState, useEffect } from "react";
+import {
+  getCategories,
+  getCities,
+  getProducts,
+  getProductsByCategoryId,
+  getProductsByCityName,
+} from "../api/services/services";
+
+/**
+ * React context for global application state (categories, recommendations, cities, etc).
+ *
+ * @type {React.Context}
+ */
+const Context = React.createContext({});
+
+/**
+ * Provider component for GlobalContext, managing global state and data fetching.
+ *
+ * @param {Object} props - Component props.
+ * @param {React.ReactNode} props.children - The child components.
+ * @returns {JSX.Element} The provider with global context value.
+ */
+export function GlobalContextProvider({ children }) {
+  const [categories, setCategories] = useState([]);
+  const [categorySelected, setCategorySelected] = useState();
+  const [recommendations, setRecommendations] = useState([]);
+  const [recommendationsSelected, setRecommendationsSelected] = useState();
+  const [selectedOption, setSelectedOption] = useState({
+    cityId: "",
+    cityName: "",
+  });
+  const [cities, setCities] = useState([]);
+  const [title, setTitle] = useState("Recomendaciones");
+  const [recommendationItem, setRecommendationItem] = useState();
+  const [loadingCategories, setLoadingCategories] = useState(false);
+  const [loadingRecommendations, setLoadingRecommendations] = useState(false);
+  const [bookingDate, setBookingDate] = useState(false);
+  const [itemId, setItemId] = useState();
+
+  useEffect(() => {
+    setLoadingCategories(true);
+    const fetchCategories = async () => {
+      const categories = await getCategories();
+      setCategories(categories.data);
+      setLoadingCategories(false);
+    };
+    fetchCategories();
+
+    setLoadingRecommendations(true);
+    const fetchRecommendations = async () => {
+      const recommendations = await getProducts();
+      setRecommendations(recommendations.data);
+      setLoadingRecommendations(false);
+    };
+    fetchRecommendations();
+
+    const fetchCities = async () => {
+      const cities = await getCities();
+      setCities(cities.data);
+    };
+
+    fetchCities();
+  }, []);
+
+  useEffect(() => {
+    if (categorySelected) {
+      setLoadingRecommendations(true);
+      const fetchProductsByCategoryId = async () => {
+        const productsByCategoryId = await getProductsByCategoryId(
+          categorySelected
+        );
+        setRecommendations(productsByCategoryId.data);
+        setTitle(
+          `Recomendaciones de ${productsByCategoryId.data[0].category.title}`
+        );
+        setLoadingRecommendations(false);
+      };
+      fetchProductsByCategoryId();
+    }
+  }, [categorySelected]);
+
+  useEffect(() => {
+    if (selectedOption.cityName) {
+      setLoadingRecommendations(true);
+
+      const fetchProductsByCityName = async () => {
+        try {
+          const productsByCityName = await getProductsByCityName(
+            selectedOption.cityName
+          );
+
+          if (productsByCityName.data.length === 0) {
+            setTitle(
+              `No se encontraron recomendaciones para ${selectedOption.cityName}`
+            );
+            setRecommendations([]);
+          } else {
+            setRecommendations(productsByCityName.data);
+            setTitle(
+              `Recomendaciones de ${productsByCityName.data[0].city.name}`
+            );
+          }
+        } catch (error) {
+          console.error("Error al obtener productos:", error);
+          setTitle("Ocurrió un error al buscar recomendaciones");
+        } finally {
+          setLoadingRecommendations(false);
+        }
+      };
+
+      fetchProductsByCityName();
+    }
+  }, [selectedOption.cityName]);
+
+  return (
+    &lt;Context.Provider
+      value={{
+        categories,
+        setCategories,
+        categorySelected,
+        setCategorySelected,
+        recommendations,
+        setRecommendations,
+        recommendationsSelected,
+        setRecommendationsSelected,
+        selectedOption,
+        setSelectedOption,
+        cities,
+        setCities,
+        title,
+        setTitle,
+        recommendationItem,
+        setRecommendationItem, // todo es de home
+        loadingCategories,
+        setLoadingCategories,
+        loadingRecommendations,
+        setLoadingRecommendations,
+        bookingDate,
+        setBookingDate,
+        itemId,
+        setItemId,
+      }}
+    >
+      {children}
+    &lt;/Context.Provider>
+  );
+}
+
+export default Context;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AddAttribute">AddAttribute</a></li><li><a href="global.html#AddImage">AddImage</a></li><li><a href="global.html#AutoComplete">AutoComplete</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#Categories">Categories</a></li><li><a href="global.html#CategoryCard">CategoryCard</a></li><li><a href="global.html#Confirmed">Confirmed</a></li><li><a href="global.html#Context">Context</a></li><li><a href="global.html#DateRangePicker">DateRangePicker</a></li><li><a href="global.html#Divider">Divider</a></li><li><a href="global.html#Fluid">Fluid</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#Galery">Galery</a></li><li><a href="global.html#GlobalContextProvider">GlobalContextProvider</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#IconItem">IconItem</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#Layout">Layout</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Map">Map</a></li><li><a href="global.html#Modal">Modal</a></li><li><a href="global.html#ProductAdministration">ProductAdministration</a></li><li><a href="global.html#ProductAttribute">ProductAttribute</a></li><li><a href="global.html#ProductData">ProductData</a></li><li><a href="global.html#ProductImage">ProductImage</a></li><li><a href="global.html#ProductPolicy">ProductPolicy</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RecommedationDetailRating">RecommedationDetailRating</a></li><li><a href="global.html#RecommendationContent">RecommendationContent</a></li><li><a href="global.html#RecommendationDetailCalendar">RecommendationDetailCalendar</a></li><li><a href="global.html#RecommendationDetailDescription">RecommendationDetailDescription</a></li><li><a href="global.html#RecommendationDetailHeader">RecommendationDetailHeader</a></li><li><a href="global.html#RecommendationDetailMap">RecommendationDetailMap</a></li><li><a href="global.html#RecommendationDetailRules">RecommendationDetailRules</a></li><li><a href="global.html#RecommendationDetails">RecommendationDetails</a></li><li><a href="global.html#Recommendations">Recommendations</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#Reservation">Reservation</a></li><li><a href="global.html#Search">Search</a></li><li><a href="global.html#Select">Select</a></li><li><a href="global.html#Slider">Slider</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#TextArea">TextArea</a></li><li><a href="global.html#ToggleIcon">ToggleIcon</a></li><li><a href="global.html#UserContextProvider">UserContextProvider</a></li><li><a href="global.html#capitalize">capitalize</a></li><li><a href="global.html#convertDate">convertDate</a></li><li><a href="global.html#convertDateEs">convertDateEs</a></li><li><a href="global.html#createProduct">createProduct</a></li><li><a href="global.html#createReservations">createReservations</a></li><li><a href="global.html#emailValidate">emailValidate</a></li><li><a href="global.html#fetchApi">fetchApi</a></li><li><a href="global.html#getAvailableProductsByDate">getAvailableProductsByDate</a></li><li><a href="global.html#getAvailableProductsByDateAndCity">getAvailableProductsByDateAndCity</a></li><li><a href="global.html#getCategories">getCategories</a></li><li><a href="global.html#getCities">getCities</a></li><li><a href="global.html#getFeatures">getFeatures</a></li><li><a href="global.html#getInitials">getInitials</a></li><li><a href="global.html#getProductById">getProductById</a></li><li><a href="global.html#getProducts">getProducts</a></li><li><a href="global.html#getProductsByCategories">getProductsByCategories</a></li><li><a href="global.html#getProductsByCategoryId">getProductsByCategoryId</a></li><li><a href="global.html#getProductsByCityName">getProductsByCityName</a></li><li><a href="global.html#getReservationsByProductId">getReservationsByProductId</a></li><li><a href="global.html#getRoleStyle">getRoleStyle</a></li><li><a href="global.html#loginUser">loginUser</a></li><li><a href="global.html#parseJwt">parseJwt</a></li><li><a href="global.html#passwordValidate">passwordValidate</a></li><li><a href="global.html#registerUser">registerUser</a></li><li><a href="global.html#toFontawesome">toFontawesome</a></li><li><a href="global.html#useOutsideClick">useOutsideClick</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sat May 24 2025 15:43:15 GMT-0500 (Colombia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

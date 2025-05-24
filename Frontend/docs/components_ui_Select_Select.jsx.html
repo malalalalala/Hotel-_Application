@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/ui/Select/Select.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/ui/Select/Select.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState } from "react";
+import "./select.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import Divider from "../Divider/Divider";
+
+/**
+ * Select component for choosing an option from a dropdown list.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {string} props.inputLabel - The label for the select field.
+ * @param {string} props.placeholder - Placeholder text for the select.
+ * @param {Array&lt;string>} props.options - The list of options to display.
+ * @param {function} props.setNewProduct - Function to update the new product state.
+ * @param {Object} props.newProduct - The current new product state.
+ * @param {string} props.selectType - The type of select (e.g., "city", "category").
+ * @param {Array&lt;Object>} props.fullList - The full list of items for lookup.
+ * @returns {JSX.Element} The rendered select component.
+ */
+const Select = ({
+  inputLabel,
+  placeholder,
+  options,
+  setNewProduct,
+  newProduct,
+  selectType,
+  fullList,
+}) => {
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggling = () => setIsOpen((prevState) => !prevState);
+
+  const handleClick = (option, selectType, fullList) => () => {
+    setSelectedOption(option);
+    setIsOpen(false);
+    if (selectType === "city") {
+      setNewProduct({
+        ...newProduct,
+        city: { id: fullList.find((item) => item.name === option).id },
+      });
+    }
+    if (selectType === "category") {
+      setNewProduct({
+        ...newProduct,
+        category: { id: fullList.find((item) => item.title === option).id },
+      });
+    }
+  };
+
+  return (
+    &lt;div className="select_container">
+      &lt;label>{inputLabel}&lt;/label>
+      &lt;div className="">
+        &lt;div className="">
+          &lt;div
+            onClick={toggling}
+            className={`input ${selectedOption ? "selected" : ""}`}
+          >
+            {selectedOption || placeholder}
+            &lt;div className={isOpen ? "chevron" : "chevron rotate"}>
+              &lt;FontAwesomeIcon icon={faChevronUp} />
+            &lt;/div>
+          &lt;/div>
+
+          {isOpen &amp;&amp; (
+            &lt;div className="list_select_container">
+              &lt;ul className="list_select_ul">
+                {options.map((option) => (
+                  &lt;li
+                    value={option}
+                    key={option}
+                    className="list_select_li"
+                    onClick={handleClick(option, selectType, fullList)}
+                  >
+                    &lt;div className="list_content">
+                      &lt;div className="text_container">
+                        &lt;div className="option_name text2">{option}&lt;/div>
+                      &lt;/div>
+                      {options[options.length - 1] === option ? (
+                        ""
+                      ) : (
+                        &lt;Divider />
+                      )}
+                    &lt;/div>
+                  &lt;/li>
+                ))}
+              &lt;/ul>
+            &lt;/div>
+          )}
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+
+export default Select;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AddAttribute">AddAttribute</a></li><li><a href="global.html#AddImage">AddImage</a></li><li><a href="global.html#AutoComplete">AutoComplete</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#Categories">Categories</a></li><li><a href="global.html#CategoryCard">CategoryCard</a></li><li><a href="global.html#Confirmed">Confirmed</a></li><li><a href="global.html#Context">Context</a></li><li><a href="global.html#DateRangePicker">DateRangePicker</a></li><li><a href="global.html#Divider">Divider</a></li><li><a href="global.html#Fluid">Fluid</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#Galery">Galery</a></li><li><a href="global.html#GlobalContextProvider">GlobalContextProvider</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#IconItem">IconItem</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#Layout">Layout</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Map">Map</a></li><li><a href="global.html#Modal">Modal</a></li><li><a href="global.html#ProductAdministration">ProductAdministration</a></li><li><a href="global.html#ProductAttribute">ProductAttribute</a></li><li><a href="global.html#ProductData">ProductData</a></li><li><a href="global.html#ProductImage">ProductImage</a></li><li><a href="global.html#ProductPolicy">ProductPolicy</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RecommedationDetailRating">RecommedationDetailRating</a></li><li><a href="global.html#RecommendationContent">RecommendationContent</a></li><li><a href="global.html#RecommendationDetailCalendar">RecommendationDetailCalendar</a></li><li><a href="global.html#RecommendationDetailDescription">RecommendationDetailDescription</a></li><li><a href="global.html#RecommendationDetailHeader">RecommendationDetailHeader</a></li><li><a href="global.html#RecommendationDetailMap">RecommendationDetailMap</a></li><li><a href="global.html#RecommendationDetailRules">RecommendationDetailRules</a></li><li><a href="global.html#RecommendationDetails">RecommendationDetails</a></li><li><a href="global.html#Recommendations">Recommendations</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#Reservation">Reservation</a></li><li><a href="global.html#Search">Search</a></li><li><a href="global.html#Select">Select</a></li><li><a href="global.html#Slider">Slider</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#TextArea">TextArea</a></li><li><a href="global.html#ToggleIcon">ToggleIcon</a></li><li><a href="global.html#UserContextProvider">UserContextProvider</a></li><li><a href="global.html#capitalize">capitalize</a></li><li><a href="global.html#convertDate">convertDate</a></li><li><a href="global.html#convertDateEs">convertDateEs</a></li><li><a href="global.html#createProduct">createProduct</a></li><li><a href="global.html#createReservations">createReservations</a></li><li><a href="global.html#emailValidate">emailValidate</a></li><li><a href="global.html#fetchApi">fetchApi</a></li><li><a href="global.html#getAvailableProductsByDate">getAvailableProductsByDate</a></li><li><a href="global.html#getAvailableProductsByDateAndCity">getAvailableProductsByDateAndCity</a></li><li><a href="global.html#getCategories">getCategories</a></li><li><a href="global.html#getCities">getCities</a></li><li><a href="global.html#getFeatures">getFeatures</a></li><li><a href="global.html#getInitials">getInitials</a></li><li><a href="global.html#getProductById">getProductById</a></li><li><a href="global.html#getProducts">getProducts</a></li><li><a href="global.html#getProductsByCategories">getProductsByCategories</a></li><li><a href="global.html#getProductsByCategoryId">getProductsByCategoryId</a></li><li><a href="global.html#getProductsByCityName">getProductsByCityName</a></li><li><a href="global.html#getReservationsByProductId">getReservationsByProductId</a></li><li><a href="global.html#getRoleStyle">getRoleStyle</a></li><li><a href="global.html#loginUser">loginUser</a></li><li><a href="global.html#parseJwt">parseJwt</a></li><li><a href="global.html#passwordValidate">passwordValidate</a></li><li><a href="global.html#registerUser">registerUser</a></li><li><a href="global.html#toFontawesome">toFontawesome</a></li><li><a href="global.html#useOutsideClick">useOutsideClick</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sat May 24 2025 15:43:16 GMT-0500 (Colombia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

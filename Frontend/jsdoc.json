@@ -1,0 +1,19 @@
+{
+  "source": {
+    "include": ["src"],
+    "exclude": [
+      "src/styles",
+      "src/constants",
+      "src/public",
+      "src/**/*.test.js",
+      "src/**/*.test.jsx",
+      "src/**/*.spec.js",
+      "src/**/*.spec.jsx"
+    ]
+  },
+  "opts": {
+    "destination": "./docs",
+    "recurse": true
+  },
+  "plugins": []
+} 
