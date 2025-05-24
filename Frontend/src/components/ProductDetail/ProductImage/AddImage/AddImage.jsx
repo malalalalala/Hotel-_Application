@@ -8,6 +8,19 @@ import {
   faWarning,
 } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * AddImage component for adding or removing images to a product.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {function} props.handleImages - Function to handle adding/removing images.
+ * @param {boolean} [props.componentImage=false] - Whether the image is part of the component list.
+ * @param {number} props.limit - The current number of images.
+ * @param {function} props.onChange - Function to handle input changes.
+ * @param {string} props.inputValue - The current value of the input field.
+ * @param {Array<string>} [props.componentImages] - The current list of images.
+ * @returns {JSX.Element} The rendered add image component.
+ */
 const AddImage = ({
   handleImages,
   componentImage = false,

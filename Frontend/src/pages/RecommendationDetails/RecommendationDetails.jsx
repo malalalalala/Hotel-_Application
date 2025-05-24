@@ -5,6 +5,12 @@ import RecommendationDetailHeader from "../../components/RecommendationDetail/Re
 import RecommendationDetailRules from "../../components/RecommendationDetail/RecommendationDetailRules/RecommendationDetailRules";
 import Spinner from "../../components/ui/Spinner/Spinner";
 
+/**
+ * RecommendationDetails page component for displaying product details, header, and rules.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered recommendation details page.
+ */
 const RecommendationDetails = () => {
   const { productId } = useParams();
   const [item, setItem] = useState();

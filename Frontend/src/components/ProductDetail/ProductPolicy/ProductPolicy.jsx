@@ -2,6 +2,16 @@ import React from "react";
 import TextArea from "../../ui/TextArea/TextArea";
 import "./productPolicy.scss";
 
+/**
+ * ProductPolicy component for displaying and editing product policies (house rules, safety, cancellation).
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.newProduct - The current product data.
+ * @param {function} props.setNewProduct - Function to update the product data.
+ * @param {function} props.handleValueChange - Function to handle input changes.
+ * @returns {JSX.Element} The rendered product policy component.
+ */
 const ProductPolicy = ({ newProduct, setNewProduct, handleValueChange }) => {
   return (
     <>

@@ -6,6 +6,12 @@ import GlobalContext from "../../context/GlobalContext";
 import Spinner from "../ui/Spinner/Spinner";
 import Fluid from "../ui/Fluid/Fluid";
 
+/**
+ * Categories component for displaying a list of category cards.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered categories component.
+ */
 const Categories = () => {
   const { categories, loadingCategories } = useContext(GlobalContext);
 

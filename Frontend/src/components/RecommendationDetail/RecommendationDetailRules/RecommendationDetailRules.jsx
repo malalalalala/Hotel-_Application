@@ -3,6 +3,14 @@ import "./recommendationDetailRules.scss";
 import Fluid from "../../../components/ui/Fluid/Fluid";
 import Divider from "../../ui/Divider/Divider";
 
+/**
+ * RecommendationDetailRules component for displaying house rules, safety, and cancellation policy.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.item - The item containing rules, safety_security, and policy.
+ * @returns {JSX.Element} The rendered recommendation detail rules component.
+ */
 const RecommendationDetailRules = ({ item }) => {
   return (
     <>

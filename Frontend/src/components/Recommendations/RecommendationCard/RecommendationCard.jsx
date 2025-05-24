@@ -16,6 +16,24 @@ import "../recommendations.scss";
 import { NavLink } from "react-router-dom";
 import Button from "../../ui/Button/Button";
 
+/**
+ * RecommendationCard component for displaying a recommendation with image, features, and details.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {string|number} props.id - The ID of the recommendation.
+ * @param {string} props.category - The category of the recommendation.
+ * @param {string} props.categoryName - The name of the recommendation.
+ * @param {string} props.opinion - The opinion or review summary.
+ * @param {string} props.location - The location of the recommendation.
+ * @param {string} props.categoryDescription - The description of the recommendation.
+ * @param {number} props.point - The points or rating value.
+ * @param {string} props.image_url - The image URL for the recommendation.
+ * @param {number} props.star - The number of stars for the recommendation.
+ * @param {Array<{icon: string}>} props.featureList - List of features with icons.
+ * @returns {JSX.Element} The rendered recommendation card component.
+ */
+
 const toFontawesome = (icon) => {
   switch (icon) {
     case "faWifi":

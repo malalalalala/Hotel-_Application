@@ -4,6 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faStar } from "@fortawesome/free-solid-svg-icons";
 import Fluid from "../../../components/ui/Fluid/Fluid";
 
+/**
+ * RecommedationDetailRating component for displaying the rating, location, and points of an item.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.item - The item containing city, location, opinion, star, and point.
+ * @returns {JSX.Element} The rendered recommendation detail rating component.
+ */
 const RecommedationDetailRating = ({ item }) => {
   return (
     <>

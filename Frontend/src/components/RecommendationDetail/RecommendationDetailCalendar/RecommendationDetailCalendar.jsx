@@ -8,6 +8,14 @@ import UserContext from "../../../context/UserContext";
 import GlobalContext from "../../../context/GlobalContext";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * RecommendationDetailCalendar component for displaying available dates and reservation button.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.item - The item containing the id for reservation and calendar.
+ * @returns {JSX.Element} The rendered recommendation detail calendar component.
+ */
 const RecommendationDetailCalendar = ({ item }) => {
   const { userLogged, setFromBookingFlow } = useContext(UserContext);
   const { setItemId } = useContext(GlobalContext);

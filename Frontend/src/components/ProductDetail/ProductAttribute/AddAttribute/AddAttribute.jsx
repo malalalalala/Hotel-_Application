@@ -12,6 +12,19 @@ import "../productAttribute.scss";
 import useOutsideClick from "../../../../hooks/useOutsideClick";
 import _ from "lodash";
 
+/**
+ * AddAttribute component for adding or removing amenities/features to a product.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {function} props.handleAttributes - Function to handle adding/removing attributes.
+ * @param {boolean} [props.componentAttribute=false] - Whether the attribute is part of the component list.
+ * @param {number} props.limit - The current number of attributes.
+ * @param {Object} [props.values] - The values for the attribute (iconName, iconValue, iconId).
+ * @param {Array<Object>} [props.componentAttributes] - The current list of attributes.
+ * @param {Array<Object>} [props.features] - The list of available features.
+ * @returns {JSX.Element} The rendered add attribute component.
+ */
 const AddAttribute = ({
   handleAttributes,
   componentAttribute = false,

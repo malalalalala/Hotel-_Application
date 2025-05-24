@@ -2,6 +2,16 @@ import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../context/UserContext";
 
+/**
+ * ProtectedRoute component to restrict access based on user authentication and role.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {string} props.role - The required user role to access the route.
+ * @param {string} props.from - The origin of the route (e.g., 'administration', 'reservation').
+ * @param {React.ReactNode} props.children - The child components to render if access is granted.
+ * @returns {JSX.Element} The rendered protected route or redirects as needed.
+ */
 const ProtectedRoute = (props) => {
   const navigate = useNavigate();
 

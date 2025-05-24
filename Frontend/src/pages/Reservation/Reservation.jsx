@@ -19,6 +19,12 @@ import Select from "../../components/ui/Select/Select";
 import RecommendationDetailHeader from "../../components/RecommendationDetail/RecommendationDetailHeader/RecommendationDetailHeader";
 import RecommendationDetailRules from "../../components/RecommendationDetail/RecommendationDetailRules/RecommendationDetailRules";
 
+/**
+ * Reservation page component for booking a product and entering user details.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered reservation page.
+ */
 const Reservation = () => {
   const [fromValue, setFromValue] = useState("__/__/__");
   const [toValue, setToValue] = useState("__/__/__");

@@ -8,6 +8,12 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 
+/**
+ * Confirmed page component for displaying a confirmation message after an action.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered confirmed page.
+ */
 const Confirmed = () => {
   const location = useLocation();
   const successInfo = location.state;

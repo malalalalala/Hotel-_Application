@@ -7,8 +7,20 @@ import {
   getProductsByCityName,
 } from "../api/services/services";
 
+/**
+ * React context for global application state (categories, recommendations, cities, etc).
+ *
+ * @type {React.Context}
+ */
 const Context = React.createContext({});
 
+/**
+ * Provider component for GlobalContext, managing global state and data fetching.
+ *
+ * @param {Object} props - Component props.
+ * @param {React.ReactNode} props.children - The child components.
+ * @returns {JSX.Element} The provider with global context value.
+ */
 export function GlobalContextProvider({ children }) {
   const [categories, setCategories] = useState([]);
   const [categorySelected, setCategorySelected] = useState();

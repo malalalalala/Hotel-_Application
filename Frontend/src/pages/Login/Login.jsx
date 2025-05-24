@@ -17,6 +17,12 @@ const initialValues = {
   password: "",
 };
 
+/**
+ * Login page component for user authentication and session management.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered login page.
+ */
 const Login = () => {
   const [formValues, setFormValues] = useState(initialValues);
   const [error, setError] = useState("register_error_oculto");

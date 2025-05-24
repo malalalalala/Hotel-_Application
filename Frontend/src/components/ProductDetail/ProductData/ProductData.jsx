@@ -4,6 +4,20 @@ import Select from "../../ui/Select/Select";
 import TextArea from "../../ui/TextArea/TextArea";
 import "./productData.scss";
 
+/**
+ * ProductData component for displaying and editing product information fields.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.newProduct - The current product data.
+ * @param {function} props.setNewProduct - Function to update the product data.
+ * @param {function} props.handleValueChange - Function to handle input changes.
+ * @param {Array<string>} props.categoryList - List of category options.
+ * @param {Array<string>} props.cityList - List of city options.
+ * @param {Array<Object>} props.categories - Full list of category objects.
+ * @param {Array<Object>} props.cities - Full list of city objects.
+ * @returns {JSX.Element} The rendered product data component.
+ */
 const ProductData = ({
   newProduct,
   setNewProduct,

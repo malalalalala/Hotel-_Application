@@ -6,6 +6,17 @@ import "../Calendar/dateRangePicker.scss";
 import es from "date-fns/locale/es";
 import { getReservationsByProductId } from "../../api/services/services";
 
+/**
+ * DateRangePicker component for selecting a date range, with disabled dates based on reservations.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {function} props.setFromValue - Function to set the start date value.
+ * @param {function} props.setToValue - Function to set the end date value.
+ * @param {function} props.setIsDisabledRange - Function to set if the selected range is disabled.
+ * @param {string|number} props.itemId - The ID of the item to fetch reservations for.
+ * @returns {JSX.Element} The rendered date range picker component.
+ */
 const DateRangePicker = ({
   setFromValue,
   setToValue,

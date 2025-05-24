@@ -2,6 +2,12 @@ import React from "react";
 import "./footer.scss";
 import SocialMedia from "../../shared-components/SocialMedia/SocialMedia";
 
+/**
+ * Footer component for displaying the website footer and social media links.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered footer component.
+ */
 const Footer = () => {
   return (
     <footer className="footer_container">

@@ -4,6 +4,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import Divider from "../Divider/Divider";
 
+/**
+ * Select component for choosing an option from a dropdown list.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {string} props.inputLabel - The label for the select field.
+ * @param {string} props.placeholder - Placeholder text for the select.
+ * @param {Array<string>} props.options - The list of options to display.
+ * @param {function} props.setNewProduct - Function to update the new product state.
+ * @param {Object} props.newProduct - The current new product state.
+ * @param {string} props.selectType - The type of select (e.g., "city", "category").
+ * @param {Array<Object>} props.fullList - The full list of items for lookup.
+ * @returns {JSX.Element} The rendered select component.
+ */
 const Select = ({
   inputLabel,
   placeholder,

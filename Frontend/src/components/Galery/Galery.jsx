@@ -7,6 +7,14 @@ import { faShareSquare } from "@fortawesome/free-regular-svg-icons";
 import Modal from "../Modal/Modal";
 import ToggleIcon from "../ui/ToggleIcon/ToggleIcon";
 
+/**
+ * Galery component for displaying a gallery of images with like and share functionality.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.item - The item containing imageList and other data.
+ * @returns {JSX.Element} The rendered gallery component.
+ */
 const Galery = ({ item }) => {
   const [showModal, setShowModal] = useState(false);
   const handleKeyup = (e) => e.keyCode === 27 && setShowModal(false);
