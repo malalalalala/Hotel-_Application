@@ -11,7 +11,6 @@ Fecha de creación: 10 de mayo de 2025
 
 Table of Contents
 =================
-* [Historial de Revisiones](#historial-de-revisiones)
 * 1 [Introducción](#1-introducción)
   * 1.1 [Propósito del Documento](#11-propósito-del-documento)
   * 1.2 [Alcance del Producto](#12-alcance-del-producto)
