@@ -24,17 +24,15 @@ const DateRangeSearch = ({ error, setError }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggling = () => setIsOpen((prevState) => !prevState);
 
-  const [dateSelected, setDateSelected] = useState(null);
-
   const {
-    setRecommendations,
     setTitle,
     setBookingDate,
     setLoadingRecommendations,
+    setSelectedDates
   } = useContext(GlobalContext);
 
   const handleButtonClickConfirm = () => {
-    setDateSelected({ startDate: fromValue, endDate: toValue });
+    setSelectedDates({ startDate: fromValue, endDate: toValue });
 
     const searchedFrom = format(selectedRange.from, "dd/MM/y");
     const searchedTo = format(selectedRange.to, "dd/MM/y");
@@ -74,25 +72,6 @@ const DateRangeSearch = ({ error, setError }) => {
     };
   }, []);
 
-  useEffect(() => {
-    if (dateSelected) {
-      setLoadingRecommendations(true);
-      const { startDate, endDate } = dateSelected;
-      sessionStorage.setItem("startDate", startDate);
-      sessionStorage.setItem("endDate", endDate);
-      const fetchAvailableProductsByDate = async () => {
-        const productsByDate = await getAvailableProductsByDate(
-          startDate,
-          endDate
-        );
-        setRecommendations(productsByDate.data);
-        setBookingDate(true);
-        setLoadingRecommendations(false);
-      };
-      fetchAvailableProductsByDate();
-    }
-  }, [dateSelected]);
-
   const disabledDays = [{ from: new Date(1800, 1, 1), to: new Date() }];
 
   return (
@@ -102,20 +81,19 @@ const DateRangeSearch = ({ error, setError }) => {
           <div
             onClick={toggling}
             className={`date_search_option ${
-              selectedRange && dateSelected ? "selected" : ""
+              selectedRange && selectedRange.from && selectedRange.to ? "selected" : ""
             }`}
           >
             <div
               className={`icon_default ${
-                selectedRange && dateSelected ? "selected" : ""
+                selectedRange && selectedRange.from && selectedRange.to ? "selected" : ""
               }`}
             >
               <FontAwesomeIcon icon={faCalendarDay} size="xl" />
             </div>
             {selectedRange &&
             selectedRange.to &&
-            selectedRange.from &&
-            dateSelected
+            selectedRange.from
               ? `${format(selectedRange.from, "dd/MM/y")} - ${format(
                   selectedRange.to,
                   "dd/MM/y"
