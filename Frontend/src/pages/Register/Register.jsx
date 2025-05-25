@@ -27,6 +27,12 @@ const initialValues = {
   },
 };
 
+/**
+ * Register page component for user account creation and validation.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered register page.
+ */
 const Register = () => {
   const [error, setError] = useState("register_error_oculto");
   const [required, setRequired] = useState(false);

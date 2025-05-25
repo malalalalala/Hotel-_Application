@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./slider.scss";
 
+/**
+ * Slider component for displaying a carousel of images with automatic scrolling.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.item - The item containing imageList for the slider.
+ * @returns {JSX.Element} The rendered slider component.
+ */
 const Slider = ({ item }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 

@@ -23,13 +23,16 @@
   }
   @include mv {
     padding: 17px 10px;
-    max-width: 414px;
+    max-width: 600px;
   }
 }
 
 .categories_container_header {
   padding-top: 7px;
   align-self: start;
+  @include mv {
+    padding-left: 10px;
+  }
 }
 
 .category_cards_container {
@@ -39,10 +42,14 @@
   padding: 10px 0;
   justify-content: center;
   @include mv(1000px) {
-    flex-flow:wrap;
+    flex-flow: wrap;
   }
   @include mv(768px) {
     gap: 14px;
+    flex-flow: wrap;
+  }
+  @include mv {
+    flex-flow: wrap;
   }
 }
 
@@ -56,13 +63,14 @@
     opacity: 0.8;
     // transition: border 0.1s ease-out;
   }
-   @include mv(768px) {
+  @include mv(768px) {
     width: 347px;
     flex: 45%;
     min-width: 200px;
   }
   @include mv {
-    width: 392px;
+    width: 300px;
+    flex: auto;
   }
 }
 

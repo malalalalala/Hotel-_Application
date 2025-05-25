@@ -3,6 +3,15 @@ import "./productAttribute.scss";
 import AddAttribute from "./AddAttribute/AddAttribute";
 import { getFeatures } from "../../../api/services/services";
 
+/**
+ * ProductAttribute component for managing and displaying accommodation amenities.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Array<Object>} props.componentAttributes - The list of current attributes.
+ * @param {function} props.setComponentAttributes - Function to update the attributes list.
+ * @returns {JSX.Element} The rendered product attribute component.
+ */
 const ProductAttribute = ({ componentAttributes, setComponentAttributes }) => {
   const [features, setFeatures] = useState([]);
 
@@ -30,7 +39,7 @@ const ProductAttribute = ({ componentAttributes, setComponentAttributes }) => {
   return (
     <>
       <div className="product_container_atributes">
-        <h2>Agregar atributos</h2>
+        <h2>Agregar amenidades del alojamiento</h2>
         <div className="product_container_atributes_add_icons">
           {componentAttributes.map(({ iconName, iconValue, iconId }, index) => (
             <AddAttribute

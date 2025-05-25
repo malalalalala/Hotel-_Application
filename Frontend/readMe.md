@@ -1,93 +1,147 @@
-# Digital Booking
+#  Parchear en Antioquia Application Frontend
 
-Frontend App
+![Hotel App Banner](public/logo192.png)
 
-> This project was bootstrapped with [npm create vite@latest](https://github.com/vitejs/vite.git).
+## Overview
+
+This is the **Frontend** for the Hotel Application, a modern web platform for booking and managing accommodations. 
+
+> **Note:** This frontend requires a compatible backend API. Make sure to configure the backend URL in your `.env.local` file. 
+> If you need the backend, see: [Hotel Application Backend](URL_TO_BACKEND_REPO)
 
 ---
 
 ## Table of Contents
-
-- [Tools version :gear:](#tools-versions)
-- [Available Scripts :spiral_notepad:](#available-scripts)
-- [Folder structure :card_index_dividers:](#folder-structure)
-- [Config Visual Studio Code :gear:](#config-visual-studio-code)
-- [Libraries :green_book:](#third-party-core-libraries)
-
----
-
-## Tools versions
-
-- Node:  v16.17.0
-- NPM: version 8.15.0
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm run dev`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3006](http://localhost:3006) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-
-For runing test in isolation
-Example: npm run test -- Facturacion.test
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Learn More
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Scripts](#scripts)
+- [Documentation](#documentation)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ---
 
-## Folder structure
+## Features
+- 🔍 **Search** for hotels, houses, and more by city and date.
+- 🗂️ **Categories** and recommendations for easy browsing.
+- 🏨 **Product details** with image galleries, amenities, and policies.
+- 📅 **Reservation system** with date pickers and user authentication.
+- 👤 **User registration and login** with role-based access (admin/user).
+- 🛠️ **Admin panel** for property management.
+- 🌐 Responsive and modern UI.
 
-    /api: Connections made with endpoints
-    /assets: resources (images, icons)
-    /components: presentational components shared across features
-    /scripts:
-    /shared-components:
-    /styles: themes, fonts
-    
 ---
 
-### Features
-
-A feature is based off the `develop` branch and merged back into the `develop` branch.
-It will eventually get into `main` when we make a release.
-
-### Working Locally
-
+## Project Structure
 ```
-# checkout develop, fetch the latest changes and pull them from remote into local
-git checkout develop
-git fetch
-git pull origin develop
+Frontend/
+  src/
+    api/           # API service calls
+    components/    # Reusable UI and page components
+    constants/     # App-wide constants
+    context/       # React context providers
+    helpers/       # Utility helpers
+    hooks/         # Custom React hooks
+    pages/         # Main app pages
+    reducers/      # State reducers
+    shared-components/ # Shared UI elements
+    styles/        # SCSS/CSS styles
+    utils/         # Utility functions
+  public/          # Static assets
+  docs/            # Generated documentation (JSDoc)
+  jsdoc.json       # JSDoc configuration
+  package.json     # Project dependencies and scripts
+  vite.config.js   # Vite configuration
+```
 
-# create a feature branch that is based off develop
-git checkout -b feature/XXX-sprint-X
+---
 
-# do your work
-git add something
-git commit -m "first commit"
-git add another
-git commit -m "second commit"
+## Installation
 
-# rebase against develop to pull in any changes that have been made
-# since you started your feature branch.
-git fetch
-git rebase origin/develop
+1. **Clone the repository:**
+   ```bash
+   git clone <repo-url>
+   cd Frontend
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Set up environment variables:**
+   - Copy `.env.local.example` to `.env.local` and configure your API endpoints and keys.
 
-... (30 líneas restantes)
+---
+
+## Usage
+
+- **Start the development server:**
+  ```bash
+  npm run dev
+  ```
+- **Build for production:**
+  ```bash
+  npm run build
+  ```
+- **Preview production build:**
+  ```bash
+  npm run preview
+  ```
+
+---
+
+## Scripts
+- `npm run dev` — Start development server
+- `npm run build` — Build for production
+- `npm run preview` — Preview production build
+- `npx jsdoc -c jsdoc.json` — Generate documentation
+
+---
+
+## Documentation
+
+- **JSDoc HTML documentation:**
+  - Generate with: `npx jsdoc -c jsdoc.json`
+  - Open `docs/index.html` in your browser.
+- **Code is fully documented** with JSDoc comments for all components, hooks, context, and utilities.
+
+---
+
+## Technologies
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [JSDoc](https://jsdoc.app/)
+- [Sass/SCSS](https://sass-lang.com/)
+- [FontAwesome](https://fontawesome.com/)
+- [date-fns](https://date-fns.org/)
+- [react-day-picker](https://react-day-picker.js.org/)
+
+---
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a pull request
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Contact
+
+- **Project Lead:** [Your Name](mailto:your.email@example.com)
+- **GitHub Issues:** [Report a bug or request a feature](../../issues)
+
+---
+
+¡Thank you for using and contributing to the Hotel Application Frontend!

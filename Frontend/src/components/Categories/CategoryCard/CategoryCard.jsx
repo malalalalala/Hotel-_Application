@@ -2,6 +2,17 @@ import React, { useContext } from "react";
 import "../categories.scss";
 import GlobalContext from "../../../context/GlobalContext";
 
+/**
+ * CategoryCard component for displaying a category with image and quantity.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {string|number} props.id - The ID of the category.
+ * @param {string} props.category - The name of the category.
+ * @param {number} props.quantity - The quantity of items in the category.
+ * @param {string} props.url - The image URL for the category.
+ * @returns {JSX.Element} The rendered category card component.
+ */
 const CategoryCard = ({ id, category, quantity, url }) => {
   const { setCategorySelected } = useContext(GlobalContext);
 

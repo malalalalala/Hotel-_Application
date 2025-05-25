@@ -11,6 +11,12 @@ import RecommendationDetailCalendar from "../../components/RecommendationDetail/
 import RecommendationDetailMap from "../../components/RecommendationDetail/RecommendationDetailMap/RecommendationDetailMap";
 import Spinner from "../../components/ui/Spinner/Spinner";
 
+/**
+ * RecommendationContent page component for displaying detailed information about a product.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered recommendation content page.
+ */
 const RecommendationContent = () => {
   const { productId } = useParams();
   const [item, setItem] = useState();

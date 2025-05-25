@@ -1,5 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 
+/**
+ * Custom React hook to detect clicks outside a referenced element and control visibility state.
+ *
+ * @returns {Array} [ref, isVisible, setIsVisible] - ref: React ref object, isVisible: boolean, setIsVisible: function.
+ */
 const useOutsideClick = () => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef();

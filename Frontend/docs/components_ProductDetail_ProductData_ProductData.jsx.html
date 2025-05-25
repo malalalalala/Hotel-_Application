@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/ProductDetail/ProductData/ProductData.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/ProductDetail/ProductData/ProductData.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from "react";
+import Input from "../../ui/Input/Input";
+import Select from "../../ui/Select/Select";
+import TextArea from "../../ui/TextArea/TextArea";
+import "./productData.scss";
+
+/**
+ * ProductData component for displaying and editing product information fields.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.newProduct - The current product data.
+ * @param {function} props.setNewProduct - Function to update the product data.
+ * @param {function} props.handleValueChange - Function to handle input changes.
+ * @param {Array&lt;string>} props.categoryList - List of category options.
+ * @param {Array&lt;string>} props.cityList - List of city options.
+ * @param {Array&lt;Object>} props.categories - Full list of category objects.
+ * @param {Array&lt;Object>} props.cities - Full list of city objects.
+ * @returns {JSX.Element} The rendered product data component.
+ */
+const ProductData = ({
+  newProduct,
+  setNewProduct,
+  handleValueChange,
+  categoryList,
+  cityList,
+  categories,
+  cities,
+}) => {
+  return (
+    &lt;>
+      &lt;div className="product_info">
+        &lt;Input
+          inputLabel="Nombre de la propiedad"
+          inputType="text"
+          inputName="title"
+          id="title"
+          placeholder="Hotel Hermitage"
+          value={newProduct.title}
+          onChange={handleValueChange}
+        />
+        &lt;Select
+          inputLabel="Categoría"
+          placeholder="Hotel"
+          options={categoryList}
+          setNewProduct={setNewProduct}
+          newProduct={newProduct}
+          fullList={categories}
+          selectType="category"
+        />
+      &lt;/div>
+      &lt;div className="product_info">
+        &lt;Input
+          inputLabel="Descripción Ubicación"
+          inputType="text"
+          inputName="location"
+          id="location"
+          placeholder="Situado en pleno centro"
+          value={newProduct.location}
+          onChange={handleValueChange}
+        />
+        &lt;Input
+          inputLabel="Invitación principal para el huesped"
+          inputType="text"
+          inputName="subtitle"
+          id="subtitle"
+          placeholder="Alojate en el centro de la ciudad"
+          value={newProduct.subtitle}
+          onChange={handleValueChange}
+        />
+      &lt;/div>
+      &lt;div className="product_info">
+        &lt;Input
+          inputLabel="Dirección"
+          inputType="text"
+          inputName="address"
+          id="address"
+          placeholder="Av. Colón 1643"
+          value={newProduct.address}
+          onChange={handleValueChange}
+        />
+        &lt;Select
+          inputLabel="Ciudad"
+          placeholder="Dónde estás ubicado"
+          options={cityList}
+          setNewProduct={setNewProduct}
+          newProduct={newProduct}
+          selectType="city"
+          fullList={cities}
+        />
+      &lt;/div>
+      &lt;div className="product_info">
+        &lt;Input
+          inputLabel="Longitud"
+          inputType="number"
+          inputName="length"
+          id="length"
+          placeholder="Longitud"
+          value={newProduct.length}
+          onChange={handleValueChange}
+        />
+        &lt;Input
+          inputLabel="Latitud"
+          inputType="number"
+          inputName="latitude"
+          id="latitude"
+          placeholder="Latitud"
+          value={newProduct.latitude}
+          onChange={handleValueChange}
+        />
+      &lt;/div>
+      &lt;div className="product_info presentation">
+        &lt;Input
+          inputLabel="Presentación"
+          inputType="text"
+          inputName="short_description"
+          id="short_description"
+          placeholder="Gran hotel en el centro de la ciudad"
+          value={newProduct.short_description}
+          onChange={handleValueChange}
+        />
+      &lt;/div>
+      &lt;div className="product_info description">
+        &lt;TextArea
+          inputLabel="Descripción"
+          inputName="long_description"
+          id="long_description"
+          placeholder="Está situado a solo unas calles de..., . En las inmediaciones también hay varios lugares de interés, como ... El Hotel es un hotel sofisticado de 4 estrellas que goza de una ubicación tranquila, a poca distancia de ... El establecimiento sirve un desayuno variado de 07:00 a 10:30."
+          model="description"
+          value={newProduct.long_description}
+          onChange={handleValueChange}
+        />
+      &lt;/div>
+    &lt;/>
+  );
+};
+
+export default ProductData;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AddAttribute">AddAttribute</a></li><li><a href="global.html#AddImage">AddImage</a></li><li><a href="global.html#AutoComplete">AutoComplete</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#Categories">Categories</a></li><li><a href="global.html#CategoryCard">CategoryCard</a></li><li><a href="global.html#Confirmed">Confirmed</a></li><li><a href="global.html#Context">Context</a></li><li><a href="global.html#DateRangePicker">DateRangePicker</a></li><li><a href="global.html#Divider">Divider</a></li><li><a href="global.html#Fluid">Fluid</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#Galery">Galery</a></li><li><a href="global.html#GlobalContextProvider">GlobalContextProvider</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#IconItem">IconItem</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#Layout">Layout</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Map">Map</a></li><li><a href="global.html#Modal">Modal</a></li><li><a href="global.html#ProductAdministration">ProductAdministration</a></li><li><a href="global.html#ProductAttribute">ProductAttribute</a></li><li><a href="global.html#ProductData">ProductData</a></li><li><a href="global.html#ProductImage">ProductImage</a></li><li><a href="global.html#ProductPolicy">ProductPolicy</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RecommedationDetailRating">RecommedationDetailRating</a></li><li><a href="global.html#RecommendationContent">RecommendationContent</a></li><li><a href="global.html#RecommendationDetailCalendar">RecommendationDetailCalendar</a></li><li><a href="global.html#RecommendationDetailDescription">RecommendationDetailDescription</a></li><li><a href="global.html#RecommendationDetailHeader">RecommendationDetailHeader</a></li><li><a href="global.html#RecommendationDetailMap">RecommendationDetailMap</a></li><li><a href="global.html#RecommendationDetailRules">RecommendationDetailRules</a></li><li><a href="global.html#RecommendationDetails">RecommendationDetails</a></li><li><a href="global.html#Recommendations">Recommendations</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#Reservation">Reservation</a></li><li><a href="global.html#Search">Search</a></li><li><a href="global.html#Select">Select</a></li><li><a href="global.html#Slider">Slider</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#TextArea">TextArea</a></li><li><a href="global.html#ToggleIcon">ToggleIcon</a></li><li><a href="global.html#UserContextProvider">UserContextProvider</a></li><li><a href="global.html#capitalize">capitalize</a></li><li><a href="global.html#convertDate">convertDate</a></li><li><a href="global.html#convertDateEs">convertDateEs</a></li><li><a href="global.html#createProduct">createProduct</a></li><li><a href="global.html#createReservations">createReservations</a></li><li><a href="global.html#emailValidate">emailValidate</a></li><li><a href="global.html#fetchApi">fetchApi</a></li><li><a href="global.html#getAvailableProductsByDate">getAvailableProductsByDate</a></li><li><a href="global.html#getAvailableProductsByDateAndCity">getAvailableProductsByDateAndCity</a></li><li><a href="global.html#getCategories">getCategories</a></li><li><a href="global.html#getCities">getCities</a></li><li><a href="global.html#getFeatures">getFeatures</a></li><li><a href="global.html#getInitials">getInitials</a></li><li><a href="global.html#getProductById">getProductById</a></li><li><a href="global.html#getProducts">getProducts</a></li><li><a href="global.html#getProductsByCategories">getProductsByCategories</a></li><li><a href="global.html#getProductsByCategoryId">getProductsByCategoryId</a></li><li><a href="global.html#getProductsByCityName">getProductsByCityName</a></li><li><a href="global.html#getReservationsByProductId">getReservationsByProductId</a></li><li><a href="global.html#getRoleStyle">getRoleStyle</a></li><li><a href="global.html#loginUser">loginUser</a></li><li><a href="global.html#parseJwt">parseJwt</a></li><li><a href="global.html#passwordValidate">passwordValidate</a></li><li><a href="global.html#registerUser">registerUser</a></li><li><a href="global.html#toFontawesome">toFontawesome</a></li><li><a href="global.html#useOutsideClick">useOutsideClick</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sat May 24 2025 15:43:16 GMT-0500 (Colombia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/ProductAdministration/ProductAdministration.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/ProductAdministration/ProductAdministration.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState, useContext } from "react";
+import Fluid from "../../components/ui/Fluid/Fluid";
+import "./productAdministration.scss";
+import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Spinner from "../../components/ui/Spinner/Spinner";
+import Button from "../../components/ui/Button/Button";
+import ProductData from "../../components/ProductDetail/ProductData/ProductData";
+import ProductAttribute from "../../components/ProductDetail/ProductAttribute/ProductAttribute";
+import ProductPolicy from "../../components/ProductDetail/ProductPolicy/ProductPolicy";
+import ProductImage from "../../components/ProductDetail/ProductImage/ProductImage";
+import GlobalContext from "../../context/GlobalContext";
+import UserContext from "../../context/UserContext";
+import { createProduct } from "../../api/services/services";
+
+/**
+ * ProductAdministration page component for creating and managing products.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered product administration page.
+ */
+const ProductAdministration = () => {
+  const navigate = useNavigate();
+  const [newProduct, setNewProduct] = useState({
+    title: "",
+    short_description: "",
+    long_description: "",
+    location: "",
+    point: null,
+    opinion: null,
+    star: null,
+    latitude: 0,
+    length: 0,
+    subtitle: "",
+    policy: "",
+    rules: "",
+    safety_security: "",
+    address: "",
+    featureList: [],
+    category: {},
+    city: {},
+  });
+
+  const [componentAttributes, setComponentAttributes] = useState([]);
+  const [componentImages, setComponentImages] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const { cities, categories } = useContext(GlobalContext);
+  const { userInfo, logOut } = useContext(UserContext);
+
+  const categoryList = categories.map((category) => category.title).sort();
+  const cityList = cities.map((city) => city.name).sort();
+
+  const handleValueChange = (e) => {
+    setNewProduct({
+      ...newProduct,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const setArrayImageList = () => {
+    const newImageArray = componentImages.map((image, i) => {
+      return {
+        title: newProduct.title ? newProduct.title : `image_${i}`,
+        url: image,
+      };
+    });
+    return newImageArray;
+  };
+
+  const setArrayFeatureList = () => {
+    const newFeatureArray = componentAttributes.map((feature) => {
+      return {
+        id: feature.iconId,
+      };
+    });
+    return newFeatureArray;
+  };
+
+  const completeProduct = {
+    ...newProduct,
+    imageList: setArrayImageList(),
+    featureList: setArrayFeatureList(),
+  };
+
+  const disabled = () => {
+    const objVerification = Object.values(completeProduct).some((value) => {
+      if (
+        (typeof value === "object" &amp;&amp; !Array.isArray(value) &amp;&amp; Object.keys(value).length === 0) ||
+        (Array.isArray(value) &amp;&amp; value.length === 0) ||
+        value === "" ||
+        componentImages.length &lt; 5
+      ) {
+        return true;
+      }
+      return false;
+    });
+    return objVerification;
+  };
+
+  const handleSubmit = async (e) => {
+    setLoading(true);
+    e.preventDefault();
+    const productResponse = await createProduct(
+      completeProduct,
+      userInfo.token
+    );
+    if (productResponse.status === 201) {
+      navigate("/confirmed", {
+        state: {
+          text: "Tu propiedad se ha creado con éxito.",
+          buttonText: "volver",
+          bgColor: "white",
+        },
+      });
+    }
+    if (productResponse.status === 403) {
+      logOut();
+    }
+    setLoading(false);
+  };
+
+  return (
+    &lt;>
+      &lt;Fluid bgColor="dark">
+        &lt;div className="product_heading">
+          &lt;h1>Administración&lt;/h1>
+          &lt;div className="product_back">
+            &lt;FontAwesomeIcon
+              icon={faChevronLeft}
+              size="2xl"
+              onClick={() => navigate(-1)}
+              cursor="pointer"
+            />
+          &lt;/div>
+        &lt;/div>
+      &lt;/Fluid>
+      &lt;Fluid bgColor="white" color="dark">
+        &lt;h1 className="product_title title">Crear propiedad&lt;/h1>
+      &lt;/Fluid>
+      &lt;Fluid bgColor="bgColor" color="dark" model="product">
+        {loading ? (
+          &lt;Spinner />
+        ) : (
+          &lt;form className="product_container" onSubmit={handleSubmit}>
+            &lt;ProductData
+              setNewProduct={setNewProduct}
+              newProduct={newProduct}
+              handleValueChange={handleValueChange}
+              categoryList={categoryList}
+              cityList={cityList}
+              categories={categories}
+              cities={cities}
+            />
+            &lt;ProductAttribute
+              componentAttributes={componentAttributes}
+              setComponentAttributes={setComponentAttributes}
+            />
+            &lt;ProductPolicy
+              setNewProduct={setNewProduct}
+              newProduct={newProduct}
+              handleValueChange={handleValueChange}
+            />
+            &lt;ProductImage
+              setComponentImages={setComponentImages}
+              componentImages={componentImages}
+            />
+            &lt;div className="product_button">
+              &lt;Button variant="button8" disabled={disabled()} type="submit">
+                Crear
+              &lt;/Button>
+            &lt;/div>
+          &lt;/form>
+        )}
+      &lt;/Fluid>
+    &lt;/>
+  );
+};
+
+export default ProductAdministration;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AddAttribute">AddAttribute</a></li><li><a href="global.html#AddImage">AddImage</a></li><li><a href="global.html#AutoComplete">AutoComplete</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#Categories">Categories</a></li><li><a href="global.html#CategoryCard">CategoryCard</a></li><li><a href="global.html#Confirmed">Confirmed</a></li><li><a href="global.html#Context">Context</a></li><li><a href="global.html#DateRangePicker">DateRangePicker</a></li><li><a href="global.html#Divider">Divider</a></li><li><a href="global.html#Fluid">Fluid</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#Galery">Galery</a></li><li><a href="global.html#GlobalContextProvider">GlobalContextProvider</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#IconItem">IconItem</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#Layout">Layout</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Map">Map</a></li><li><a href="global.html#Modal">Modal</a></li><li><a href="global.html#ProductAdministration">ProductAdministration</a></li><li><a href="global.html#ProductAttribute">ProductAttribute</a></li><li><a href="global.html#ProductData">ProductData</a></li><li><a href="global.html#ProductImage">ProductImage</a></li><li><a href="global.html#ProductPolicy">ProductPolicy</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RecommedationDetailRating">RecommedationDetailRating</a></li><li><a href="global.html#RecommendationContent">RecommendationContent</a></li><li><a href="global.html#RecommendationDetailCalendar">RecommendationDetailCalendar</a></li><li><a href="global.html#RecommendationDetailDescription">RecommendationDetailDescription</a></li><li><a href="global.html#RecommendationDetailHeader">RecommendationDetailHeader</a></li><li><a href="global.html#RecommendationDetailMap">RecommendationDetailMap</a></li><li><a href="global.html#RecommendationDetailRules">RecommendationDetailRules</a></li><li><a href="global.html#RecommendationDetails">RecommendationDetails</a></li><li><a href="global.html#Recommendations">Recommendations</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#Reservation">Reservation</a></li><li><a href="global.html#Search">Search</a></li><li><a href="global.html#Select">Select</a></li><li><a href="global.html#Slider">Slider</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#TextArea">TextArea</a></li><li><a href="global.html#ToggleIcon">ToggleIcon</a></li><li><a href="global.html#UserContextProvider">UserContextProvider</a></li><li><a href="global.html#capitalize">capitalize</a></li><li><a href="global.html#convertDate">convertDate</a></li><li><a href="global.html#convertDateEs">convertDateEs</a></li><li><a href="global.html#createProduct">createProduct</a></li><li><a href="global.html#createReservations">createReservations</a></li><li><a href="global.html#emailValidate">emailValidate</a></li><li><a href="global.html#fetchApi">fetchApi</a></li><li><a href="global.html#getAvailableProductsByDate">getAvailableProductsByDate</a></li><li><a href="global.html#getAvailableProductsByDateAndCity">getAvailableProductsByDateAndCity</a></li><li><a href="global.html#getCategories">getCategories</a></li><li><a href="global.html#getCities">getCities</a></li><li><a href="global.html#getFeatures">getFeatures</a></li><li><a href="global.html#getInitials">getInitials</a></li><li><a href="global.html#getProductById">getProductById</a></li><li><a href="global.html#getProducts">getProducts</a></li><li><a href="global.html#getProductsByCategories">getProductsByCategories</a></li><li><a href="global.html#getProductsByCategoryId">getProductsByCategoryId</a></li><li><a href="global.html#getProductsByCityName">getProductsByCityName</a></li><li><a href="global.html#getReservationsByProductId">getReservationsByProductId</a></li><li><a href="global.html#getRoleStyle">getRoleStyle</a></li><li><a href="global.html#loginUser">loginUser</a></li><li><a href="global.html#parseJwt">parseJwt</a></li><li><a href="global.html#passwordValidate">passwordValidate</a></li><li><a href="global.html#registerUser">registerUser</a></li><li><a href="global.html#toFontawesome">toFontawesome</a></li><li><a href="global.html#useOutsideClick">useOutsideClick</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sat May 24 2025 15:43:16 GMT-0500 (Colombia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

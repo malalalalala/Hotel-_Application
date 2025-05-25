@@ -8,6 +8,12 @@ import { getAvailableProductsByDateAndCity } from "../../api/services/services";
 import GlobalContext from "../../context/GlobalContext";
 import { convertDateEs } from "../../utils/stringConvertions";
 
+/**
+ * Search component for searching available products by date and city.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered search component.
+ */
 const Search = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");

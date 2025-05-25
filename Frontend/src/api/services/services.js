@@ -1,6 +1,14 @@
 import { config } from '../../config';
 const URL_BACKEND = config.apiUrl;
 
+/**
+ * Makes an API request and handles errors.
+ *
+ * @param {string} url - The endpoint URL.
+ * @param {string} requestName - The name of the request for error reporting.
+ * @param {Object} [requestInfo] - Optional fetch options (method, headers, body, etc.).
+ * @returns {Promise<Object>} The response object with status and data or error.
+ */
 const fetchApi = async (url, requestName, requestInfo) => {
   try {
     const response = await fetch(url, requestInfo);
@@ -32,6 +40,10 @@ const fetchApi = async (url, requestName, requestInfo) => {
 /********************----- CATEGORIES ----**************************/
 
 // List all categories
+/**
+ * Fetches all categories from the backend.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getCategories = async () => {
   return await fetchApi(`${URL_BACKEND}/categories`, "getCategories");
 };
@@ -39,16 +51,29 @@ export const getCategories = async () => {
 /********************----- PRODUCTS -----********************/
 
 // List all products
+/**
+ * Fetches all products from the backend.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getProducts = async () => {
   return await fetchApi(`${URL_BACKEND}/products`, "getProducts");
 };
 
 // Get product by id
+/**
+ * Fetches a product by its ID.
+ * @param {string|number} id - The product ID.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getProductById = async (id) => {
   return await fetchApi(`${URL_BACKEND}/products/${id}`, "getProductById");
 };
 
 // Get product by categories
+/**
+ * Fetches products grouped by categories.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getProductsByCategories = async () => {
   return await fetchApi(
     `${URL_BACKEND}/categories/products`,
@@ -57,6 +82,11 @@ export const getProductsByCategories = async () => {
 };
 
 // Get product by category id
+/**
+ * Fetches products by category ID.
+ * @param {string|number} id - The category ID.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getProductsByCategoryId = async (id) => {
   return await fetchApi(
     `${URL_BACKEND}/products/category/${id}`,
@@ -65,6 +95,11 @@ export const getProductsByCategoryId = async (id) => {
 };
 
 // Get products by city id
+/**
+ * Fetches products by city name.
+ * @param {string} city - The city name.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getProductsByCityName = async (city) => {
   return await fetchApi(
     `${URL_BACKEND}/products/city/${city}`,
@@ -73,6 +108,12 @@ export const getProductsByCityName = async (city) => {
 };
 
 //post products
+/**
+ * Creates a new product.
+ * @param {Object} productInfo - The product information to create.
+ * @param {string} token - The authentication token.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const createProduct = async (productInfo, token) => {
   return await fetchApi(`${URL_BACKEND}/products`, "createProduct", {
     method: "POST",
@@ -88,6 +129,10 @@ export const createProduct = async (productInfo, token) => {
 /********************----- CITIES -----********************/
 
 // List all cities
+/**
+ * Fetches all cities from the backend.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getCities = async () => {
   return await fetchApi(`${URL_BACKEND}/cities`, "getCities");
 };
@@ -95,6 +140,10 @@ export const getCities = async () => {
 /********************----- FEATURES -----********************/
 
 // List all features
+/**
+ * Fetches all features from the backend.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getFeatures = async () => {
   return await fetchApi(`${URL_BACKEND}/features`, "getFeatures");
 };
@@ -102,6 +151,12 @@ export const getFeatures = async () => {
 /********************----- DATES -----********************/
 
 // List available dates
+/**
+ * Fetches available products by date range.
+ * @param {string} startDate - The start date (YYYY-MM-DD).
+ * @param {string} endDate - The end date (YYYY-MM-DD).
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getAvailableProductsByDate = async (startDate, endDate) => {
   return await fetchApi(
     `${URL_BACKEND}/findByDate/${startDate}/${endDate}`,
@@ -112,6 +167,13 @@ export const getAvailableProductsByDate = async (startDate, endDate) => {
 /********************----- DATES AND CITY -----********************/
 
 // List available dates
+/**
+ * Fetches available products by date range and city ID.
+ * @param {string} startDate - The start date (YYYY-MM-DD).
+ * @param {string} endDate - The end date (YYYY-MM-DD).
+ * @param {string|number} cityId - The city ID.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getAvailableProductsByDateAndCity = async (
   startDate,
   endDate,
@@ -125,6 +187,11 @@ export const getAvailableProductsByDateAndCity = async (
 
 /********************----- LOGIN -----**************************/
 
+/**
+ * Authenticates a user and returns a token.
+ * @param {Object} userInfo - The user login information.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const loginUser = async (userInfo) => {
   return await fetchApi(`${URL_BACKEND}/auth/login`, "loginUser", {
     method: "POST",
@@ -138,6 +205,11 @@ export const loginUser = async (userInfo) => {
 
 /********************----- REGISTER -----**************************/
 
+/**
+ * Registers a new user.
+ * @param {Object} userInfo - The user registration information.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const registerUser = async (userInfo) => {
   return await fetchApi(`${URL_BACKEND}/users`, "registerUser", {
     method: "POST",
@@ -152,6 +224,12 @@ export const registerUser = async (userInfo) => {
 /********************----- RESERVATIONS -----**************************/
 
 //post reservation
+/**
+ * Creates a new reservation.
+ * @param {Object} reservationInfo - The reservation information to create.
+ * @param {string} token - The authentication token.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const createReservations = async (reservationInfo, token) => {
   return await fetchApi(`${URL_BACKEND}/reservations`, "createReservations", {
     method: "POST",
@@ -165,6 +243,11 @@ export const createReservations = async (reservationInfo, token) => {
 };
 
 // Get reservations by product
+/**
+ * Fetches reservations by product ID.
+ * @param {string|number} id - The product ID.
+ * @returns {Promise<Object>} The response object with status and data.
+ */
 export const getReservationsByProductId = async (id) => {
   return await fetchApi(
     `${URL_BACKEND}/reservations/product/${id}`,

@@ -4,6 +4,20 @@ import Select from "../../ui/Select/Select";
 import TextArea from "../../ui/TextArea/TextArea";
 import "./productData.scss";
 
+/**
+ * ProductData component for displaying and editing product information fields.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.newProduct - The current product data.
+ * @param {function} props.setNewProduct - Function to update the product data.
+ * @param {function} props.handleValueChange - Function to handle input changes.
+ * @param {Array<string>} props.categoryList - List of category options.
+ * @param {Array<string>} props.cityList - List of city options.
+ * @param {Array<Object>} props.categories - Full list of category objects.
+ * @param {Array<Object>} props.cities - Full list of city objects.
+ * @returns {JSX.Element} The rendered product data component.
+ */
 const ProductData = ({
   newProduct,
   setNewProduct,
@@ -37,7 +51,7 @@ const ProductData = ({
       </div>
       <div className="product_info">
         <Input
-          inputLabel="Ubicación"
+          inputLabel="Descripción Ubicación"
           inputType="text"
           inputName="location"
           id="location"
@@ -46,7 +60,7 @@ const ProductData = ({
           onChange={handleValueChange}
         />
         <Input
-          inputLabel="Invitación principal para el anfitrión"
+          inputLabel="Invitación principal para el huesped"
           inputType="text"
           inputName="subtitle"
           id="subtitle"
@@ -101,7 +115,7 @@ const ProductData = ({
           inputType="text"
           inputName="short_description"
           id="short_description"
-          placeholder="Escribir aquí una breve presentación"
+          placeholder="Gran hotel en el centro de la ciudad"
           value={newProduct.short_description}
           onChange={handleValueChange}
         />
@@ -111,7 +125,7 @@ const ProductData = ({
           inputLabel="Descripción"
           inputName="long_description"
           id="long_description"
-          placeholder="Escribir aquí"
+          placeholder="Está situado a solo unas calles de..., . En las inmediaciones también hay varios lugares de interés, como ... El Hotel es un hotel sofisticado de 4 estrellas que goza de una ubicación tranquila, a poca distancia de ... El establecimiento sirve un desayuno variado de 07:00 a 10:30."
           model="description"
           value={newProduct.long_description}
           onChange={handleValueChange}

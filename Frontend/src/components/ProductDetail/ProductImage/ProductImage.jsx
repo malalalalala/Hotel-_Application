@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import "./productImage.scss";
 import AddImage from "./AddImage/AddImage";
 
+/**
+ * ProductImage component for managing and displaying product images.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Array<string>} props.componentImages - The list of current image URLs.
+ * @param {function} props.setComponentImages - Function to update the images list.
+ * @returns {JSX.Element} The rendered product image component.
+ */
 const ProductImage = ({ componentImages, setComponentImages }) => {
   const [searchImage, setSearchImage] = useState("");
 

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/ProductDetail/ProductAttribute/AddAttribute/AddAttribute.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/ProductDetail/ProductAttribute/AddAttribute/AddAttribute.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState, useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSquarePlus,
+  faSquareXmark,
+  faWarning,
+  faCircleExclamation,
+} from "@fortawesome/free-solid-svg-icons";
+import Input from "../../../ui/Input/Input";
+import AutoComplete from "../../../ui/AutoComplete/AutoComplete";
+import "../productAttribute.scss";
+import useOutsideClick from "../../../../hooks/useOutsideClick";
+import _ from "lodash";
+
+/**
+ * AddAttribute component for adding or removing amenities/features to a product.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {function} props.handleAttributes - Function to handle adding/removing attributes.
+ * @param {boolean} [props.componentAttribute=false] - Whether the attribute is part of the component list.
+ * @param {number} props.limit - The current number of attributes.
+ * @param {Object} [props.values] - The values for the attribute (iconName, iconValue, iconId).
+ * @param {Array&lt;Object>} [props.componentAttributes] - The current list of attributes.
+ * @param {Array&lt;Object>} [props.features] - The list of available features.
+ * @returns {JSX.Element} The rendered add attribute component.
+ */
+const AddAttribute = ({
+  handleAttributes,
+  componentAttribute = false,
+  limit,
+  values,
+  componentAttributes,
+  features,
+}) => {
+  const [documentRef, isVisible, setIsVisible] = useOutsideClick();
+  const [suggestions, setSuggestions] = useState([]);
+  const [selectedIcon, setSelectedIcon] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedFeatureId, setSelectedFeatureId] = useState([]);
+  const [selectedFeatureName, setSelectedFeatureName] = useState([]);
+  const ref = useRef();
+
+  useEffect(() => {
+    if (!features) return;
+    const result = features.filter((f) => {
+      return f.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+    setSuggestions(result);
+    if (result.length > 0) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }, [searchTerm]);
+
+  function handleSearch(event) {
+    const { value } = event.target;
+    setSearchTerm(value);
+  }
+
+  function handleSuggestionClick(iconValue, iconId, iconName) {
+    console.log("iconValue", iconValue);
+    setSelectedIcon(iconValue);
+    setSelectedFeatureId(iconId);
+    setSelectedFeatureName(iconName);
+    setSearchTerm(iconName);
+    setIsVisible(false);
+  }
+
+  return (
+    &lt;>
+      &lt;div className="product_add_icons">
+        &lt;div className="product_add_component">
+          &lt;div className="product_add_icons_inputs">
+            &lt;div className="product_add_icons_input_autocomplete">
+              &lt;Input
+                inputLabel="Nombre de la amenidad"
+                inputType="text"
+                inputName="propertyAutocomplete"
+                id="propertyAutocomplete"
+                placeholder={
+                  limit === 8
+                    ? "Llegaste al límite de features posibles de ingresar"
+                    : "Empieza a escribir para ver opciones: WiFi, Piscina…"
+                }
+                inputValue={values ? values.iconName : searchTerm}
+                disabled={limit === 8 || componentAttributes}
+                onChange={handleSearch}
+                autoComplete="off"
+              />
+              &lt;div ref={documentRef}>
+                {isVisible &amp;&amp; (
+                  &lt;AutoComplete
+                    isVisible={isVisible}
+                    suggestions={suggestions}
+                    handleSuggestionClick={handleSuggestionClick}
+                  />
+                )}
+              &lt;/div>
+            &lt;/div>
+            &lt;Input
+              inputLabel="Ícono"
+              inputType="text"
+              inputName="propertyName"
+              id="propertyName"
+              placeholder={
+                limit === 8
+                  ? "Llegaste al límite de íconos"
+                  : "Se autocompleta de acuerdo a tu selección anterior"
+              }
+              inputValue={values ? values.iconValue : selectedIcon}
+              autoComplete="off"
+              disabled
+            />
+          &lt;/div>
+          &lt;div className="product_add_icons_icon">
+            &lt;FontAwesomeIcon
+              icon={componentAttribute ? faSquareXmark : faSquarePlus}
+              onClick={() => {
+                handleAttributes({
+                  iconValue: selectedIcon,
+                  iconId: selectedFeatureId,
+                  iconName: selectedFeatureName,
+                });
+                setSearchTerm("");
+                setSelectedIcon("");
+              }}
+              cursor="pointer"
+              className={
+                componentAttribute
+                  ? "product_icon delete"
+                  : limit === 8
+                  ? "product_icon limit"
+                  : "product_icon success"
+              }
+            />
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+      &lt;div className="product_fail_message_attribute_container">
+        {limit === 8 &amp;&amp; (
+          &lt;>
+            &lt;FontAwesomeIcon icon={faCircleExclamation} />
+            &lt;h4>Llegaste al límite de atributos posibles de agregar.&lt;/h4>
+          &lt;/>
+        )}
+      &lt;/div>
+    &lt;/>
+  );
+};
+
+export default AddAttribute;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AddAttribute">AddAttribute</a></li><li><a href="global.html#AddImage">AddImage</a></li><li><a href="global.html#AutoComplete">AutoComplete</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#Categories">Categories</a></li><li><a href="global.html#CategoryCard">CategoryCard</a></li><li><a href="global.html#Confirmed">Confirmed</a></li><li><a href="global.html#Context">Context</a></li><li><a href="global.html#DateRangePicker">DateRangePicker</a></li><li><a href="global.html#Divider">Divider</a></li><li><a href="global.html#Fluid">Fluid</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#Galery">Galery</a></li><li><a href="global.html#GlobalContextProvider">GlobalContextProvider</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#IconItem">IconItem</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#Layout">Layout</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Map">Map</a></li><li><a href="global.html#Modal">Modal</a></li><li><a href="global.html#ProductAdministration">ProductAdministration</a></li><li><a href="global.html#ProductAttribute">ProductAttribute</a></li><li><a href="global.html#ProductData">ProductData</a></li><li><a href="global.html#ProductImage">ProductImage</a></li><li><a href="global.html#ProductPolicy">ProductPolicy</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RecommedationDetailRating">RecommedationDetailRating</a></li><li><a href="global.html#RecommendationContent">RecommendationContent</a></li><li><a href="global.html#RecommendationDetailCalendar">RecommendationDetailCalendar</a></li><li><a href="global.html#RecommendationDetailDescription">RecommendationDetailDescription</a></li><li><a href="global.html#RecommendationDetailHeader">RecommendationDetailHeader</a></li><li><a href="global.html#RecommendationDetailMap">RecommendationDetailMap</a></li><li><a href="global.html#RecommendationDetailRules">RecommendationDetailRules</a></li><li><a href="global.html#RecommendationDetails">RecommendationDetails</a></li><li><a href="global.html#Recommendations">Recommendations</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#Reservation">Reservation</a></li><li><a href="global.html#Search">Search</a></li><li><a href="global.html#Select">Select</a></li><li><a href="global.html#Slider">Slider</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#TextArea">TextArea</a></li><li><a href="global.html#ToggleIcon">ToggleIcon</a></li><li><a href="global.html#UserContextProvider">UserContextProvider</a></li><li><a href="global.html#capitalize">capitalize</a></li><li><a href="global.html#convertDate">convertDate</a></li><li><a href="global.html#convertDateEs">convertDateEs</a></li><li><a href="global.html#createProduct">createProduct</a></li><li><a href="global.html#createReservations">createReservations</a></li><li><a href="global.html#emailValidate">emailValidate</a></li><li><a href="global.html#fetchApi">fetchApi</a></li><li><a href="global.html#getAvailableProductsByDate">getAvailableProductsByDate</a></li><li><a href="global.html#getAvailableProductsByDateAndCity">getAvailableProductsByDateAndCity</a></li><li><a href="global.html#getCategories">getCategories</a></li><li><a href="global.html#getCities">getCities</a></li><li><a href="global.html#getFeatures">getFeatures</a></li><li><a href="global.html#getInitials">getInitials</a></li><li><a href="global.html#getProductById">getProductById</a></li><li><a href="global.html#getProducts">getProducts</a></li><li><a href="global.html#getProductsByCategories">getProductsByCategories</a></li><li><a href="global.html#getProductsByCategoryId">getProductsByCategoryId</a></li><li><a href="global.html#getProductsByCityName">getProductsByCityName</a></li><li><a href="global.html#getReservationsByProductId">getReservationsByProductId</a></li><li><a href="global.html#getRoleStyle">getRoleStyle</a></li><li><a href="global.html#loginUser">loginUser</a></li><li><a href="global.html#parseJwt">parseJwt</a></li><li><a href="global.html#passwordValidate">passwordValidate</a></li><li><a href="global.html#registerUser">registerUser</a></li><li><a href="global.html#toFontawesome">toFontawesome</a></li><li><a href="global.html#useOutsideClick">useOutsideClick</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sat May 24 2025 15:43:15 GMT-0500 (Colombia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

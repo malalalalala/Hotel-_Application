@@ -10,7 +10,7 @@
   bottom: 0;
   left: 20%;
   z-index: 20;
-  @include mv(414px) {
+  @include mv(600px) {
     display: block;
   }
 }
@@ -26,7 +26,7 @@
 .hamburger_menu_nologged_text {
   font-size: 20px;
   position: absolute;
-  right: 5%;
+  right: 20%;
   bottom: 3%;
 }
 .hamburger_menu_close {
@@ -66,7 +66,7 @@
   font-size: 16px;
   font-weight: 700;
   margin: 2px 0px;
-  color: $dark;
+  color: $white;
   position: absolute;
   right: 5%;
   top: 85%;

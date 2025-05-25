@@ -7,7 +7,7 @@ const LoginAlert = () => {
   const [alertMessage, setAlertMessage] = useState("");
 
   useEffect(() => {
-    setAlertMessage(sessionStorage.getItem("alertmessage"));
+    setAlertMessage(sessionStorage.getItem("loginAlertMessage"));
   }, []);
 
   return (

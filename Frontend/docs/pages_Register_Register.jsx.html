@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/Register/Register.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/Register/Register.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from "react";
+import "./register.scss";
+import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import {
+  emailValidate,
+  passwordValidate,
+  passwordComparison,
+} from "../../utils/formValidations";
+import {
+  faUserCircle,
+  faEyeSlash,
+  faEye,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { registerUser } from "../../api/services/services";
+
+const initialValues = {
+  name: "",
+  lastName: "",
+  email: "",
+  password: "",
+  password2: "",
+  role: {
+    id: 2,
+  },
+};
+
+/**
+ * Register page component for user account creation and validation.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered register page.
+ */
+const Register = () => {
+  const [error, setError] = useState("register_error_oculto");
+  const [required, setRequired] = useState(false);
+  const [formValues, setFormValues] = useState(initialValues);
+  const errorMessageEmail = emailValidate(formValues.email);
+  const errorMessagePassword = passwordValidate(formValues.password);
+  const errorMessagePasswordComparison = passwordComparison(
+    formValues.password,
+    formValues.password2
+  );
+  const [success, setSuccess] = useState(false);
+  const [passwordShown, setPasswordShown] = useState(false);
+  const navigate = useNavigate();
+
+  const handleValueChange = (e) => {
+    setFormValues({
+      ...formValues,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const togglePasswordVisiblity = () => {
+    setPasswordShown((prevState) => !prevState);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (
+      !emailValidate(formValues.email) &amp;&amp;
+      !passwordValidate(formValues.password) &amp;&amp;
+      !passwordComparison(formValues.password, formValues.password2)
+    ) {
+      const registerInfo = await registerUser(formValues);
+      if (registerInfo.status === 200 || registerInfo.status === 201) {
+        setTimeout(() => {
+          navigate("/login");
+        }, 1000);
+        return setSuccess(
+          &lt;>
+            &lt;FontAwesomeIcon icon={faUserCircle} size="sm" className="full" />
+            &lt;span>Usuario registrado con éxito&lt;/span>
+          &lt;/>
+        );
+      }
+    } else {
+      setError("register_error");
+    }
+  };
+
+  const handleClick = () => setRequired(true);
+  return (
+    &lt;div className="register_container">
+      &lt;div className="register_container_content">
+        &lt;h1 className="register_header">Crear cuenta&lt;/h1>
+        &lt;form className="register_form_container" onSubmit={handleSubmit}>
+          &lt;div className="register_form_container_medium">
+            &lt;div className="register_form_group_medium">
+              &lt;label htmlFor="name">Nombre&lt;/label>
+              &lt;input
+                type="text"
+                name="name"
+                id="name"
+                value={formValues.name}
+                required={required}
+                onChange={handleValueChange}
+              />
+            &lt;/div>
+            &lt;div className="register_form_group_medium">
+              &lt;label htmlFor="lastName">Apellido&lt;/label>
+              &lt;input
+                type="text"
+                name="lastName"
+                id="lastName"
+                value={formValues.lastName}
+                required={required}
+                onChange={handleValueChange}
+              />
+            &lt;/div>
+          &lt;/div>
+          &lt;div className="register_form_group">
+            &lt;label htmlFor="email">Correo electrónico&lt;/label>
+            &lt;input
+              type="email"
+              placeholder="example@domain.com"
+              name="email"
+              id="email"
+              value={formValues.email}
+              required={required}
+              onChange={handleValueChange}
+            />
+            &lt;small
+              className={
+                errorMessageEmail ? "register_error" : "register_oculto"
+              }
+            >
+              {errorMessageEmail}
+            &lt;/small>
+          &lt;/div>
+          &lt;div className="register_form_group">
+            &lt;label htmlFor="password">Contraseña&lt;/label>
+            &lt;input
+              type={passwordShown ? "text" : "password"}
+              name="password"
+              id="password"
+              required={required}
+              value={formValues.password}
+              onChange={handleValueChange}
+            />
+            &lt;i
+              className="register_password_icon"
+              onClick={togglePasswordVisiblity}
+            >
+              &lt;FontAwesomeIcon
+                icon={passwordShown ? faEyeSlash : faEye}
+                size="sm"
+                className="full"
+              />
+            &lt;/i>
+            &lt;small
+              className={
+                errorMessagePassword ? "register_error" : "register_oculto"
+              }
+            >
+              {errorMessagePassword}
+            &lt;/small>
+          &lt;/div>
+          &lt;div className="register_form_group">
+            &lt;label htmlFor="password2">Confirmar Contraseña&lt;/label>
+            &lt;input
+              type={passwordShown ? "text" : "password"}
+              name="password2"
+              id="password2"
+              value={formValues.password2}
+              required={required}
+              onChange={handleValueChange}
+            />
+            &lt;i
+              className="register_password_icon"
+              onClick={togglePasswordVisiblity}
+            >
+              &lt;FontAwesomeIcon
+                icon={passwordShown ? faEyeSlash : faEye}
+                size="sm"
+                className="full"
+              />
+            &lt;/i>
+            &lt;small
+              className={
+                errorMessagePasswordComparison
+                  ? "register_error"
+                  : "register_error_oculto"
+              }
+            >
+              {errorMessagePasswordComparison}
+            &lt;/small>
+          &lt;/div>
+          &lt;div className="register_form_sucess">
+            {success ? &lt;p>{success}&lt;/p> : ""}
+          &lt;/div>
+          &lt;div className="register_form_group_submit">
+            &lt;button type="submit" onClick={handleClick}>
+              Crear cuenta
+            &lt;/button>
+            &lt;p>
+              ¿Ya tienes una cuenta?
+              &lt;NavLink to="/login"> Iniciar sesión&lt;/NavLink>
+            &lt;/p>
+          &lt;/div>
+        &lt;/form>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+
+export default Register;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AddAttribute">AddAttribute</a></li><li><a href="global.html#AddImage">AddImage</a></li><li><a href="global.html#AutoComplete">AutoComplete</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#Categories">Categories</a></li><li><a href="global.html#CategoryCard">CategoryCard</a></li><li><a href="global.html#Confirmed">Confirmed</a></li><li><a href="global.html#Context">Context</a></li><li><a href="global.html#DateRangePicker">DateRangePicker</a></li><li><a href="global.html#Divider">Divider</a></li><li><a href="global.html#Fluid">Fluid</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#Galery">Galery</a></li><li><a href="global.html#GlobalContextProvider">GlobalContextProvider</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#IconItem">IconItem</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#Layout">Layout</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Map">Map</a></li><li><a href="global.html#Modal">Modal</a></li><li><a href="global.html#ProductAdministration">ProductAdministration</a></li><li><a href="global.html#ProductAttribute">ProductAttribute</a></li><li><a href="global.html#ProductData">ProductData</a></li><li><a href="global.html#ProductImage">ProductImage</a></li><li><a href="global.html#ProductPolicy">ProductPolicy</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RecommedationDetailRating">RecommedationDetailRating</a></li><li><a href="global.html#RecommendationContent">RecommendationContent</a></li><li><a href="global.html#RecommendationDetailCalendar">RecommendationDetailCalendar</a></li><li><a href="global.html#RecommendationDetailDescription">RecommendationDetailDescription</a></li><li><a href="global.html#RecommendationDetailHeader">RecommendationDetailHeader</a></li><li><a href="global.html#RecommendationDetailMap">RecommendationDetailMap</a></li><li><a href="global.html#RecommendationDetailRules">RecommendationDetailRules</a></li><li><a href="global.html#RecommendationDetails">RecommendationDetails</a></li><li><a href="global.html#Recommendations">Recommendations</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#Reservation">Reservation</a></li><li><a href="global.html#Search">Search</a></li><li><a href="global.html#Select">Select</a></li><li><a href="global.html#Slider">Slider</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#TextArea">TextArea</a></li><li><a href="global.html#ToggleIcon">ToggleIcon</a></li><li><a href="global.html#UserContextProvider">UserContextProvider</a></li><li><a href="global.html#capitalize">capitalize</a></li><li><a href="global.html#convertDate">convertDate</a></li><li><a href="global.html#convertDateEs">convertDateEs</a></li><li><a href="global.html#createProduct">createProduct</a></li><li><a href="global.html#createReservations">createReservations</a></li><li><a href="global.html#emailValidate">emailValidate</a></li><li><a href="global.html#fetchApi">fetchApi</a></li><li><a href="global.html#getAvailableProductsByDate">getAvailableProductsByDate</a></li><li><a href="global.html#getAvailableProductsByDateAndCity">getAvailableProductsByDateAndCity</a></li><li><a href="global.html#getCategories">getCategories</a></li><li><a href="global.html#getCities">getCities</a></li><li><a href="global.html#getFeatures">getFeatures</a></li><li><a href="global.html#getInitials">getInitials</a></li><li><a href="global.html#getProductById">getProductById</a></li><li><a href="global.html#getProducts">getProducts</a></li><li><a href="global.html#getProductsByCategories">getProductsByCategories</a></li><li><a href="global.html#getProductsByCategoryId">getProductsByCategoryId</a></li><li><a href="global.html#getProductsByCityName">getProductsByCityName</a></li><li><a href="global.html#getReservationsByProductId">getReservationsByProductId</a></li><li><a href="global.html#getRoleStyle">getRoleStyle</a></li><li><a href="global.html#loginUser">loginUser</a></li><li><a href="global.html#parseJwt">parseJwt</a></li><li><a href="global.html#passwordValidate">passwordValidate</a></li><li><a href="global.html#registerUser">registerUser</a></li><li><a href="global.html#toFontawesome">toFontawesome</a></li><li><a href="global.html#useOutsideClick">useOutsideClick</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sat May 24 2025 15:43:16 GMT-0500 (Colombia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

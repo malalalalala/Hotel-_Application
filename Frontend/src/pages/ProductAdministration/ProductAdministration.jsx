@@ -15,6 +15,12 @@ import GlobalContext from "../../context/GlobalContext";
 import UserContext from "../../context/UserContext";
 import { createProduct } from "../../api/services/services";
 
+/**
+ * ProductAdministration page component for creating and managing products.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered product administration page.
+ */
 const ProductAdministration = () => {
   const navigate = useNavigate();
   const [newProduct, setNewProduct] = useState({
@@ -81,8 +87,8 @@ const ProductAdministration = () => {
   const disabled = () => {
     const objVerification = Object.values(completeProduct).some((value) => {
       if (
-        value === {} ||
-        value === [] ||
+        (typeof value === "object" && value !== null && !Array.isArray(value) && Object.keys(value).length === 0) ||
+        (Array.isArray(value) && value.length === 0) ||
         value === "" ||
         componentImages.length < 5
       ) {

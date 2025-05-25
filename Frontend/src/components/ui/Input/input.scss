@@ -42,6 +42,7 @@
     background-color: $bgColor;
     color: $dark;
     &.disabled {
+      background-color: $white;
       color: $placeholder;
     }
   }

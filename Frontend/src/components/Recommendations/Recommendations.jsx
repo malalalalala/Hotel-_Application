@@ -4,11 +4,15 @@ import RecommendationCard from "./RecommendationCard/RecommendationCard";
 import GlobalContext from "../../context/GlobalContext";
 import Spinner from "../ui/Spinner/Spinner";
 
+/**
+ * Recommendations component for displaying a list of recommendation cards.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered recommendations component.
+ */
 const Recommendations = () => {
   const { recommendations, title, loadingRecommendations } =
     useContext(GlobalContext);
-
-  console.log("recommendations", recommendations);
 
   return (
     <section className="recommendations_container">
@@ -17,8 +21,10 @@ const Recommendations = () => {
         <div className="recommendations_cards_container">
           {loadingRecommendations ? (
             <Spinner />
+          ) : recommendations?.length === 0 ? (
+            <div className="recommendations_empty">No encontramos alojamientos. Intenta ingresando otros criterios de búsqueda.</div>
           ) : (
-            recommendations?.map(
+            recommendations.map(
               ({
                 id,
                 title,

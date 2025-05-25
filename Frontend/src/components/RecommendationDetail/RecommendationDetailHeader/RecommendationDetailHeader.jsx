@@ -5,6 +5,14 @@ import Fluid from "../../../components/ui/Fluid/Fluid";
 import { useNavigate } from "react-router-dom";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * RecommendationDetailHeader component for displaying the header with category and title, and a back button.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object} props.item - The item containing category and title.
+ * @returns {JSX.Element} The rendered recommendation detail header component.
+ */
 const RecommendationDetailHeader = ({ item }) => {
   const navigate = useNavigate();
 

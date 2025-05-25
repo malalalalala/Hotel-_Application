@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/Reservation/Reservation.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/Reservation/Reservation.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useEffect, useState, useContext } from "react";
+import Fluid from "../../components/ui/Fluid/Fluid";
+import "./reservation.scss";
+import DateRangePicker from "../../components/Calendar/DateRangePicker";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
+import { faStar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import Button from "../../components/ui/Button/Button";
+import Divider from "../../components/ui/Divider/Divider";
+import UserContext from "../../context/UserContext";
+import GlobalContext from "../../context/GlobalContext";
+import { getProductById } from "../../api/services/services";
+import Spinner from "../../components/ui/Spinner/Spinner";
+import { useNavigate } from "react-router-dom";
+import { convertDate } from "../../utils/stringConvertions";
+import { createReservations } from "../../api/services/services";
+import Input from "../../components/ui/Input/Input";
+import Select from "../../components/ui/Select/Select";
+import RecommendationDetailHeader from "../../components/RecommendationDetail/RecommendationDetailHeader/RecommendationDetailHeader";
+import RecommendationDetailRules from "../../components/RecommendationDetail/RecommendationDetailRules/RecommendationDetailRules";
+
+/**
+ * Reservation page component for booking a product and entering user details.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered reservation page.
+ */
+const Reservation = () => {
+  const [fromValue, setFromValue] = useState("__/__/__");
+  const [toValue, setToValue] = useState("__/__/__");
+  const [isDisabledRange, setIsDisabledRange] = useState(false);
+  const [loadingItem, setLoadingItem] = useState(true);
+  const [item, setItem] = useState();
+  const [city, setCity] = useState(item?.city.name);
+  const [disabled, setDisabled] = useState(true);
+  const navigate = useNavigate();
+
+  const { userInfo, logOut } = useContext(UserContext);
+  const { itemId, setItemId } = useContext(GlobalContext);
+
+  const handleChange = (e) => {
+    setCity(e.target.value);
+  };
+
+  const reservationInfo = {
+    check_in: convertDate(fromValue),
+    check_out: convertDate(toValue),
+    product: {
+      id: itemId,
+    },
+    user: {
+      id: userInfo.userId,
+    },
+  };
+
+  const handleSubmit = async (e) => {
+    setLoadingItem(true);
+    e.preventDefault();
+    if (!disabled) {
+      const reservationResponse = await createReservations(
+        reservationInfo,
+        userInfo.token
+      );
+      if (reservationResponse.status === 201) {
+        navigate("/confirmed", {
+          state: {
+            title: "¡Muchas gracias!",
+            text: "Su reserva se ha realizado con éxito",
+            buttonText: "ok",
+            bgColor: "bgColor",
+          },
+        });
+      }
+      if (reservationResponse.status === 403) {
+        logOut();
+      }
+    }
+    setLoadingItem(false);
+  };
+
+  useEffect(() => {
+    setItemId(sessionStorage.getItem("itemId"));
+    const fetchProductById = async () => {
+      const productsById = await getProductById(
+        sessionStorage.getItem("itemId")
+      );
+      setItem(productsById.data);
+      setLoadingItem(false);
+      setCity(productsById.data.city.name);
+    };
+    fetchProductById();
+  }, []);
+
+  useEffect(() => {
+    if (
+      Boolean(
+        fromValue &amp;&amp;
+          toValue &amp;&amp;
+          toValue !== "__/__/__" &amp;&amp;
+          fromValue !== "__/__/__" &amp;&amp;
+          !isDisabledRange
+      )
+    ) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  }, [fromValue, toValue]);
+
+  // const optionsAM = Array.from({ length: 12 }, (v, i) => `${i + 1} AM`);
+  // const optionsPM = Array.from({ length: 12 }, (v, i) => `${i + 1} PM`);
+  const options = Array.from({ length: 12 }, (v, i) => `${i + 1} AM`).concat(
+    Array.from({ length: 12 }, (v, i) => `${i + 1} PM`)
+  );
+
+  return (
+    &lt;>
+      &lt;RecommendationDetailHeader item={item} />
+      &lt;Fluid bgColor="white" color="dark">
+        &lt;h1 className="reservation_title title">Completá tus datos&lt;/h1>
+        {loadingItem ? (
+          &lt;Spinner />
+        ) : (
+          &lt;form className="reservation-form" onSubmit={handleSubmit}>
+            &lt;div className="reservation_container">
+              &lt;div className="reservation_container_content">
+                &lt;div className="reservation_container_user">
+                  &lt;div className="reservation_container_user_group_column">
+                    &lt;Input
+                      inputLabel="Nombre"
+                      inputType="text"
+                      inputName="name"
+                      id="name"
+                      placeholder={userInfo.name}
+                      inputValue={userInfo.name}
+                      disabled
+                    />
+                  &lt;/div>
+                  &lt;div className="reservation_container_user_group_column">
+                    &lt;Input
+                      inputLabel="Apellido"
+                      inputType="text"
+                      inputName="lastName"
+                      id="lastName"
+                      placeholder={userInfo.lastname}
+                      inputValue={userInfo.lastname}
+                      disabled
+                    />
+                  &lt;/div>
+                  &lt;div className="reservation_container_user_group_column">
+                    &lt;Input
+                      inputLabel="Correo Electrónico"
+                      inputType="text"
+                      inputName="email"
+                      id="email"
+                      placeholder={userInfo.email}
+                      inputValue={userInfo.email}
+                      disabled
+                    />
+                  &lt;/div>
+                  &lt;div className="reservation_container_user_group_column">
+                    &lt;Input
+                      inputLabel="Ciudad"
+                      inputType="text"
+                      inputName="city"
+                      id="city"
+                      placeholder={city}
+                      inputValue={city}
+                      onChange={handleChange}
+                    />
+                  &lt;/div>
+                &lt;/div>
+                &lt;h1 className="reservation_title title">
+                  Seleccioná tu fecha de reserva
+                &lt;/h1>
+                &lt;div className="reservation_container_calendar">
+                  &lt;DateRangePicker
+                    setFromValue={setFromValue}
+                    setToValue={setToValue}
+                    setIsDisabledRange={setIsDisabledRange}
+                    itemId={itemId}
+                  />
+                &lt;/div>
+                {isDisabledRange &amp;&amp; (
+                  &lt;div className="reservation_disabled_range_picker">
+                    El rango de fechas seleccionado no se encuentra disponible
+                    para reservas
+                  &lt;/div>
+                )}
+                &lt;h1 className="reservation_title title">
+                  Tu horario de llegada
+                &lt;/h1>
+                &lt;div className="reservation_container_time">
+                  &lt;div className="reservation_container_check-in">
+                    &lt;FontAwesomeIcon icon={faCircleCheck} size="lg" />
+                    &lt;p>
+                      Tu habitación va a estar lista para el check-in entre las
+                      10:00 AM y las 11:00 PM
+                    &lt;/p>
+                  &lt;/div>
+                  &lt;div className="reservation_container_dropdown">
+                    &lt;Select
+                      inputLabel="Indicá tu horario estimado de llegada "
+                      placeholder="10:00 AM"
+                      options={options}
+                    />
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+
+              &lt;div className="reservation_container_content_confirm">
+                &lt;div className="reservation_container_check">
+                  &lt;div className="reservation_container_check_title">
+                    &lt;h1>Detalle de la reserva&lt;/h1>
+                  &lt;/div>
+                  &lt;div className="reservation_container_check_content">
+                    &lt;div
+                      className="reservation_container_check_img"
+                      style={{
+                        backgroundImage: `url(${item?.imageList?.[0]?.url})`,
+                      }}
+                    />
+                    &lt;div className="reservation_container_check_body">
+                      &lt;h4>{item?.category.title}&lt;/h4>
+                      &lt;h1>{item?.title}&lt;/h1>
+                      {[...Array(item?.star)].map((s, index) => {
+                        return (
+                          &lt;FontAwesomeIcon
+                            key={index}
+                            icon={faStar}
+                            color="green"
+                            size="xs"
+                            className="star"
+                          />
+                        );
+                      })}
+                      &lt;div className="reservation_container_check_body_location">
+                        &lt;FontAwesomeIcon icon={faLocationDot} size="sm" />
+                        &lt;h5 className="bold">
+                          {[
+                            item.address,
+                            item.city?.name,
+                            item.city?.state,
+                            item.city?.country,
+                          ]
+                            .filter(Boolean)
+                            .join(", ")}
+                        &lt;/h5>
+                      &lt;/div>
+                      &lt;Divider color="grey" />
+                      &lt;div className="reservation_container_check_body_date">
+                        &lt;h3>Check in&lt;/h3>
+                        &lt;h3>{fromValue ? fromValue : "__/__/__"}&lt;/h3>
+                      &lt;/div>
+                      &lt;Divider color="grey" />
+                      &lt;div className="reservation_container_check_body_date">
+                        &lt;h3>Check out&lt;/h3>
+                        &lt;h3>{toValue ? toValue : "__/__/__"}&lt;/h3>
+                      &lt;/div>
+                      &lt;Divider color="grey" />
+                      &lt;div className="reservation_container_check_button">
+                        &lt;Button
+                          type="submit"
+                          variant="button8"
+                          disabled={disabled}
+                        >
+                          Confirmar reserva
+                        &lt;/Button>
+                      &lt;/div>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/form>
+        )}
+      &lt;/Fluid>
+      &lt;RecommendationDetailRules item={item} />
+    &lt;/>
+  );
+};
+
+export default Reservation;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AddAttribute">AddAttribute</a></li><li><a href="global.html#AddImage">AddImage</a></li><li><a href="global.html#AutoComplete">AutoComplete</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#Categories">Categories</a></li><li><a href="global.html#CategoryCard">CategoryCard</a></li><li><a href="global.html#Confirmed">Confirmed</a></li><li><a href="global.html#Context">Context</a></li><li><a href="global.html#DateRangePicker">DateRangePicker</a></li><li><a href="global.html#Divider">Divider</a></li><li><a href="global.html#Fluid">Fluid</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#Galery">Galery</a></li><li><a href="global.html#GlobalContextProvider">GlobalContextProvider</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#IconItem">IconItem</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#Layout">Layout</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Map">Map</a></li><li><a href="global.html#Modal">Modal</a></li><li><a href="global.html#ProductAdministration">ProductAdministration</a></li><li><a href="global.html#ProductAttribute">ProductAttribute</a></li><li><a href="global.html#ProductData">ProductData</a></li><li><a href="global.html#ProductImage">ProductImage</a></li><li><a href="global.html#ProductPolicy">ProductPolicy</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RecommedationDetailRating">RecommedationDetailRating</a></li><li><a href="global.html#RecommendationContent">RecommendationContent</a></li><li><a href="global.html#RecommendationDetailCalendar">RecommendationDetailCalendar</a></li><li><a href="global.html#RecommendationDetailDescription">RecommendationDetailDescription</a></li><li><a href="global.html#RecommendationDetailHeader">RecommendationDetailHeader</a></li><li><a href="global.html#RecommendationDetailMap">RecommendationDetailMap</a></li><li><a href="global.html#RecommendationDetailRules">RecommendationDetailRules</a></li><li><a href="global.html#RecommendationDetails">RecommendationDetails</a></li><li><a href="global.html#Recommendations">Recommendations</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#Reservation">Reservation</a></li><li><a href="global.html#Search">Search</a></li><li><a href="global.html#Select">Select</a></li><li><a href="global.html#Slider">Slider</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#TextArea">TextArea</a></li><li><a href="global.html#ToggleIcon">ToggleIcon</a></li><li><a href="global.html#UserContextProvider">UserContextProvider</a></li><li><a href="global.html#capitalize">capitalize</a></li><li><a href="global.html#convertDate">convertDate</a></li><li><a href="global.html#convertDateEs">convertDateEs</a></li><li><a href="global.html#createProduct">createProduct</a></li><li><a href="global.html#createReservations">createReservations</a></li><li><a href="global.html#emailValidate">emailValidate</a></li><li><a href="global.html#fetchApi">fetchApi</a></li><li><a href="global.html#getAvailableProductsByDate">getAvailableProductsByDate</a></li><li><a href="global.html#getAvailableProductsByDateAndCity">getAvailableProductsByDateAndCity</a></li><li><a href="global.html#getCategories">getCategories</a></li><li><a href="global.html#getCities">getCities</a></li><li><a href="global.html#getFeatures">getFeatures</a></li><li><a href="global.html#getInitials">getInitials</a></li><li><a href="global.html#getProductById">getProductById</a></li><li><a href="global.html#getProducts">getProducts</a></li><li><a href="global.html#getProductsByCategories">getProductsByCategories</a></li><li><a href="global.html#getProductsByCategoryId">getProductsByCategoryId</a></li><li><a href="global.html#getProductsByCityName">getProductsByCityName</a></li><li><a href="global.html#getReservationsByProductId">getReservationsByProductId</a></li><li><a href="global.html#getRoleStyle">getRoleStyle</a></li><li><a href="global.html#loginUser">loginUser</a></li><li><a href="global.html#parseJwt">parseJwt</a></li><li><a href="global.html#passwordValidate">passwordValidate</a></li><li><a href="global.html#registerUser">registerUser</a></li><li><a href="global.html#toFontawesome">toFontawesome</a></li><li><a href="global.html#useOutsideClick">useOutsideClick</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sat May 24 2025 15:43:16 GMT-0500 (Colombia Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

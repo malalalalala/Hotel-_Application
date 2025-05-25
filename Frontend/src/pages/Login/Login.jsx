@@ -17,6 +17,12 @@ const initialValues = {
   password: "",
 };
 
+/**
+ * Login page component for user authentication and session management.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered login page.
+ */
 const Login = () => {
   const [formValues, setFormValues] = useState(initialValues);
   const [error, setError] = useState("register_error_oculto");
@@ -33,6 +39,13 @@ const Login = () => {
     setFromBookingFlow(sessionStorage.getItem("bookingFlow"));
     setItemId(sessionStorage.getItem("itemId"));
   }, [fromBookingFlow]);
+
+  useEffect(() => {
+    // Clear loginAlertMessage after showing the alert
+    if (sessionStorage.getItem("loginAlertMessage")) {
+      sessionStorage.removeItem("loginAlertMessage");
+    }
+  }, []);
 
   const setStorageInfo = (info) => {
     sessionStorage.setItem("name", info.name);

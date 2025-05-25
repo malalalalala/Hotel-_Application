@@ -8,6 +8,12 @@ import getRoleStyle from "../../helpers/getRoleStyle";
 import Admin from "./Admin/Admin";
 import { roles } from "../../constants/roles";
 
+/**
+ * Header component for displaying the site header, logo, and user/menu controls.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered header component.
+ */
 const Header = () => {
   const { setLogged, setUserInfo, userInfo, userLogged, setFromBookingFlow } =
     useContext(UserContext);
