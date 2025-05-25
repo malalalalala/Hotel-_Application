@@ -1,6 +1,3 @@
--- ============================
---       POBLAR TABLA CATEGORIES
--- ============================
 INSERT INTO categories (title, description, image_url)
   VALUES ('Hoteles',  'Confortables con todos los servicios y comodidades ', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/455745951.jpg?k=d45ca051f70646f85e7b59163f71a6d9657d5b2c6a6c75dd081a88f49eb91010&o=');
 
@@ -13,10 +10,6 @@ INSERT INTO categories (title, description, image_url)
 INSERT INTO categories (title, description, image_url)
   VALUES ('Hosterias', 'Ven y relajate en la mejor estadía', 'https://cincohorizontes.com/wp-content/uploads/2021/06/image_6487327-3.jpg');
 
-
--- ============================
---       POBLAR TABLA CITIES
--- ============================
 INSERT INTO cities (name, country, state)
   VALUES ('Guatape', 'Antioquia', 'Colombia');
 
@@ -77,6 +70,8 @@ INSERT INTO cities (name, country, state)
 -- ============================
 --       POBLAR TABLA PRODUCTS
 -- ============================
+=======
+
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
     'Hotel Los Recuerdos',
@@ -304,6 +299,7 @@ INSERT INTO products (title, short_description, policy, location, point, opinion
     2,
     1
   );
+
 
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
@@ -728,14 +724,10 @@ INSERT INTO products (title, short_description, policy, location, point, opinion
 
 
 
-
-
-
-
-
 -- ============================
 --       POBLAR TABLA FEATURES
 -- ============================
+
 INSERT INTO features (name, icon)
   VALUES ('Wifi', 'faWifi');
 
@@ -752,15 +744,15 @@ INSERT INTO features (name, icon)
   VALUES ('Apto mascotas', 'faPaw');
 
 INSERT INTO features (name, icon)
+
   VALUES ('Lavadero', 'faPersonSwimming');
+
+  VALUES ('Piscina', 'faPersonSwimming');
+
 
 INSERT INTO features (name, icon)
   VALUES ('Estacionamiento gratuito', 'faCar');
 
-
--- ============================
---       POBLAR TABLA IMAGES
--- ============================
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Los Recuerdos ', 'https://cf.bstatic.com/xdata/images/xphoto/2560x1280/72900619.jpg?k=37c05aec9f8fc9cbd06fab0f9841b0d8d871c47ec0754faac6a5bada4fc385aa&o=
 ', 1);
@@ -1208,14 +1200,10 @@ INSERT INTO images (title, url, id_product)
 INSERT INTO images (title, url, id_product)
   VALUES ('Casa Finca Marinilla Zona de Comedor', 'https://a0.muscache.com/im/pictures/miso/Hosting-1131970783367841428/original/26346a24-3214-48b0-aa31-390d497c949f.jpeg?im_w=240', 34);
 
-
-
-
-
-
 -- ============================
 --  POBLAR TABLA PRODUCTS_HAS_FEATURES
 -- ============================
+
 INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 1);
 INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 1);
 INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 1);
@@ -1224,36 +1212,24 @@ INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 1);
 INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 1);
 INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 1);
 
-
--- ============================
---       POBLAR TABLA ROLES
--- ============================
 INSERT INTO roles (name)
   VALUES ('Admin');
 
 INSERT INTO roles (name)
   VALUES ('User');
 
-
--- ============================
---       POBLAR TABLA USERS
--- ============================
 INSERT INTO users (name, last_name, email, password,role_id)
   VALUES ('Bruno', 'Rodriguez', 'brodriguez@gmail.com', '$2a$12$zGAXSVRkhPwAzVuLhV2sJOQnyNFQxNBVobFlEUFdyer6qZMhpJ/EW',2);
-  --abc1234
 
--- Inserta un usuario con rol User (role_id = 2) y password de 7 caracteres
 INSERT INTO users (name, last_name, email, password, role_id)
-  VALUES ('Laura', 'Ramos', 'lalo@gmail.com', '$2a$12$PAox1AJUWXrPnM.62kICguJk.ppd110tgTAU2lhvX/MD6fx78jQ0e', 1);
+  VALUES ('Laura', 'Ramos', 'lalo@gmail.com', '$2a$12$PAox1AJUWXrPnM.62kICguJk.ppd110tgTAU2lhvX/MD6fx78jQ0e', 1)
 
 
   --1234567
 
 
--- ============================
---       POBLAR TABLA RESERVATIONS
--- ============================
 INSERT INTO reservations (check_in, check_out, product_id, user_id)
+
   VALUES ('2022-11-20', '2022-11-30', 1, 1);
 
 
@@ -1268,3 +1244,4 @@ INSERT INTO reservations (check_in, check_out, product_id, user_id)
  --        SELECT * FROM USERS;
 
 -- ============================
+

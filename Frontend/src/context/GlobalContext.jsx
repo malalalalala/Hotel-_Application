@@ -37,6 +37,10 @@ export function GlobalContextProvider({ children }) {
   const [loadingRecommendations, setLoadingRecommendations] = useState(false);
   const [bookingDate, setBookingDate] = useState(false);
   const [itemId, setItemId] = useState();
+  const [selectedDates, setSelectedDates] = useState({
+    startDate: "",
+    endDate: ""
+  });
 
   useEffect(() => {
     setLoadingCategories(true);
@@ -71,9 +75,17 @@ export function GlobalContextProvider({ children }) {
           categorySelected
         );
         setRecommendations(productsByCategoryId.data);
-        setTitle(
-          `Recomendaciones de ${productsByCategoryId.data[0].category.title}`
-        );
+        if (
+          productsByCategoryId.data.length > 0 &&
+          productsByCategoryId.data[0].category &&
+          productsByCategoryId.data[0].category.title
+        ) {
+          setTitle(
+            `Recomendaciones de ${productsByCategoryId.data[0].category.title}`
+          );
+        } else {
+          setTitle("No hay alojamientos con estos criterios.");
+        }
         setLoadingRecommendations(false);
       };
       fetchProductsByCategoryId();
@@ -113,6 +125,27 @@ export function GlobalContextProvider({ children }) {
     }
   }, [selectedOption.cityName]);
 
+  useEffect(() => {
+    if (
+      selectedOption.cityId &&
+      selectedDates.startDate &&
+      selectedDates.endDate
+    ) {
+      setLoadingRecommendations(true);
+      const fetchByCityAndDate = async () => {
+        const result = await import("../api/services/services").then(mod => mod.getAvailableProductsByDateAndCity(selectedDates.startDate, selectedDates.endDate, selectedOption.cityId));
+        setRecommendations(result.data);
+        setTitle(
+          result.data.length > 0
+            ? `Recomendaciones disponibles en ${selectedOption.cityName} entre ${selectedDates.startDate} y ${selectedDates.endDate}`
+            : "No hay alojamientos con estos criterios."
+        );
+        setLoadingRecommendations(false);
+      };
+      fetchByCityAndDate();
+    }
+  }, [selectedOption.cityId, selectedDates.startDate, selectedDates.endDate]);
+
   return (
     <Context.Provider
       value={{
@@ -140,6 +173,8 @@ export function GlobalContextProvider({ children }) {
         setBookingDate,
         itemId,
         setItemId,
+        selectedDates,
+        setSelectedDates,
       }}
     >
       {children}

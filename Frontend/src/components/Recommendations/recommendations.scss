@@ -289,3 +289,16 @@ $lh: 0.8rem;
     margin-right: 0rem;
   }
 }
+
+.recommendations_empty {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 1.25rem;
+  color: #444;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
