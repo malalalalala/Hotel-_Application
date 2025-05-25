@@ -47,6 +47,15 @@ INSERT INTO cities (name, country, state)
 INSERT INTO cities (name, country, state)
   VALUES ('San Ronque', 'Antioquia', 'Colombia');
 
+INSERT INTO cities (name, country, state)
+  VALUES ('Cisneros', 'Antioquia', 'Colombia');
+
+INSERT INTO cities (name, country, state)
+  VALUES ('Cocorná', 'Antioquia', 'Colombia');
+
+INSERT INTO cities (name, country, state)
+  VALUES ('San Luis', 'Antioquia', 'Colombia');
+
 
 -- ============================
 --       POBLAR TABLA PRODUCTS
@@ -241,6 +250,241 @@ INSERT INTO products (title, short_description, policy, location, point, opinion
     10   -- id_city: San Ronque
   );
 
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Levit Glamping',
+    'Ubicado en una reserva natural, ofrece alojamientos con jacuzzi y vistas a la represa .',
+    'Consulta las políticas del lugar al reservar.',
+    'Reserva Natural Guatapé, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Escapa a la naturaleza con estilo.',
+    'Experimenta el confort del glamping con paisajes naturales, privacidad y servicios exclusivos.',
+    6.2333,
+    -75.1833,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    1
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Glamping Montecarlo Lodge',
+    'Ofrece cubos de madera con jacuzzi y vistas panorámicas.',
+    'Consulta las políticas del lugar al reservar.',
+    'Vía Vereda La Zulia, Guatapé, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Escapa a la naturaleza con estilo.',
+    'Experimenta el confort del glamping con paisajes naturales, privacidad y servicios exclusivos.',
+    6.2333,
+    -75.1833,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    1
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Gulupa Ecolodge',
+    'Glamping ecológico con vista a las montañas y plantación de café.',
+    'Consulta las políticas del lugar al reservar.',
+    'Vereda La Selva, a 4 kilómetros de la plaza principal, al lado de Café Jardín, Jardín, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Conecta con la naturaleza en Jardín.',
+    'Disfruta de una experiencia de glamping sostenible en medio de las montañas y cafetales de Jardín, con vistas panorámicas, privacidad y confort.',
+    5.5915,
+    -75.8122,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    2
+  );
+
+
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Nalua Glamping y Hotel',
+    'Combinación de hotel y glamping en entorno natural, con vista a la montaña.',
+    'Consulta las políticas del lugar al reservar.',
+    'Kilómetro 6, Vereda El Quimbayo, 051077 San Fé, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Relájate entre naturaleza y confort.',
+    'Disfruta de una experiencia que combina el lujo del glamping con la comodidad hotelera en medio de un entorno natural y tranquilo.',
+    6.4551,
+    -75.7236,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    3
+  );
+
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Glamping Jericó, El Edén',
+    'Ofrece alojamiento con jacuzzi privado y vistas al jardín.',
+    'Consulta las políticas del lugar al reservar.',
+    'Sector Puente Sucre, Finca Santa Cruz, Jericó, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Escapa a la naturaleza con estilo.',
+    'Experimenta el confort del glamping con paisajes naturales, privacidad y servicios exclusivos.',
+    5.7900,
+    -75.7800,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    4
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Sukha Glamping',
+    'Ofrece alojamientos con puntuación excepcional por parte de los huéspedes.',
+    'Consulta las políticas del lugar al reservar.',
+    'Aeropuerto José María Córdova-Rionegro, Rionegro, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Escapa a la naturaleza con estilo.',
+    'Experimenta el confort del glamping con paisajes naturales, privacidad y servicios exclusivos.',
+    6.1645,
+    -75.4231,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    5
+  );
+
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Cabaña Glamping Los Canarios',
+    'Ofrece alojamiento con piscina natural y cocina al aire libre.',
+    'Consulta las políticas del lugar al reservar.',
+    'Vereda La Rápida, San Rafael, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Escapa a la naturaleza con estilo.',
+    'Experimenta el confort del glamping con paisajes naturales, privacidad y servicios exclusivos.',
+    6.3000,
+    -75.0333,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    6
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Glamping El Tabor',
+    'Ofrece experiencias de glamping en un entorno natural.',
+    'Consulta las políticas del lugar al reservar.',
+    'Vereda El Tabor, San Carlos, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Escapa a la naturaleza con estilo.',
+    'Experimenta el confort del glamping con paisajes naturales, privacidad y servicios exclusivos.',
+    6.2000,
+    -74.9833,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    7
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Glamping Flor del Monte',
+    'Piscinas, zonas verdes y alojamiento familiar.',
+    'Consulta las políticas del lugar al reservar.',
+    'Vereda Llano de Montaña, Sopetrán, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Escapa a la naturaleza con estilo.',
+    'Experimenta el confort del glamping con paisajes naturales, privacidad y servicios exclusivos.',
+    6.5000,
+    -75.7500,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    8
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Madeira Glamping',
+    'Ubicado en entorno natural, ideal para una escapada de lujo.',
+    'Consulta las políticas del lugar al reservar.',
+    'Km 4 vía Don Diego, La Ceja, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Escapa a la naturaleza con estilo.',
+    'Experimenta el confort del glamping con paisajes naturales, privacidad y servicios exclusivos.',
+    6.0333,
+    -75.4333,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    9
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Glamping Paraíso',
+    'Experiencia de glamping en entorno natural, antes del casco urbano de San Roque.',
+    'Consulta las políticas del lugar al reservar.',
+    'Vía A San Roque, 2 kilómetros antes del casco urbano, 053030 San Roque, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Una escapada natural en San Roque.',
+    'Disfruta de un entorno natural con privacidad, vistas a la montaña y todas las comodidades del glamping.',
+    6.4855,
+    -75.0170,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    10
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'El Mirador de San Joaquín',
+    'Alojamiento en cabaña con jacuzzi privado y vistas al jardín.',
+    'Consulta las políticas del lugar al reservar.',
+    'San Joaquín, 054430 San Luis, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Una escapada natural en San Luis.',
+    'Disfruta de una cabaña acogedora con jacuzzi privado, rodeada de naturaleza y vistas al jardín.',
+    6.0413,
+    -74.9917,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    2,
+    13
+  );
+
+
+
+
 
 -- ============================
 --       POBLAR TABLA FEATURES
@@ -365,8 +609,188 @@ INSERT INTO images (title, url, id_product)
 INSERT INTO images (title, url, id_product)
    VALUES ('Hotel San Roque', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/569885711.jpg?k=6e1936329f8e7c25ebf3602c13297ad6f099b3233c5f5cda16f3cc735ce93515&o=&hp=1', 10);
 
+INSERT INTO images (title, url, id_product)
+  VALUES ('Levit Glamping Exterior Vista Lago 1', 'https://www.levitglamping.com/wp-content/uploads/2021/03/Super-Eclipse-8.jpg', 11);
+INSERT INTO images (title, url, id_product)
+  VALUES ('Levit Glamping Exterior Vista Lago 2', 'https://www.levitglamping.com/wp-content/uploads/2021/03/Super-Eclipse-11.jpg', 11);
+INSERT INTO images (title, url, id_product)
+  VALUES ('Levit Glamping Exterior General', 'https://www.levitglamping.com/wp-content/uploads/2023/04/Glamping-guatape-Super-Eclipse-5.jpg', 11);
+INSERT INTO images (title, url, id_product)
+  VALUES ('Levit Glamping Jacuzzi', 'https://www.levitglamping.com/wp-content/uploads/2021/03/Super-Eclipse-12.jpg', 11);
 
--- Agrega aquí el resto de los INSERT para la tabla images, siguiendo el mismo formato.
+INSERT INTO images (title, url, id_product)
+  VALUES ('Montecarlo Lodge Cubo Exterior 1', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/495123868.jpg?k=65c0197fae5db8c73f7427c088b4179a96535c905b6e3bf0b4abca4d6d1c9449&o=&hp=1', 12);
+INSERT INTO images (title, url, id_product)
+  VALUES ('Montecarlo Lodge Cubo Exterior 2', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/495123886.jpg?k=2a96980c7c9c09224dbdf5d388374c0c0e3e7696c224589fd53dfd6dc8c14e0f&o=&hp=1', 12);
+INSERT INTO images (title, url, id_product)
+  VALUES ('Montecarlo Lodge Vista Panorámica', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/287320054.jpg?k=8c87384c88a8bbc1282421e1e616a69aa1a678b7db338bba78959a3047b57bba&o=&hp=1', 12);
+INSERT INTO images (title, url, id_product)
+  VALUES ('Montecarlo Lodge Interior', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/442190347.jpg?k=fc724729516d97982db5eb790aa07b61e6da60d0475b76896496c4102ba36147&o=&hp=1', 12);
+INSERT INTO images (title, url, id_product)
+  VALUES ('Montecarlo Lodge Jacuzzi', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/304704943.jpg?k=a64af6bd2a14cd727637a181d9d7131286aeb72421f1e18e15dc45dbf266839a&o=&hp=1', 12);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Gulupa Ecolodge Vista Exterior', 'https://content.r9cdn.net/rimg/himg/d2/f6/8c/booking-8009390-639150634-631214.jpg?crop=true&width=836&height=607&watermarkheight=16&watermarkpadding=16', 13);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Gulupa Ecolodge Habitación Principal', 'https://content.r9cdn.net/rimg/himg/c6/cf/c3/booking-8009390-640535898-755742.jpg?crop=true&width=836&height=607&watermarkheight=16&watermarkpadding=16', 13);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Gulupa Ecolodge Terraza Vista Montaña', 'https://content.r9cdn.net/rimg/himg/38/7c/c5/booking-8009390-639186706-695629.jpg?crop=true&width=836&height=607&watermarkheight=16&watermarkpadding=16', 13);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Gulupa Ecolodge Interior Cabaña', 'https://content.r9cdn.net/rimg/himg/8c/35/0b/booking-8009390-639186718-717507.jpg?crop=true&width=836&height=607&watermarkheight=16&watermarkpadding=16', 13);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Gulupa Ecolodge Zona de Descanso', 'https://content.r9cdn.net/rimg/himg/44/68/90/booking-8009390-639186712-711165.jpg?crop=true&width=836&height=607&watermarkheight=16&watermarkpadding=', 13);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Nalua Glamping Exterior 1', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/421457677.jpg?k=f0c5a91e5884976a783ed169927b123ba1b5032e98c55255f742f2f34131d6f6&o=&hp=1', 14);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Nalua Glamping Terraza Noche', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/512002756.jpg?k=0a03a73e42b05fe6dacbab6f8d48bd8deec5427893a5143987152c19b3773179&o=&hp=1', 14);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Nalua Glamping Zona Verde', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/335528297.jpg?k=703639b217841c0b3ea66aab0730aa503a61ad15b7ee4aa020c034133ebac1a6&o=&hp=1', 14);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Nalua Glamping Interior Habitación', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/335527842.jpg?k=ee8664104714b44c2344c8583e2e0c12bfd38d61e659ee64ee603d00ef226f32&o=&hp=1', 14);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Nalua Glamping Vista Noche', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/335527810.jpg?k=a395dd356b023e20c7d0fb98ff8a16915cbd1e78c172ae3bb998dc69d54e585f&o=&hp=1', 14);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Nalua Glamping Fachada Día', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/335451305.jpg?k=36cb4cf874373610e7e0262a3a971788ef8067daec20e0748c25e8f5efd12498&o=&hp=1', 14);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Glamping Jericó Fachada Día', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/350554568.jpg?k=b9132ffc7fb378911db517542b0a996e4b9c66d00e91baa5328cbad9495dfa87&o=&hp=1', 15);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Glamping Jericó Fachada Alternativa', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/350554568.jpg?k=b9132ffc7fb378911db517542b0a996e4b9c66d00e91baa5328cbad9495dfa87&o=&hp=1', 15);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Glamping Jericó Jacuzzi Jardín', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/350533250.jpg?k=7dcf4f605e524c324decfaab04eaf754bbcaaba6d94112b3e8ab87cf1f0fc9cd&o=&hp=1', 15);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Glamping Jericó Habitación Vista Jardín', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/350533256.jpg?k=c7d9ec43b585ee05cbecc6410f7ae50aa9db1348c0a1e42b471c875f83ed2f9a&o=&hp=1', 15);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Sukha Glamping Vista Exterior', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/480380581.jpg?k=b426aa090bb222c2d3576a34f6375001fc1fcd364e15033d23924e9ee86e0b52&o=&hp=1', 16);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Sukha Glamping Habitación Panorámica', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/501078994.jpg?k=cd9d2bc80662ba74f31b5e14450687649ce3f01ff298c2c3a26b4cdf5336b8f6&o=&hp=1', 16);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Sukha Glamping Interior Noche', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/484446187.jpg?k=8a8f343d59c82f3f99aaabcdc277b142c36e036b3f06ababf2e643fe4f0764b3&o=&hp=1', 16);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Sukha Glamping Alojamiento Vista Bosque', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/492793809.jpg?k=19c5f6cdb41144b885991355754f5c5ea32a3807bc913d6b3cbeb2dd37b086de&o=&hp=1', 16);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Sukha Glamping Área Común Exterior', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/480380610.jpg?k=2a0cbff9d3a7d3932c382fd6d40848040e1eaf836b563183bf2ef3f6075af235&o=&hp=1', 16);
+
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Los Canarios Piscina Natural', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/352113290.jpg?k=90ea5ea7776e1947fb2104cc5f0e103f0ec78ba7c7dca50550a2af8220ccb9e0&o=', 17);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Los Canarios Entrada', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/352113272.jpg?k=262cd5417fe88ab63ba8feb013bcbbc91b2705e14aae36c958f9d57d0560d066&o=&hp=1', 17);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Los Canarios Terraza', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/352113293.jpg?k=cda694eb43c186a6e95f91e309df2985a5d9b873ae3269da5447fb08b41c3af8&o=&hp=1', 17);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Los Canarios Área Común', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/352132943.jpg?k=ba6cf1e1541c4a72e198b6654b889767e50cd664e41d149ad8ce17be283ea2c0&o=&hp=1', 17);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Los Canarios Cabaña Vista', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/524581888.jpg?k=849ed1b40bef8caafdfcc84a02f9ed527c064b717902bc69e4c73427aead9daa&o=&hp=1', 17);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Los Canarios Cocina al Aire Libre', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/352113284.jpg?k=1ba9fe23f2d31bc006f38bc2a7dc857e1f37a92e955c2d1b113c28aa85ee25f4&o=&hp=1', 17);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Tabor Vista Exterior', 'https://1.bp.blogspot.com/-ZTVhu7CawkQ/YZLl0rHU6XI/AAAAAAAAIi4/h8w-78j-aBktsdEopdAO7dV7vUxpuw6ZgCLcBGAsYHQ/s1440/242553153_114339490989452_4452964244461065830_n.jpg', 18);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Tabor Mirador', 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/fb/a7/5c/caption.jpg?w=900&h=500&s=1', 18);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Tabor Cabaña Principal', 'https://www.hotelessancarlos.org.co/wp-content/uploads/2023/09/IMG-20230116-WA0060.jpg', 18);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Tabor Paisaje Natural', 'https://th.bing.com/th/id/OIP.rvXVOY59wmMR7JFaVndj5gHaE8?rs=1&pid=ImgDetMain', 18);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Tabor Vista Nocturna', 'https://www.hotelessancarlos.org.co/wp-content/uploads/2023/09/IMG-20221025-WA0037.jpg', 18);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Flor del Monte Piscina Principal', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/544889263.jpg?k=08a8d1ff61b5602d628d0e057301514db32a0a34721a566790b5c94a0a610623&o=&hp=1', 19);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Flor del Monte Zona Verde', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/544889277.jpg?k=9d6f9ed0b255f5e63afdd77fbf824e7d4d456c26febd7a8ff8772051a9d7a215&o=&hp=1', 19);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Flor del Monte Entrada', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/544889235.jpg?k=aa923576c0fd182aa5da7e3af1c9181b14f5ec2d6ca6b92f5a965e6776bf9b59&o=&hp=1', 19);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Flor del Monte Vista General', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/544889271.jpg?k=e15fa05f2de1b988dc0c22567ee0b421b474cccdb5a8f10505bc8732d94f6a75&o=&hp=1', 19);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Madeira Glamping Vista General', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/457216177.jpg?k=9ae8bf04077993531772f6d3837fe59f1333eef8e70c17dfb439a74e3c9a7628&o=&hp=1', 20);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Madeira Glamping Exterior con Jardín', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/408570326.jpg?k=3384f9a7e7b9c44b172dc4b1a79aafeb9e1a63a4d03f97e5a76a7a830ff86d9b&o=&hp=1', 20);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Madeira Glamping Noche', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/407477718.jpg?k=b7dcd65674710437063e318c5d18af8cf7ee1d98b2ce29b6232c0910e90b2cea&o=&hp=1', 20);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Madeira Glamping Interiores', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/408561711.jpg?k=12691cc89fecb6cc37e83a4a5e3ec9d6e85d01185993752bcc1e84c8ae218c13&o=&hp=1', 20);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Madeira Glamping Sala con Vista', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/408561676.jpg?k=270ccd17992d6af13ae95dcc44f7b5dc7bb6cdc042f93522553d2ec3c8c59d8f&o=&hp=1', 20);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Madeira Glamping Entrada', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/428535443.jpg?k=23955c93217f296807f76832be611258285bc547b6cbfc56429037721e8518b9&o=&hp=1', 20);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Glamping Paraíso Vista Principal', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/380182670.jpg?k=20bccdbee947c9762ac06654912de2cca410b96ca4233518a99dc071523f42a4&o=&hp=1', 21);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Glamping Paraíso Vista Piscina', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/643080105.jpg?k=4ffc732e50b086e9350efd6c19f27d041d40f3874e504015f3475016140ee800&o=&hp=1', 21);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Glamping Paraíso Interior Habitación', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/380182663.jpg?k=dcfbbabee4d7506e9bba96e17034c9829e9759cb940464d71984bb439ce3978a&o=&hp=1', 21);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Glamping Paraíso Piscina Nocturna', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/643080106.jpg?k=07d200674ca8a710302bdd8a6ed9483c6c5a7ddc9d06485637f5ea797bd5b838&o=&hp=1', 21);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Glamping Paraíso Vista Jardín', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/643080114.jpg?k=d2e2c0b4d09c48cb0a774e08076fe5408644b17da57ac87133114cc93fade445&o=&hp=1', 21);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Glamping Paraíso Entrada', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/380182657.jpg?k=444e0d42b0b2f95b6de05dd16a6a8258e706d4ae9a5b77e0fd99b4188b334534&o=&hp=1', 21);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Mirador de San Joaquín Vista Jardín', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/526471868.jpg?k=1870fb2c0b3db587f3763f2e06aaeb1d570ef0585ca5a303d5ec72456af00eb7&o=', 22);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Mirador de San Joaquín Exterior', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/526471741.jpg?k=7fc9c2537790ec4ab0c0c552e13fcf64f8724f854d509b4e2577e69a07a224b7&o=&hp=1', 22);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Mirador de San Joaquín Cabaña Jacuzzi', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/597593440.jpg?k=7aa5398b0bfb8f6c292bd1132dcfb79c7a7999b96b2d0ecac76e733e5b06ca44&o=&hp=1', 22);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Mirador de San Joaquín Interior', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/530631970.jpg?k=4f80862ce4bc0fd7f8647af70007d42c15e794791f6f761fe267bd802ffebe14&o=&hp=1', 22);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Mirador de San Joaquín Balcón', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/526742778.jpg?k=3e1d9cbf7679315ffb7ab404fed3974b9772b2bc6ee498b575599fde3ce48639&o=&hp=1', 22);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Mirador de San Joaquín Habitación', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/526471852.jpg?k=abbe73c5eb9302460341c9f5740d32c1f15180fb70670d8b38410450a244555c&o=&hp=1', 22);
+
+
+
 
 
 -- ============================
