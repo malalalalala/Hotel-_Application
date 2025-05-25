@@ -86,7 +86,7 @@ public class SecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
                 .headers().frameOptions().sameOrigin()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**", "/v3/api-docs.yaml", "/debug", "/actuator/**","/metrics").permitAll()
+                .antMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**", "/v3/api-docs.yaml", "/debug", "/actuator/**").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
