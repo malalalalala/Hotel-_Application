@@ -79,19 +79,16 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
     protected HttpSecurity configure(HttpSecurity http) throws Exception {
 
         http
+                .cors().configurationSource(corsConfigurationSource())
+                .and()
                 .csrf().disable()
                 // Permite el uso de iframes (necesario para H2 Console)
                 .headers().frameOptions().sameOrigin()
                 .and()
                 .authorizeRequests()
-                // Permite acceso libre a la consola H2
+                .antMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**", "/v3/api-docs.yaml", "/debug", "/actuator/**").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
-                .antMatchers(
-                        "/v3/api-docs/**",
-                        "/swagger-ui/**",
-                        "/swagger-ui.html")
-                .permitAll()
-
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 // GET
                 .antMatchers(HttpMethod.GET,
                         "/categories/**", "/cities/**", "/features/**", "/images/**",
@@ -102,6 +99,7 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
 
                 // POST - (por ejemplo, admin no puede reservar, según pedido de PO)
                 .antMatchers(HttpMethod.POST, "/auth/login/**", "/users/**").permitAll()
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers(HttpMethod.POST,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**", "/roles/**")
                 .hasAnyAuthority(ROLE_ADMIN)
@@ -116,8 +114,7 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
                 // DELETE
                 .antMatchers(HttpMethod.DELETE,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**",
-                        "/reservations/**", "/roles/**", "/users/**")
-                .hasAnyAuthority(ROLE_ADMIN)
+                        "/reservations/**", "/roles/**", "/users/**").hasAnyAuthority(ROLE_ADMIN)
                 .and()
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPointConfig)
                 .and()
@@ -136,8 +133,8 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOriginPatterns(Arrays.asList("*"));
-        // config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "*"));
+        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200"));
+        //config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "https://parchearenantioquia.up.railway.app"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowCredentials(true);
         config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
@@ -146,12 +143,26 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
         return cors;
     }
 
+    @Bean
+    public CorsFilter corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200"));
+        //config.setAllowedOrigins(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200"));
+        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        config.setAllowCredentials(true);
+        config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
+        source.registerCorsConfiguration("/**", config);
+        return new CorsFilter(source);
+    }
+
     /**
      * Registro los filtros configurados anteriormente para que sea un filter
      * implementado por sprinb
      * de esta manera uso e implemento el registro y apertura de los cors
      */
     @Bean
+
     public FilterRegistrationBean<CorsFilter> corsFilter() {
         FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<CorsFilter>(
                 new CorsFilter(corsConfigurationSource()));

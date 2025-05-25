@@ -25,8 +25,8 @@ public class Category implements Serializable{
     private String image_url;
 
 
-    /*@OneToMany(mappedBy = "category", cascade = CascadeType.REMOVE)
-    @JsonIgnore
+/*    @OneToMany(mappedBy = "category")
+    @JsonIgnoreProperties("category")
     private List<Product> productList;*/
 
 
