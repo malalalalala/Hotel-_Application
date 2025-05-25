@@ -86,8 +86,9 @@
 			<version>1.6.9</version>
 		</dependency>
 		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-registry-prometheus</artifactId>
+			<groupId>io.opentelemetry.instrumentation</groupId>
+			<artifactId>opentelemetry-spring-boot-starter</artifactId>
+			<version>1.31.0-alpha</version>
 		</dependency>
 
     </dependencies>
