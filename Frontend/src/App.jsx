@@ -24,7 +24,6 @@ function App() {
               <Route index element={<Home />} />
               <Route path="login" element={<Login />} />
               <Route path="register" element={<Register />} />
-
               <Route path="products" element={<RecommendationDetails />}>
                 <Route path=":productId" element={<RecommendationContent />} />
               </Route>

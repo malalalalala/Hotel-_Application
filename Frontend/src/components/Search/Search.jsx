@@ -11,6 +11,7 @@ import { convertDateEs } from "../../utils/stringConvertions";
 const Search = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [error, setError] = useState("");
   const {
     setRecommendations,
     setTitle,
@@ -29,6 +30,12 @@ const Search = () => {
 
   const handleClickSearch = async (startDate, endDate) => {
     const cityId = selectedOption.cityId;
+    if (!startDate || !endDate) {
+      setError("Las fechas de búsqueda son obligatorias");
+      return;
+    }
+
+    setError("");
     setLoadingRecommendations(true);
     const productsByDateAndCity = await getAvailableProductsByDateAndCity(
       startDate,
@@ -36,10 +43,20 @@ const Search = () => {
       cityId
     );
     setRecommendations(productsByDateAndCity.data);
+
     setLoadingRecommendations(false);
-    setTitle(
-      `Recomendaciones disponibles en ${selectedOption.cityName} entre ${titleStartDate} y ${titleEndDate}`
-    );
+    let title = "Recomendaciones disponibles";
+
+    if (selectedOption.cityName) {
+      title += ` en ${selectedOption.cityName}`;
+    }
+
+    if (titleStartDate && titleEndDate) {
+      title += ` entre ${titleStartDate} y ${titleEndDate}`;
+    }
+
+    setTitle(title);
+
     sessionStorage.clear();
   };
 
@@ -48,9 +65,14 @@ const Search = () => {
       <h1 className="searchBar_header">
         Busca ofertas en hoteles, casas y mucho más
       </h1>
+
       <div className="searchBar_form_container">
         <LocationSelect />
-        <DateRangeSearch />
+        <div>
+          <DateRangeSearch />
+          {error && <span className="search_error">{error}</span>}
+        </div>
+
         <Button
           onClick={() => handleClickSearch(startDate, endDate)}
           variant="button1"

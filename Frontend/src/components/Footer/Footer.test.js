@@ -17,7 +17,7 @@ describe("<Footer/>", () => {
   });
 
   it("displays copyright text", () => {
-    const copyRights = screen.getByText(/©2022 Digital Booking/i);
+    const copyRights = screen.getByText(/©2025 Parchear en Antioquia/i);
     expect(copyRights.toBeInTheDocument());
   });
 

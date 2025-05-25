@@ -1,4 +1,5 @@
-const URL_BACKEND = import.meta.env.VITE_BACKEND_URL;
+import { config } from '../../config';
+const URL_BACKEND = config.apiUrl;
 
 const fetchApi = async (url, requestName, requestInfo) => {
   try {
