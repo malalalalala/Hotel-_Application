@@ -49,6 +49,29 @@ INSERT INTO cities (name, country, state)
 INSERT INTO cities (name, country, state)
   VALUES ('San Luis', 'Antioquia', 'Colombia');
 
+INSERT INTO cities (name, country, state)
+  VALUES ('Puerto Triunfo', 'Antioquia', 'Colombia');
+
+INSERT INTO cities (name, country, state)
+  VALUES ('Barbosa', 'Antioquia', 'Colombia');
+
+INSERT INTO cities (name, country, state)
+  VALUES ('Fredonia', 'Antioquia', 'Colombia');
+
+INSERT INTO cities (name, country, state)
+  VALUES ('El Carmen de Viboral', 'Antioquia', 'Colombia');
+
+INSERT INTO cities (name, country, state)
+  VALUES ('Marinilla', 'Antioquia', 'Colombia');
+
+
+
+
+-- ============================
+--       POBLAR TABLA PRODUCTS
+-- ============================
+=======
+
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
     'Hotel Los Recuerdos',
@@ -472,7 +495,232 @@ INSERT INTO products (title, short_description, policy, location, point, opinion
     13
   );
 
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Hostería El Trébol',
+    'Alojamiento campestre con vistas al lago y actividades al aire libre en Guatapé.',
+    'Consulta las políticas del establecimiento al reservar.',
+    'Vereda La Piedra, 700 metros vía principal, 053847 Guatapé, Colombia',
+    96,
+    'Excepcional',
+    4,
+    'Naturaleza y confort junto al embalse.',
+    'Disfruta de cabañas privadas con vistas al lago, desayuno americano, actividades como pesca, ciclismo y parque acuático, todo en un entorno natural y tranquilo.',
+    6.22626,
+    -75.18648,
+    'Check-out: 1:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    4,
+    1
+  );
 
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Hostería El Paraíso Jardín',
+    'Alojamiento tradicional con encanto en el corazón de Jardín, Antioquia.',
+    'Consulta las políticas del establecimiento al reservar.',
+    'Calle 16, Jardín, Antioquia, 056050, Colombia',
+    92,
+    'Muy bueno',
+    4,
+    'Relájate en un entorno pintoresco y tranquilo.',
+    'Ofrece habitaciones confortables, zonas comunes para el descanso, cercanía al centro histórico y un ambiente acogedor con excelente atención al cliente.',
+    5.5955,
+    -75.8172,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    4,
+    2
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Hostería Tonusco Campestre',
+    'Alojamiento campestre con piscina, naturaleza y tranquilidad en Santa Fe de Antioquia.',
+    'Consulta las políticas del establecimiento al reservar.',
+    'Calle 7 con Carrera 7, Barrio Barranca - El Gualí, Santa Fe de Antioquia, 570050, Colombia',
+    94,
+    'Excelente',
+    4,
+    'Descanso natural en una zona histórica.',
+    'Ofrece amplias instalaciones rodeadas de naturaleza, piscina al aire libre, restaurante, zonas verdes y cómodas habitaciones para una estadía relajante.',
+    6.5560,
+    -75.8260,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    4,
+    3
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Hostería Puerta del Nus',
+    'Alojamiento acogedor en el corazón de Cisneros, ideal para el descanso.',
+    'Consulta las políticas del establecimiento al reservar.',
+    'Calle 19A, Barrio El Uno, 053050 Cisneros, Colombia',
+    88,
+    'Muy bueno',
+    3,
+    'Comodidad en el corredor del Nus.',
+    'Ofrece habitaciones cómodas, restaurante, parqueadero y zonas comunes tranquilas para viajeros y familias.',
+    6.5376,
+    -75.0908,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    4,
+    11
+  );
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Hostería La Medusa',
+    'Rodeada de naturaleza, ideal para desconectarse y disfrutar de la tranquilidad de Cocorná.',
+    'Consulta las políticas del establecimiento al reservar.',
+    'Cl 21 #28-42, Quebrada Guayabal, Cocorná, Antioquia, Colombia',
+    86,
+    'Muy bueno',
+    4,
+    'Naturaleza y confort en un solo lugar.',
+    'Ubicada en medio de la vegetación, ofrece habitaciones cómodas, piscina natural, restaurante típico y acceso a la quebrada Guayabal.',
+    6.0076,
+    -75.1725,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    4,
+    12
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Finca Hotel Ríos Claros',
+    'Alojamiento campestre con acceso a zonas verdes y cercanía a los ríos de San Luis.',
+    'Consulta las políticas del establecimiento al reservar.',
+    'Autopista Medellín-Bogotá km 130, 054430 San Luis, Colombia',
+    89,
+    'Excelente',
+    4,
+    'Tranquilidad natural a orillas del río.',
+    'Rodeada de naturaleza, esta finca hotel ofrece espacios amplios, zona de camping, restaurante y acceso a ríos cercanos, ideal para el ecoturismo.',
+    5.8996,
+    -74.9657,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    4,
+    13
+  );
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Cabaña Villa Jardín - Aldea Doradal - Santorini Colombiano',
+    'Encantadora cabaña estilo mediterráneo en Doradal, ideal para relajarse en familia.',
+    'Consulta las políticas del lugar al reservar.',
+    'Aldea Doradal, Cabaña #82, 053448 Doradal, Puerto Triunfo, Colombia',
+    90,
+    'Excelente',
+    4,
+    'Descanso al estilo Santorini en Antioquia.',
+    'Ubicada en la Aldea Doradal, esta cabaña combina arquitectura blanca y azul estilo Santorini con zonas verdes, terrazas amplias y cercanía al Río Claro.',
+    5.8966,
+    -74.7255,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al establecimiento.',
+    4,
+    14
+  );
+
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Alojamiento entero: casa en Barbosa',
+    'Hermosa casa entre las montañas a 42 km de Medellín.',
+    'Consulta las políticas del anfitrión al reservar.',
+    'Barbosa, Antioquia, Colombia',
+    88,
+    'Muy bueno',
+    4,
+    'Descanso entre montañas a pocos minutos de Medellín.',
+    'Ubicada en un entorno montañoso y tranquilo, esta casa ofrece comodidad, vistas panorámicas y acceso rápido desde Medellín. Ideal para familias o parejas. Ten en cuenta que hay un peaje en la ruta.',
+    6.4372,
+    -75.3339,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al anfitrión.',
+    3,
+    15
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Finca Naya - Fredonia',
+    'Alojamiento entero entre cafetales con vista al Río Cauca.',
+    'Consulta las políticas del anfitrión al reservar.',
+    'Fredonia, Antioquia, Colombia',
+    93,
+    'Excelente',
+    5,
+    'Naturaleza, altura y café.',
+    'En las alturas sobre el Río Cauca, en medio de los verdes cafetales, se encuentra Finca Naya. Un alojamiento ideal para descansar, disfrutar del paisaje cafetero y conectarse con la naturaleza antioqueña.',
+    5.9167,
+    -75.6667,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'El alojamiento cuenta con protocolos de seguridad e información turística local.',
+    3,
+    16
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Casa Colonial en Santa Fe de Antioquia',
+    'Alojamiento entero en el corazón del centro histórico.',
+    'Consulta las políticas del anfitrión al reservar.',
+    'Centro Histórico, Santa Fe de Antioquia, Colombia',
+    95,
+    'Excelente',
+    5,
+    'Disfruta del encanto colonial.',
+    'Casa colonial completamente equipada ideal para familias o grupos. A pasos de la plaza principal, rodeada de arquitectura patrimonial, historia y clima cálido. Piscina privada y cocina tradicional.',
+    6.5552,
+    -75.8230,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'El alojamiento cuenta con extintores, información turística y recomendaciones locales.',
+    3,
+    3
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Condominio moderno en El Carmen',
+    'A solo 1 minuto del parque principal de El Carmen de Viboral.',
+    'Consulta las políticas del anfitrión al reservar.',
+    'Centro, El Carmen de Viboral, Antioquia, Colombia',
+    93,
+    'Excelente',
+    5,
+    'Confort y ubicación privilegiada.',
+    'Alojamiento tipo condominio completamente equipado. Ideal para parejas o viajeros que deseen explorar el arte cerámico y la cultura local. Cercano a restaurantes y zonas turísticas.',
+    6.0821,
+    -75.3351,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Cuenta con seguridad privada, acceso digital y recomendaciones de actividades locales.',
+    3,
+    17
+  );
+
+INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
+  VALUES (
+    'Casa Finca en Marinilla',
+    'Hermosa y acogedora casa finca a 15 minutos de Marinilla.',
+    'Consulta las políticas del anfitrión al reservar.',
+    'Zona rural, a 15 minutos del centro de Marinilla, Antioquia, Colombia',
+    91,
+    'Excelente',
+    5,
+    'Tranquilidad y naturaleza en el oriente antioqueño.',
+    'Esta casa finca ofrece un entorno campestre ideal para descansar, con amplias zonas verdes, espacios familiares y vistas a la naturaleza. Perfecta para una escapada rural cerca de la ciudad.',
+    6.1710,
+    -75.3319,
+    'Check-out: 12:00 PM. No se permiten fiestas. No fumar.',
+    'Consulta al anfitrión.',
+    3,
+    18
+  );
 
 
 
@@ -496,7 +744,11 @@ INSERT INTO features (name, icon)
   VALUES ('Apto mascotas', 'faPaw');
 
 INSERT INTO features (name, icon)
+
+  VALUES ('Lavadero', 'faPersonSwimming');
+
   VALUES ('Piscina', 'faPersonSwimming');
+
 
 INSERT INTO features (name, icon)
   VALUES ('Estacionamiento gratuito', 'faCar');
@@ -776,6 +1028,178 @@ INSERT INTO images (title, url, id_product)
 INSERT INTO images (title, url, id_product)
   VALUES ('El Mirador de San Joaquín Habitación', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/526471852.jpg?k=abbe73c5eb9302460341c9f5740d32c1f15180fb70670d8b38410450a244555c&o=&hp=1', 22);
 
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Trébol Fachada', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/554583099.jpg?k=16f6166aeb05bf53a35b991781989ce3e5063a11c650ab4441d3d9fb95e1b264&o=', 23);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Trébol Entrada', 'https://cf.bstatic.com/xdata/images/hotel/max500/554265412.jpg?k=662643c8c00d4473538e64878ecaf3b1f03507820a479ae8d1c44a8f28f31aa1&o=', 23);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Trébol Habitación', 'https://cf.bstatic.com/xdata/images/hotel/max300/379311593.jpg?k=4a3244cbbabd808df33eea455119549471cb17f0b1909588d1928cad283dd343&o=', 23);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Trébol Vista general', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/554265450.jpg?k=d97079dc96d3ef4b23846b6025a5442e0acf88d34242d663df76bbb90fdd4b3c&o=&hp=1', 23);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Trébol Jardín', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/554583341.jpg?k=4f9707b030445afb63d44d7a1b3bf80bdb8a8ea622f1fed004f97afaad1b97f7&o=&hp=1', 23);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Trébol Zona común', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/554583349.jpg?k=0a9ad63714718385338eadb29c1835017c35ca041c948bd1087086139d3cb2d5&o=&hp=1', 23);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('El Trébol Exteriores', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/554265486.jpg?k=96cd1673d4af8c3bf3f12352749f2b5e242392d17078b77646381dee7cf4f26d&o=&hp=1', 23);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería El Paraíso Fachada', 'https://img.restaurantguru.com/c35c-Hosteria-El-Paraiso-Jardin-Antioquia-facade-2.jpg', 24);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería El Paraíso Restaurante', 'https://img.restaurantguru.com/c616-Restaurant-Hosteria-El-Paraiso-Jardin-Antioquia-picture.jpg', 24);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería El Paraíso Comida', 'https://img.restaurantguru.com/c3c2-Restaurant-Hosteria-El-Paraiso-Jardin-Antioquia-meals.jpg', 24);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería Tonusco Campestre Vista General', 'https://www.kayak.com.co/rimg/himg/36/5b/c8/expedia_group-2571840-189958700-668432.jpg?width=968&height=607&crop=true', 25);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería Tonusco Campestre Piscina', 'https://www.kayak.com.co/rimg/himg/02/ef/94/expedia_group-2571840-c08042-520999.jpg?width=968&height=607&crop=true', 25);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería Tonusco Campestre Habitación', 'https://www.kayak.com.co/rimg/himg/f9/58/83/expedia_group-2571840-d931e6-493529.jpg?width=968&height=607&crop=true', 25);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería Puerta del Nus Fachada', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/463205301.jpg?k=93065034ed360d3993fe5836f3ed66c1329652e62080378104db67e43c1c7534&o=', 26);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería Puerta del Nus Entrada', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/451825385.webp?k=1d9263a4fcf27febc462ab9a4375eba89ad494b689f33258764640ae3678fc9e&o=', 26);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería Puerta del Nus Piscina', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/545031108.jpg?k=ead6117f809505dd4f23e02376a0367b2d8c38801c4c6822af6bbc06fe3b47e4&o=&hp=1', 26);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería Puerta del Nus Zonas Verdes', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/447065600.jpg?k=077539dd62b3b30f191fc139a0a7e03f129371f6d7f7482ea3341c5b7d27ab0d&o=&hp=1', 26);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería La Medusa Fachada', 'https://www.kayak.com.co/rimg/himg/8b/02/dd/expedia_group-10248927-193555586-258766.jpg?width=836&height=607&crop=true', 27);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería La Medusa Piscina', 'https://www.kayak.com.co/rimg/himg/2a/0e/bb/expedia_group-10248927-128572495-206077.jpg?width=836&height=607&crop=true', 27);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería La Medusa Zonas Verdes', 'https://www.kayak.com.co/rimg/himg/f4/e6/9b/expedia_group-10248927-73084817-317431.jpg?width=836&height=607&crop=true', 27);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería La Medusa Entrada Principal', 'https://www.kayak.com.co/rimg/himg/09/ac/fd/expedia_group-10248927-255388246-346453.jpg?width=836&height=607&crop=true', 27);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Hotel Rios Claros Exterior', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/404386053.jpg?k=af8369df04b8c171506239620a66d8a7a2c7ff3f36cf036b30cb89a58adf2cf0&o=&hp=1', 28);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Hotel Rios Claros Entrada', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/506586967.jpg?k=ec2bc27bfaf21f802e1ed296f5195330be342550f0fb6d1e4ffb13177fd344d7&o=&hp=1', 28);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Hotel Rios Claros Jardines', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/404386073.jpg?k=524ed66ce20da857f2b0360bc9f1cfe06609cade9ade51009054742ab231f8b1&o=&hp=1', 28);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Hotel Rios Claros Habitación', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/406432101.jpg?k=6353d9757b39899a1e08fcb4ee08d676af02673653cbc24969186c65957c2d92&o=&hp=1', 28);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Hotel Rios Claros Piscina', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/406432102.jpg?k=f946bb13af614bd6d425345a34f7db2d7aa31bc060cceaf72c84e151be788470&o=&hp=1', 28);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Hotel Rios Claros Instalaciones', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/506586611.jpg?k=bafcd72d2e1f69d4e757f44eb47c335d0ab3830de2ae47dc0e4b729f056974a8&o=&hp=1', 28);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Hotel Rios Claros Vista General', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/506586984.jpg?k=e9397d2c2c07053c4702a85961e037c855854d6569e2e01972cb4291c0c0b725&o=&hp=1', 28);
+
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Villa Jardín Fachada', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/634923793.jpg?k=ca6ed5a35e098515f4f9c41b27a66dad2092455690830a3f8008e49c555b9e85&o=', 29);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Villa Jardín Entrada', 'https://cf.bstatic.com/xdata/images/hotel/max500/634923413.jpg?k=e4f886a970b3d662071eda7c6b527f4e9ef716427fa5cc2877ba6bf441c33460&o=', 29);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Villa Jardín Vista Interna', 'https://cf.bstatic.com/xdata/images/hotel/max300/513933385.jpg?k=8fa7c0bff1f514e04c9cf38d4485934812cdf3a0afcd9d02218b589e876e04cc&o=', 29);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Villa Jardín Piscina Nocturna', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/634923939.jpg?k=986468f973a44125bb984eb983b25d66fc7754afde6b98e5d422c6b2a0a376fa&o=&hp=1', 29);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Villa Jardín Interior General', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/634923705.jpg?k=cfc53fb1ccf49aa4930000bdffc1960f719b8c8dba3433bb021a78bd98f857cc&o=&hp=1', 29);
+
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa en las Montañas Sala', 'https://a0.muscache.com/im/pictures/miso/Hosting-21527257/original/2412ce0f-2d5c-486c-9c7c-56b1ebc4e7db.png?im_w=1200', 30);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa en las Montañas Comedor', 'https://a0.muscache.com/im/pictures/miso/Hosting-21527257/original/debfcba7-865c-49c2-ae3b-5fa7db977f1f.png?im_w=720', 30);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa en las Montañas Dormitorio', 'https://a0.muscache.com/im/pictures/miso/Hosting-21527257/original/30117c97-62d2-438f-a468-ff4d42b2efec.jpeg?im_w=1200', 30);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa en las Montañas Jardín', 'https://a0.muscache.com/im/pictures/ae518bf2-5b6e-4f3a-b12b-b7c49e310775.jpg?im_w=720', 30);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa en las Montañas Cocina', 'https://a0.muscache.com/im/pictures/miso/Hosting-21527257/original/d25ef966-6ec8-48aa-8c6e-adec472b558f.png?im_w=720', 30);
+
+-- IMÁGENES DE FINCA NAYA (ID 31)
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Naya Fachada', 'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NDI0MDg5MjE=/original/29d33ef8-4c36-44ac-bd4e-8d824a6bf231.jpeg?im_w=720', 31);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Naya Vista Panorámica', 'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NDI0MDg5MjE=/original/6fe696bc-42e2-489e-b41b-da983565005c.jpeg?im_w=1200', 31);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Naya Sala', 'https://a0.muscache.com/im/pictures/c0243d0a-2f1b-454d-9532-6783931ab794.jpg?im_w=1200', 31);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Naya Comedor', 'https://a0.muscache.com/im/pictures/miso/Hosting-42408921/original/6b71cb50-4aab-48c6-919e-dddc7375ec9d.jpeg?im_w=1200', 31);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Finca Naya Jardín', 'https://a0.muscache.com/im/pictures/acdde957-bd95-46d5-95f3-db97eb56699a.jpg?im_w=240', 31);
+
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Colonial Santa Fe Fachada', 'https://a0.muscache.com/im/pictures/miso/Hosting-1063889573195406074/original/02faf4e7-6459-4ba5-a435-b1530f16a26b.jpeg?im_w=720', 32);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Colonial Santa Fe Piscina', 'https://a0.muscache.com/im/pictures/miso/Hosting-1063889573195406074/original/51ac597c-38e5-4f0f-bc38-6c92183a23a1.jpeg?im_w=240', 32);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Colonial Santa Fe Cocina', 'https://a0.muscache.com/im/pictures/hosting/Hosting-1063889573195406074/original/1b7aa123-04f5-400b-8644-03d8fabc6295.jpeg?im_w=480', 32);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Colonial Santa Fe Comedor', 'https://a0.muscache.com/im/pictures/miso/Hosting-1063889573195406074/original/ed279e05-e51b-40cd-82f3-3315c0d6fc52.jpeg?im_w=240', 32);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Colonial Santa Fe Habitación', 'https://a0.muscache.com/im/pictures/miso/Hosting-1063889573195406074/original/37e731fc-b0aa-4d75-9327-bf4c4b4c4b39.jpeg?im_w=240', 32);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Condominio El Carmen Sala Principal', 'https://a0.muscache.com/im/pictures/miso/Hosting-856029785250558552/original/25d1390b-8b36-4ffe-b127-40ac47a2fd1d.jpeg?im_w=1200', 33);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Condominio El Carmen Cocina Comedor', 'https://a0.muscache.com/im/pictures/miso/Hosting-856029785250558552/original/d6e1d748-c8cb-4df6-bf83-28205dcbb152.jpeg?im_w=720', 33);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Condominio El Carmen Habitación Principal', 'https://a0.muscache.com/im/pictures/miso/Hosting-856029785250558552/original/241d6514-898e-464b-925d-bbc30e980607.jpeg?im_w=720', 33);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Finca Marinilla Fachada Principal', 'https://a0.muscache.com/im/pictures/miso/Hosting-1131970783367841428/original/b0a0b9ed-cf36-4493-b7d1-dde10d1b6994.jpeg?im_w=1200', 34);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Finca Marinilla Jardín con Vista', 'https://a0.muscache.com/im/pictures/miso/Hosting-1131970783367841428/original/48bf35b9-3dcc-4507-95a6-164fab9b164d.jpeg?im_w=720', 34);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Finca Marinilla Sala Rústica', 'https://a0.muscache.com/im/pictures/hosting/Hosting-1131970783367841428/original/2914cbd9-fbbe-4b23-8ab4-5f170ab81bc2.jpeg?im_w=240', 34);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Finca Marinilla Cocina Campestre', 'https://a0.muscache.com/im/pictures/miso/Hosting-1131970783367841428/original/4d575bb0-7e86-46ca-a3a4-876c36f931a9.jpeg?im_w=240', 34);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Finca Marinilla Zona de Comedor', 'https://a0.muscache.com/im/pictures/miso/Hosting-1131970783367841428/original/26346a24-3214-48b0-aa31-390d497c949f.jpeg?im_w=240', 34);
+
 -- ============================
 --  POBLAR TABLA PRODUCTS_HAS_FEATURES
 -- ============================
@@ -798,7 +1222,11 @@ INSERT INTO users (name, last_name, email, password,role_id)
   VALUES ('Bruno', 'Rodriguez', 'brodriguez@gmail.com', '$2a$12$zGAXSVRkhPwAzVuLhV2sJOQnyNFQxNBVobFlEUFdyer6qZMhpJ/EW',2);
 
 INSERT INTO users (name, last_name, email, password, role_id)
-  VALUES ('Laura', 'Ramos', 'lalo@gmail.com', '$2a$12$PAox1AJUWXrPnM.62kICguJk.ppd110tgTAU2lhvX/MD6fx78jQ0e', 1);
+  VALUES ('Laura', 'Ramos', 'lalo@gmail.com', '$2a$12$PAox1AJUWXrPnM.62kICguJk.ppd110tgTAU2lhvX/MD6fx78jQ0e', 1)
+
+
+  --1234567
+
 
 INSERT INTO reservations (check_in, check_out, product_id, user_id)
 
