@@ -21,8 +21,10 @@ const Recommendations = () => {
         <div className="recommendations_cards_container">
           {loadingRecommendations ? (
             <Spinner />
+          ) : recommendations?.length === 0 ? (
+            <div className="recommendations_empty">No encontramos alojamientos. Intenta ingresando otros criterios de búsqueda.</div>
           ) : (
-            recommendations?.map(
+            recommendations.map(
               ({
                 id,
                 title,

@@ -261,7 +261,7 @@ INSERT INTO features (name, icon)
   VALUES ('Apto mascotas', 'faPaw');
 
 INSERT INTO features (name, icon)
-  VALUES ('Pileta', 'faPersonSwimming');
+  VALUES ('Piscina', 'faPersonSwimming');
 
 INSERT INTO features (name, icon)
   VALUES ('Estacionamiento gratuito', 'faCar');

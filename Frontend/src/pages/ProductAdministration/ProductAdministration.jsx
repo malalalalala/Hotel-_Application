@@ -87,7 +87,7 @@ const ProductAdministration = () => {
   const disabled = () => {
     const objVerification = Object.values(completeProduct).some((value) => {
       if (
-        (typeof value === "object" && !Array.isArray(value) && Object.keys(value).length === 0) ||
+        (typeof value === "object" && value !== null && !Array.isArray(value) && Object.keys(value).length === 0) ||
         (Array.isArray(value) && value.length === 0) ||
         value === "" ||
         componentImages.length < 5
