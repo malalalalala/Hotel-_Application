@@ -64,9 +64,6 @@ public class NotificationService {
         }
     }
 
-    /**
-     * Envía un mensaje personalizado al grupo
-     */
     public void sendCustomMessage(String message) {
         try {
             sendToGroup("📱 HOTEL NOTIFICATION: " + message);

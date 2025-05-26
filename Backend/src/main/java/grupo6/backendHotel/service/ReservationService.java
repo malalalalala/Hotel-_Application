@@ -2,7 +2,9 @@ package grupo6.backendHotel.service;
 
 import grupo6.backendHotel.dto.*;
 import grupo6.backendHotel.exceptions.ResourceNotFoundException;
+import grupo6.backendHotel.models.Product;
 import grupo6.backendHotel.models.Reservation;
+import grupo6.backendHotel.models.User;
 import grupo6.backendHotel.repository.ReservationRepository;
 import grupo6.backendHotel.service.exceptions.ConflictoException;
 import grupo6.backendHotel.service.exceptions.DatosIncorrectosException;
@@ -22,14 +24,20 @@ public class ReservationService {
 
     private ReservationRepository reservationRepository;
     private NotificationService notificationService;
+    private ProductService productService;
+    private UserService userService;
 
     //Constructor
     @Lazy
     @Autowired
     public ReservationService(ReservationRepository reservationRepository,
-                              NotificationService notificationService) {
+                              NotificationService notificationService,
+                              ProductService productService,
+                              UserService userService) {
         this.reservationRepository = reservationRepository;
         this.notificationService = notificationService;
+        this.productService = productService;
+        this.userService = userService;
     }
 
 
@@ -107,42 +115,70 @@ public class ReservationService {
         log.info("=== INICIANDO REGISTRO DE RESERVA ===");
         log.info("ReservationDTO recibido: {}", reservationDTO);
 
-        Reservation reservation = ReservationDTO.fromDTO(reservationDTO);
-        if (reservation.getProduct() != null && reservation.getProduct().getId() != null) {
-            if (reservation.getProduct().getTitle() == null) {
-                Optional<Reservation> tempReservation = reservationRepository.findById(reservation.getProduct().getId());
-                log.info("Producto tiene solo ID: {}, buscando entidad completa...", reservation.getProduct().getId());
+        // Crear nueva reserva
+        Reservation reservation = new Reservation();
+        reservation.setCheck_in(reservationDTO.getCheck_in());
+        reservation.setCheck_out(reservationDTO.getCheck_out());
+
+        // *** CARGAR ENTIDADES COMPLETAS DESDE LA BASE DE DATOS ***
+        try {
+            // Cargar producto completo
+            if (reservationDTO.getProduct() != null && reservationDTO.getProduct().getId() != null) {
+                Integer productId = reservationDTO.getProduct().getId();
+                log.info("Cargando producto con ID: {}", productId);
+
+                // Obtener DTO del service y convertir a entidad
+                ProductDTO productDTO = productService.getProduct(productId);
+                Product fullProduct = ProductDTO.fromDTO(productDTO);
+                reservation.setProduct(fullProduct);
+                log.info("Producto cargado: {}", fullProduct.getTitle());
+            } else {
+                log.error("PROBLEMA: No se encontró ID de producto en el DTO");
+                throw new RuntimeException("ID de producto requerido");
             }
+
+            // Cargar usuario completo
+            if (reservationDTO.getUser() != null && reservationDTO.getUser().getId() != null) {
+                Integer userId = reservationDTO.getUser().getId();
+                log.info("Cargando usuario con ID: {}", userId);
+
+                // Obtener DTO del service y convertir a entidad
+                UserDTO userDTO = userService.getUser(userId);
+                User fullUser = UserDTO.fromDTO(userDTO);
+                reservation.setUser(fullUser);
+                log.info("Usuario cargado: {} {} ({})", fullUser.getName(), fullUser.getLastName(), fullUser.getEmail());
+            } else {
+                log.error("PROBLEMA: No se encontró ID de usuario en el DTO");
+                throw new RuntimeException("ID de usuario requerido");
+            }
+
+        } catch (Exception e) {
+            log.error("Error cargando entidades relacionadas: {}", e.getMessage(), e);
+            throw new RuntimeException("Error cargando datos: " + e.getMessage());
         }
 
-        if (reservation.getUser() != null && reservation.getUser().getId() != null) {
-            if (reservation.getUser().getName() == null) {
-                log.info("Usuario tiene solo ID: {}, buscando entidad completa...", reservation.getUser().getId());
-            }
-        }
-
+        // Guardar la reserva con las entidades completas
         Reservation reservationResponse = reservationRepository.save(reservation);
         log.info("Reserva guardada con ID: {}", reservationResponse.getId());
 
-        Optional<Reservation> completeReservation = reservationRepository.findById(reservationResponse.getId());
+        // Verificar que los datos están completos
+        if (reservationResponse.getUser() != null && reservationResponse.getProduct() != null) {
+            log.info("=== DATOS COMPLETOS PARA NOTIFICACIÓN ===");
+            log.info("Usuario: {} {} ({})",
+                    reservationResponse.getUser().getName(),
+                    reservationResponse.getUser().getLastName(),
+                    reservationResponse.getUser().getEmail());
+            log.info("Producto: {}", reservationResponse.getProduct().getTitle());
 
-        if (completeReservation.isPresent()) {
-            Reservation fullReservation = completeReservation.get();
-
-            log.info("Reserva completa cargada:");
-            if (fullReservation.getUser() != null) {
-                log.info("- Usuario: {} {}", fullReservation.getUser().getName(), fullReservation.getUser().getLastName());
-            }
-            if (fullReservation.getProduct() != null) {
-                log.info("- Producto: {}", fullReservation.getProduct().getTitle());
-            }
-
+            // Enviar notificación
             try {
-                notificationService.sendReservationNotificationAsync(fullReservation);
+                notificationService.sendReservationNotificationAsync(reservationResponse);
                 log.info("Notificación enviada correctamente");
             } catch (Exception e) {
                 log.error("Error enviando notificación: {}", e.getMessage());
             }
+        } else {
+            log.error("PROBLEMA: Datos aún incompletos después de guardar");
         }
 
         ReservationDTO reservationDTOResponse = ReservationDTO.fromEntity(reservationResponse);
