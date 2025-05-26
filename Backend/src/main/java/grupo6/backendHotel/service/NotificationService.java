@@ -28,9 +28,9 @@ public class NotificationService {
         // Configurar los miembros del grupo aquí
         // Cada persona debe haber configurado CallMeBot previamente
         this.groupMembers = Arrays.asList(
-                new GroupMember("+573015781171", "1173354") // Admin principal
-                //new GroupMember("+573009876543", "TU_API_KEY_2"), // Recepción
-                //new GroupMember("+573005555555", "TU_API_KEY_3")  // Manager
+                new GroupMember("+573015781171", "1173354"), // Admin principal
+                new GroupMember("+573009876543", "TU_API_KEY_2"), // Recepción
+                new GroupMember("+573005555555", "TU_API_KEY_3")  // Manager
         );
     }
 
@@ -39,6 +39,11 @@ public class NotificationService {
      */
     public void sendReservationNotification(Reservation reservation) {
         try {
+            // Log para debug
+            log.info("Enviando notificación para reserva ID: {}", reservation.getId());
+            log.info("Usuario: {}", reservation.getUser() != null ? reservation.getUser().getName() : "NULL");
+            log.info("Producto: {}", reservation.getProduct() != null ? reservation.getProduct().getTitle() : "NULL");
+
             String message = buildReservationMessage(reservation);
             sendToGroup(message);
             log.info("Notificación de reserva enviada para reservation ID: {}", reservation.getId());
@@ -64,6 +69,9 @@ public class NotificationService {
         }
     }
 
+    /**
+     * Envía un mensaje personalizado al grupo
+     */
     public void sendCustomMessage(String message) {
         try {
             sendToGroup("📱 HOTEL NOTIFICATION: " + message);
@@ -78,6 +86,26 @@ public class NotificationService {
      * Construye el mensaje de nueva reserva
      */
     private String buildReservationMessage(Reservation reservation) {
+        // Verificar si los datos están disponibles y manejar nulls
+        String userName = "Usuario no disponible";
+        String userLastName = "";
+        String userEmail = "Email no disponible";
+        String productTitle = "Producto no disponible";
+
+        try {
+            if (reservation.getUser() != null) {
+                userName = reservation.getUser().getName() != null ? reservation.getUser().getName() : "Sin nombre";
+                userLastName = reservation.getUser().getLastName() != null ? reservation.getUser().getLastName() : "";
+                userEmail = reservation.getUser().getEmail() != null ? reservation.getUser().getEmail() : "Sin email";
+            }
+
+            if (reservation.getProduct() != null) {
+                productTitle = reservation.getProduct().getTitle() != null ? reservation.getProduct().getTitle() : "Sin título";
+            }
+        } catch (Exception e) {
+            log.error("Error obteniendo datos de la reserva: {}", e.getMessage());
+        }
+
         return String.format(
                 "🏨 NUEVA RESERVA\n\n" +
                         "👤 Cliente: %s %s\n" +
@@ -89,12 +117,12 @@ public class NotificationService {
                         "⏰ Registrada: %s\n\n" +
                         "¡Confirmar disponibilidad y preparar alojamiento!",
 
-                reservation.getUser().getName(),
-                reservation.getUser().getLastName(),
-                reservation.getUser().getEmail(),
-                reservation.getProduct().getTitle(),
-                reservation.getCheck_in().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),
-                reservation.getCheck_out().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),
+                userName,
+                userLastName,
+                userEmail,
+                productTitle,
+                reservation.getCheck_in() != null ? reservation.getCheck_in().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) : "Fecha no disponible",
+                reservation.getCheck_out() != null ? reservation.getCheck_out().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) : "Fecha no disponible",
                 reservation.getId(),
                 LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))
         );
@@ -130,16 +158,22 @@ public class NotificationService {
         // Enviar a todos los miembros del grupo en paralelo para mayor velocidad
         groupMembers.parallelStream().forEach(member -> {
             try {
+                // No codificar toda la URL, solo el mensaje
                 String encodedMessage = URLEncoder.encode(message, StandardCharsets.UTF_8);
-                String url = String.format(
-                        "https://api.callmebot.com/whatsapp.php?phone=%s&text=%s&apikey=%s",
+
+                // Construir URL paso a paso para evitar problemas de codificación
+                String baseUrl = "https://api.callmebot.com/whatsapp.php";
+                String fullUrl = String.format("%s?phone=%s&text=%s&apikey=%s",
+                        baseUrl,
                         member.getPhone(),
                         encodedMessage,
                         member.getApiKey()
                 );
 
-                String response = restTemplate.getForObject(url, String.class);
-                log.debug("Mensaje enviado a {}: {}", member.getPhone(), response);
+                log.debug("Enviando mensaje a {}: {}", member.getPhone(), message); // Log del mensaje original
+
+                String response = restTemplate.getForObject(fullUrl, String.class);
+                log.debug("Respuesta de CallMeBot para {}: {}", member.getPhone(), response);
 
             } catch (Exception e) {
                 log.error("Error enviando mensaje a {}: {}", member.getPhone(), e.getMessage());
