@@ -25,12 +25,12 @@ public class Reservation implements Serializable{
         private LocalDate check_out;
 
         //RELACIONES ENTRE TABLAS
-        @ManyToOne(fetch = FetchType.LAZY)
+        @ManyToOne(fetch = FetchType.EAGER)
         @JoinColumn(name = "product_id")
         private Product product;
 
 
-        @ManyToOne(fetch = FetchType.LAZY)
+        @ManyToOne(fetch = FetchType.EAGER)
         @JoinColumn(name = "user_id")
         private User user;
 
