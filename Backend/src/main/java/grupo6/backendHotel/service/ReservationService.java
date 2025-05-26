@@ -21,12 +21,15 @@ import java.util.Optional;
 public class ReservationService {
 
     private ReservationRepository reservationRepository;
+    private NotificationService notificationService;
 
     //Constructor
     @Lazy
     @Autowired
-    public ReservationService(ReservationRepository reservationRepository) {
+    public ReservationService(ReservationRepository reservationRepository,
+                              NotificationService notificationService) {
         this.reservationRepository = reservationRepository;
+        this.notificationService = notificationService;
     }
 
 
@@ -90,6 +93,12 @@ public class ReservationService {
         log.info(String.valueOf(reservation));
         log.info(String.valueOf(reservationDTO));
         Reservation reservationResponse = reservationRepository.save(reservation);
+        try {
+            notificationService.sendReservationNotificationAsync(reservationResponse);
+            log.info("Notificación de reserva enviada para ID: {}", reservationResponse.getId());
+        } catch (Exception e) {
+            log.error("Error enviando notificación, pero reserva creada exitosamente: {}", e.getMessage());
+        }
         ReservationDTO reservationDTOResponse = ReservationDTO.fromEntity(reservationResponse);
         log.info(String.valueOf(reservationDTOResponse));
         return reservationDTOResponse;
@@ -110,9 +119,20 @@ public class ReservationService {
 
     //DELETE
     public void delete(Integer id) throws ResourceNotFoundException, DatosIncorrectosException, ConflictoException {
-        if(this.getReservation(id) == null)
+        Optional<Reservation> reservationOpt = reservationRepository.findById(id);
+        if(this.getReservation(id) == null) {
             throw new ResourceNotFoundException("There is no reservation with the ID: " + id, "id", id);
+        }
+        Reservation reservation = reservationOpt.get();
         reservationRepository.deleteById(id);
+        try {
+            notificationService.sendCancellationNotificationAsync(reservation);
+            log.info("Notificación de cancelación enviada para ID: {}", id);
+        } catch (Exception e) {
+            log.error("Error enviando notificación de cancelación: {}", e.getMessage());
+            // No fallar el proceso si falla la notificación
+        }
+        log.info("Reserva eliminada exitosamente: ID {}", id);
     }
 
 
