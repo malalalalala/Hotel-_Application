@@ -155,25 +155,29 @@ public class NotificationService {
      * Envía mensaje a todos los miembros del grupo usando CallMeBot
      */
     private void sendToGroup(String message) {
-        // Enviar a todos los miembros del grupo en paralelo para mayor velocidad
         groupMembers.parallelStream().forEach(member -> {
             try {
-                // No codificar toda la URL, solo el mensaje
-                String encodedMessage = URLEncoder.encode(message, StandardCharsets.UTF_8);
+                // Codificar solo caracteres problemáticos, manteniendo emojis
+                String encodedMessage = message
+                        .replace(" ", "+")           // Espacios
+                        .replace("\n", "%0A")       // Saltos de línea
+                        .replace("&", "%26")        // Ampersand
+                        .replace("=", "%3D")        // Igual
+                        .replace("?", "%3F")        // Interrogación
+                        .replace("#", "%23")        // Numeral
+                        .replace("(", "%28")        // Paréntesis
+                        .replace(")", "%29")        // Paréntesis
+                        .replace(":", "%3A");       // Dos puntos
 
-                // Construir URL paso a paso para evitar problemas de codificación
-                String baseUrl = "https://api.callmebot.com/whatsapp.php";
-                String fullUrl = String.format("%s?phone=%s&text=%s&apikey=%s",
-                        baseUrl,
+                String url = String.format(
+                        "https://api.callmebot.com/whatsapp.php?phone=%s&text=%s&apikey=%s",
                         member.getPhone(),
                         encodedMessage,
                         member.getApiKey()
                 );
 
-                log.debug("Enviando mensaje a {}: {}", member.getPhone(), message); // Log del mensaje original
-
-                String response = restTemplate.getForObject(fullUrl, String.class);
-                log.debug("Respuesta de CallMeBot para {}: {}", member.getPhone(), response);
+                String response = restTemplate.getForObject(url, String.class);
+                log.info("Mensaje enviado correctamente a {}: {}", member.getPhone(), response);
 
             } catch (Exception e) {
                 log.error("Error enviando mensaje a {}: {}", member.getPhone(), e.getMessage());
