@@ -154,7 +154,7 @@ public class NotificationService {
     /**
      * Envía mensaje a todos los miembros del grupo usando CallMeBot
      */
-    private void sendToGroup(String message) {
+/*    private void sendToGroup(String message) {
         groupMembers.parallelStream().forEach(member -> {
             try {
                 // Codificar solo caracteres problemáticos, manteniendo emojis
@@ -183,8 +183,32 @@ public class NotificationService {
                 log.error("Error enviando mensaje a {}: {}", member.getPhone(), e.getMessage());
             }
         });
-    }
+    }*/
 
+    private void sendToGroup(String message) {
+        groupMembers.parallelStream().forEach(member -> {
+            try {
+                // Construir URL directamente sin UriComponentsBuilder
+                String cleanMessage = message.replace(" ", "%20")    // Solo espacios
+                        .replace("\n", "%0A");   // Solo saltos de línea
+
+                String url = String.format(
+                        "https://api.callmebot.com/whatsapp.php?phone=%s&text=%s&apikey=%s",
+                        member.getPhone(),
+                        cleanMessage,
+                        member.getApiKey()
+                );
+
+                log.debug("URL final para {}: {}", member.getPhone(), url);
+
+                String response = restTemplate.getForObject(url, String.class);
+                log.info("Mensaje enviado correctamente a {}: {}", member.getPhone(), response);
+
+            } catch (Exception e) {
+                log.error("Error enviando mensaje a {}: {}", member.getPhone(), e.getMessage());
+            }
+        });
+    }
     /**
      * Envío asíncrono para no bloquear el proceso principal
      */
