@@ -28,9 +28,7 @@ public class NotificationService {
         // Configurar los miembros del grupo aquí
         // Cada persona debe haber configurado CallMeBot previamente
         this.groupMembers = Arrays.asList(
-                new GroupMember("+573015781171", "1173354"), // Admin principal
-                new GroupMember("+573009876543", "TU_API_KEY_2"), // Recepción
-                new GroupMember("+573005555555", "TU_API_KEY_3")  // Manager
+                new GroupMember("+573015781171", "1173354")
         );
     }
 
