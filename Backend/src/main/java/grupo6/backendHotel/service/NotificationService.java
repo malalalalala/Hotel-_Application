@@ -38,16 +38,16 @@ public class NotificationService {
     public void sendReservationNotification(Reservation reservation) {
         try {
             // Log para debug
-            log.info("Enviando notificación para reserva ID: {}", reservation.getId());
-            log.info("Usuario: {}", reservation.getUser() != null ? reservation.getUser().getName() : "NULL");
-            log.info("Producto: {}", reservation.getProduct() != null ? reservation.getProduct().getTitle() : "NULL");
+            log.info("Enviando notificación para reserva ID {}", reservation.getId());
+            log.info("Usuario {}", reservation.getUser() != null ? reservation.getUser().getName() : "NULL");
+            log.info("Producto {}", reservation.getProduct() != null ? reservation.getProduct().getTitle() : "NULL");
 
             String message = buildReservationMessage(reservation);
             sendToGroup(message);
-            log.info("Notificación de reserva enviada para reservation ID: {}", reservation.getId());
+            log.info("Notificación de reserva enviada para reservation ID {}", reservation.getId());
 
         } catch (Exception e) {
-            log.error("Error enviando notificación de reserva para ID {}: {}",
+            log.error("Error enviando notificación de reserva para ID {} {}",
                     reservation.getId(), e.getMessage());
         }
     }
@@ -59,10 +59,10 @@ public class NotificationService {
         try {
             String message = buildCancellationMessage(reservation);
             sendToGroup(message);
-            log.info("Notificación de cancelación enviada para reservation ID: {}", reservation.getId());
+            log.info("Notificación de cancelación enviada para reservation ID {}", reservation.getId());
 
         } catch (Exception e) {
-            log.error("Error enviando notificación de cancelación para ID {}: {}",
+            log.error("Error enviando notificación de cancelación para ID {} {}",
                     reservation.getId(), e.getMessage());
         }
     }
@@ -72,11 +72,11 @@ public class NotificationService {
      */
     public void sendCustomMessage(String message) {
         try {
-            sendToGroup("📱 HOTEL NOTIFICATION: " + message);
+            sendToGroup("📱 HOTEL NOTIFICATION " + message);
             log.info("Mensaje personalizado enviado al grupo");
 
         } catch (Exception e) {
-            log.error("Error enviando mensaje personalizado: {}", e.getMessage());
+            log.error("Error enviando mensaje personalizado {}", e.getMessage());
         }
     }
 
@@ -101,18 +101,18 @@ public class NotificationService {
                 productTitle = reservation.getProduct().getTitle() != null ? reservation.getProduct().getTitle() : "Sin título";
             }
         } catch (Exception e) {
-            log.error("Error obteniendo datos de la reserva: {}", e.getMessage());
+            log.error("Error obteniendo datos de la reserva {}", e.getMessage());
         }
 
         return String.format(
                 "🏨 NUEVA RESERVA\n\n" +
                         "👤 Cliente: %s %s\n" +
-                        "📧 Email: %s\n" +
-                        "🏠 Alojamiento: %s\n" +
-                        "📅 Check-in: %s\n" +
-                        "📅 Check-out: %s\n" +
+                        "📧 Email %s\n" +
+                        "🏠 Alojamiento %s\n" +
+                        "📅 Check-in %s\n" +
+                        "📅 Check-out %s\n" +
                         "🆔 Reserva #%d\n" +
-                        "⏰ Registrada: %s\n\n" +
+                        "⏰ Registrada %s\n\n" +
                         "¡Confirmar disponibilidad y preparar alojamiento!",
 
                 userName,
@@ -122,7 +122,7 @@ public class NotificationService {
                 reservation.getCheck_in() != null ? reservation.getCheck_in().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) : "Fecha no disponible",
                 reservation.getCheck_out() != null ? reservation.getCheck_out().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) : "Fecha no disponible",
                 reservation.getId(),
-                LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))
+                LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
         );
     }
 
@@ -132,12 +132,12 @@ public class NotificationService {
     private String buildCancellationMessage(Reservation reservation) {
         return String.format(
                 "❌ RESERVA CANCELADA\n\n" +
-                        "👤 Cliente: %s %s\n" +
-                        "🏠 Alojamiento: %s\n" +
-                        "📅 Fechas: %s - %s\n" +
+                        "👤 Cliente %s %s\n" +
+                        "🏠 Alojamiento %s\n" +
+                        "📅 Fechas %s - %s\n" +
                         "🆔 Reserva #%d\n" +
-                        "⏰ Cancelada: %s\n\n" +
-                        "Liberar disponibilidad en el sistema.",
+                        "⏰ Cancelada %s\n\n" +
+                        "Liberar disponibilidad en el sistema",
 
                 reservation.getUser().getName(),
                 reservation.getUser().getLastName(),
@@ -145,7 +145,7 @@ public class NotificationService {
                 reservation.getCheck_in().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),
                 reservation.getCheck_out().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),
                 reservation.getId(),
-                LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))
+                LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy mm"))
         );
     }
 
@@ -165,7 +165,7 @@ public class NotificationService {
                         .replace("#", "%23")        // Numeral
                         .replace("(", "%28")        // Paréntesis
                         .replace(")", "%29")        // Paréntesis
-                        .replace(":", "%3A");       // Dos puntos
+                        .replace(":", ":");       // Dos puntos
 
                 String url = String.format(
                         "https://api.callmebot.com/whatsapp.php?phone=%s&text=%s&apikey=%s",
