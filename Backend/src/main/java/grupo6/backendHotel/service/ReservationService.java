@@ -85,7 +85,7 @@ public class ReservationService {
     }
 
     //REGISTER
-    public ReservationDTO register(ReservationDTO reservationDTO) {
+/*    public ReservationDTO register(ReservationDTO reservationDTO) {
         //Reservation reservation = new Reservation();
         //convertEntity(reservation, reservationDTO);
         //log.info("register");
@@ -101,6 +101,52 @@ public class ReservationService {
         }
         ReservationDTO reservationDTOResponse = ReservationDTO.fromEntity(reservationResponse);
         log.info(String.valueOf(reservationDTOResponse));
+        return reservationDTOResponse;
+    }*/
+    public ReservationDTO register(ReservationDTO reservationDTO) {
+        log.info("=== INICIANDO REGISTRO DE RESERVA ===");
+        log.info("ReservationDTO recibido: {}", reservationDTO);
+
+        Reservation reservation = ReservationDTO.fromDTO(reservationDTO);
+        if (reservation.getProduct() != null && reservation.getProduct().getId() != null) {
+            if (reservation.getProduct().getTitle() == null) {
+                Optional<Reservation> tempReservation = reservationRepository.findById(reservation.getProduct().getId());
+                log.info("Producto tiene solo ID: {}, buscando entidad completa...", reservation.getProduct().getId());
+            }
+        }
+
+        if (reservation.getUser() != null && reservation.getUser().getId() != null) {
+            if (reservation.getUser().getName() == null) {
+                log.info("Usuario tiene solo ID: {}, buscando entidad completa...", reservation.getUser().getId());
+            }
+        }
+
+        Reservation reservationResponse = reservationRepository.save(reservation);
+        log.info("Reserva guardada con ID: {}", reservationResponse.getId());
+
+        Optional<Reservation> completeReservation = reservationRepository.findById(reservationResponse.getId());
+
+        if (completeReservation.isPresent()) {
+            Reservation fullReservation = completeReservation.get();
+
+            log.info("Reserva completa cargada:");
+            if (fullReservation.getUser() != null) {
+                log.info("- Usuario: {} {}", fullReservation.getUser().getName(), fullReservation.getUser().getLastName());
+            }
+            if (fullReservation.getProduct() != null) {
+                log.info("- Producto: {}", fullReservation.getProduct().getTitle());
+            }
+
+            try {
+                notificationService.sendReservationNotificationAsync(fullReservation);
+                log.info("Notificación enviada correctamente");
+            } catch (Exception e) {
+                log.error("Error enviando notificación: {}", e.getMessage());
+            }
+        }
+
+        ReservationDTO reservationDTOResponse = ReservationDTO.fromEntity(reservationResponse);
+        log.info("=== REGISTRO COMPLETADO ===");
         return reservationDTOResponse;
     }
 
