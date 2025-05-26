@@ -107,12 +107,12 @@ public class NotificationService {
         return String.format(
                 "🏨 NUEVA RESERVA\n\n" +
                         "👤 Cliente: %s %s\n" +
-                        "📧 Email %s\n" +
-                        "🏠 Alojamiento %s\n" +
-                        "📅 Check-in %s\n" +
-                        "📅 Check-out %s\n" +
-                        "🆔 Reserva #%d\n" +
-                        "⏰ Registrada %s\n\n" +
+                        "📧 Email: %s\n" +
+                        "🏠 Alojamiento: %s\n" +
+                        "📅 Check-in: %s\n" +
+                        "📅 Check-out: %s\n" +
+                        "🆔 Reserva: #%d\n" +
+                        "⏰ Registrada: %s\n\n" +
                         "¡Confirmar disponibilidad y preparar alojamiento!",
 
                 userName,
@@ -132,11 +132,11 @@ public class NotificationService {
     private String buildCancellationMessage(Reservation reservation) {
         return String.format(
                 "❌ RESERVA CANCELADA\n\n" +
-                        "👤 Cliente %s %s\n" +
-                        "🏠 Alojamiento %s\n" +
-                        "📅 Fechas %s - %s\n" +
-                        "🆔 Reserva #%d\n" +
-                        "⏰ Cancelada %s\n\n" +
+                        "👤 Cliente: %s %s\n" +
+                        "🏠 Alojamiento: %s\n" +
+                        "📅 Fechas: %s - %s\n" +
+                        "🆔 Reserva: #%d\n" +
+                        "⏰ Cancelada: %s\n\n" +
                         "Liberar disponibilidad en el sistema",
 
                 reservation.getUser().getName(),
