@@ -111,7 +111,7 @@ public class NotificationService {
                         "🏠 Alojamiento: %s\n" +
                         "📅 Check-in: %s\n" +
                         "📅 Check-out: %s\n" +
-                        "🆔 Reserva: #%d\n" +
+                        "🆔 Reserva: # %d\n" +
                         "⏰ Registrada: %s\n\n" +
                         "¡Confirmar disponibilidad y preparar alojamiento!",
 
@@ -135,7 +135,7 @@ public class NotificationService {
                         "👤 Cliente: %s %s\n" +
                         "🏠 Alojamiento: %s\n" +
                         "📅 Fechas: %s - %s\n" +
-                        "🆔 Reserva: #%d\n" +
+                        "🆔 Reserva: # %d\n" +
                         "⏰ Cancelada: %s\n\n" +
                         "Liberar disponibilidad en el sistema",
 
