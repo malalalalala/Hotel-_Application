@@ -96,7 +96,6 @@
 			<version>1.50.0</version>
 		</dependency>
     </dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -113,5 +112,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
