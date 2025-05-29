@@ -32,7 +32,7 @@ public class MetricsController {
         info.put("uptime", ManagementFactory.getRuntimeMXBean().getUptime());
         return info;
     }
-    @Autowired
+/*    @Autowired
     private MeterRegistry meterRegistry;
 
     @GetMapping("/available")
@@ -41,5 +41,5 @@ public class MetricsController {
                 .stream()
                 .map(meter -> meter.getId().getName())
                 .collect(Collectors.toSet());
-    }
+    }*/
 }
