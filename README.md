@@ -15,7 +15,7 @@
   https://hotel-application-production.up.railway.app/swagger-ui/index.html#/auth-controller/token  
 - 📚 **Structure and Routing (DeepWiki)**:  
   https://deepwiki.com/AndresT3086/Hotel-_Application/3.1-application-structure-and-routing  
-
+  [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/AndresT3086/Hotel-_Application)
 ---
 
 ## 📂 Folder Structure
