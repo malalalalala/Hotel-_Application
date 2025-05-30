@@ -87,7 +87,7 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**", "/v3/api-docs.yaml",
-                        "/debug", "/actuator/**","/metrics/**","/health").permitAll()
+                        "/debug").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 // GET
