@@ -99,7 +99,7 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
                 .permitAll()
 
                 // POST - (por ejemplo, admin no puede reservar, según pedido de PO)
-                .antMatchers(HttpMethod.POST, "/auth/login/**", "/users/**","/auth/login").permitAll()
+                .antMatchers(HttpMethod.POST,  "/users/**","/auth/login").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers(HttpMethod.POST,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**", "/roles/**")
