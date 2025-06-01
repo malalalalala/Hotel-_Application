@@ -134,7 +134,7 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200"));
+        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200","https://hotel-application-production.up.railway.app/**"));
         //config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "https://parchearenantioquia.up.railway.app"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowCredentials(true);
