@@ -90,16 +90,16 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
                         "/debug").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/roles/**").hasAnyAuthority(ROLE_ADMIN)
                 // GET
                 .antMatchers(HttpMethod.GET,
                         "/categories/**", "/cities/**", "/features/**", "/images/**",
                         "/products/**", "/reservations/**", "products/city/**", "products/category/**",
                         "/findByDate/**", "/users/**")
                 .permitAll()
-                .antMatchers(HttpMethod.GET, "/roles/**").hasAnyAuthority(ROLE_ADMIN)
 
                 // POST - (por ejemplo, admin no puede reservar, según pedido de PO)
-                .antMatchers(HttpMethod.POST, "/auth/login/**", "/users/**").permitAll()
+                .antMatchers(HttpMethod.POST, "/auth/login/**", "/users/**","/auth/login").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers(HttpMethod.POST,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**", "/roles/**")
