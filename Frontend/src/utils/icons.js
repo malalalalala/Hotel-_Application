@@ -2,7 +2,7 @@ import {
   faWifi,
   faSnowflake,
   faKitchenSet,
-  faTV,
+  faTv,
   faPaw,
   faShirt,
   faPersonSwimming,
