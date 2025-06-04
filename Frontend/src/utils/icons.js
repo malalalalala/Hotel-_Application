@@ -13,7 +13,7 @@ export const iconMap = {
   faWifi: faWifi,
   faSnowflake: faSnowflake,
   faKitchenSet: faKitchenSet,
-  faTV: faTV,
+  faTv: faTv,
   faPaw: faPaw,
   faShirt: faShirt,
   faPersonSwimming: faPersonSwimming,
