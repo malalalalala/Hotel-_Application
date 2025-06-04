@@ -743,7 +743,7 @@ INSERT INTO features (name, icon)
   VALUES ('Apto mascotas', 'faPaw');
 
 INSERT INTO features (name, icon)
-  VALUES ('Lavadero', 'faShirt');
+  VALUES ('Lavadero', 'fatShirt');
 
 INSERT INTO features (name, icon)
   VALUES ('Piscina', 'faPersonSwimming');
