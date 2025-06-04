@@ -737,7 +737,7 @@ INSERT INTO features (name, icon)
   VALUES ('Cocina', 'faKitchenSet');
 
 INSERT INTO features (name, icon)
-  VALUES ('Televisor', 'faTV');
+  VALUES ('Televisor', 'faTv');
 
 INSERT INTO features (name, icon)
   VALUES ('Apto mascotas', 'faPaw');
