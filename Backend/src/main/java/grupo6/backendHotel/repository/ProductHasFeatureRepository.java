@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public interface ProductHasFeatureRepository extends JpaRepository<ProductHasFeature, Integer> {
 
-    @Query("SELECT pf.feature FROM ProductHasFeature pf WHERE pf.product.id = ?1 ")
+    @Query("SELECT pf.feature FROM ProductHasFeature pf WHERE pf.product.id = ?1 ORDER BY pf.feature.id ASC")
     List<Feature> findByProductId(Integer productId);
 
     @Query(value = "SELECT pf.product_id FROM products_has_features pf WHERE pf.product_id = ?1 ", nativeQuery = true)
