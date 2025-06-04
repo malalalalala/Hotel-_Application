@@ -70,7 +70,6 @@ INSERT INTO cities (name, country, state)
 -- ============================
 --       POBLAR TABLA PRODUCTS
 -- ============================
-=======
 
 INSERT INTO products (title, short_description, policy, location, point, opinion, star, subtitle, long_description, latitude, length, rules, safety_security, id_category, id_city)
   VALUES (
@@ -122,7 +121,7 @@ INSERT INTO products (title, short_description, policy, location, point, opinion
     'Sumérgete en la historia de Santa Fe.',
     'Estilo colonial, piscina para adultos, jacuzzi, solárium y restaurante.',
      6.5552,
-     75.8230,
+     -75.8230,
     'Consulta al hotel.',
     'Consulta al hotel.',
     1,
@@ -738,133 +737,170 @@ INSERT INTO features (name, icon)
   VALUES ('Cocina', 'faKitchenSet');
 
 INSERT INTO features (name, icon)
-  VALUES ('Televisor', 'faTV');
+  VALUES ('Televisor', 'faTv');
 
 INSERT INTO features (name, icon)
   VALUES ('Apto mascotas', 'faPaw');
 
 INSERT INTO features (name, icon)
+  VALUES ('Lavadero', 'faTshirt');
 
-  VALUES ('Lavadero', 'faPersonSwimming');
-
+INSERT INTO features (name, icon)
   VALUES ('Piscina', 'faPersonSwimming');
-
 
 INSERT INTO features (name, icon)
   VALUES ('Estacionamiento gratuito', 'faCar');
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Los Recuerdos ', 'https://cf.bstatic.com/xdata/images/xphoto/2560x1280/72900619.jpg?k=37c05aec9f8fc9cbd06fab0f9841b0d8d871c47ec0754faac6a5bada4fc385aa&o=
-', 1);
+  VALUES ('Hotel Los Recuerdos ', 'https://cf.bstatic.com/xdata/images/xphoto/2560x1280/72900619.jpg?k=37c05aec9f8fc9cbd06fab0f9841b0d8d871c47ec0754faac6a5bada4fc385aa&o=', 1);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Los Recuerdos', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/455745750.jpg?k=e3334d812a28233bd444b6f193fb05debb873abc75fdbedb24f13cd78e0fb5dd&o=&hp=1', 1);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Los Recuerdos', 'https://cf.bstatic.com/xdata/images/xphoto/2560x1280/72900619.jpg?k=37c05aec9f8fc9cbd06fab0f9841b0d8d871c47ec0754faac6a5bada4fc385aa&o=', 1);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Los Recuerdos', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/455745630.jpg?k=dab9358b0c582d3655798c95a23b63c79e364e48a8a0dac424e130aed9bcdcb8&o=&hp=1', 1);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Los Recuerdos', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/455746236.jpg?k=715453101f5698d5d20b686d3497832b7f14e204a6969af702398c8d9c2bd851&o=&hp=1', 1);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Hacienda Balandú', 'https://static.wixstatic.com/media/b78411_113463b99779428ab4f777358a1c3b36~mv2_d_6000_4000_s_4_2.jpg/v1/fill/w_980,h_508,q_90/b78411_113463b99779428ab4f777358a1c3b36~mv2_d_6000_4000_s_4_2.jpg', 2);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Hacienda Balandú', 'https://www.comfenalcoantioquia.com.co/wcm/connect/2854aefd-0ab2-4100-85e1-bec0439bafa0/Hotel+Hacienda+Baland%C3%BA+1+grande.jpg', 2);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Hacienda Balandú', 'https://lh6.googleusercontent.com/BgHhmsFUOPkKr__NaN_ekQRfKcRjqahUz6HEiEnaHEY=w1467-h825-no', 2);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Hacienda Balandú', 'https://lh4.googleusercontent.com/MQ0TWRir0OzLcQIGhHdjrsjRxo_GZXu5LaW5E4Fe56g=w1467-h825-no', 2);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Hacienda Balandú', 'https://lh6.googleusercontent.com/gBGHmtquIV9sbG9yWgm5at2BGNKGTfrP_nZSy7CYgA8=w1467-h825-no', 2);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Ángel', 'https://www.hotelsanangel.co/wp-content/uploads/2022/04/@davidsolera-50-scaled.jpg', 3);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Ángel', 'https://www.hotelsanangel.co/wp-content/uploads/2022/04/@davidsolera-48-scaled.jpg', 3);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Ángel', 'https://www.hotelsanangel.co/wp-content/uploads/2022/04/@davidsolera-11-scaled.jpg', 3);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Ángel', 'https://cdn0.matrimonio.com.co/vendor/3841/3_2/960/jpeg/hotelsanangelsantafe-269819527-462441975278373-2338605730929762579-n_10_163841-164336783634723.jpeg', 3);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Cauca Viejo Fundadores', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/366325010.jpg?k=f0db2ab6b164e041e8af950f7608da13a52c281018907456b7206f405749d704&o=&hp=1', 4);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Cauca Viejo Fundadores', 'https://lh3.googleusercontent.com/proxy/XYAj9JILMfbuz5YnTOVMdrHPzt4wxrm84AF3gVINshLTS3wKc14_6W0P2dS6xG7AiQAe9x1VE_jBOyQUhmLdUoFnJ12DEc1w2QeYw0xcwkMMWV5Lsn1telo9_oszKPO2OGO4QIifzynjffpSdabyo8kkYG9WbA=s680-w680-h510-rw', 4);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Cauca Viejo Fundadores', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/516382587.jpg?k=fdbfdb732460510a58d69f057200b14188d8f5246add47fd396d20a92b8833d1&o=&hp=1', 4);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Cauca Viejo Fundadores', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/516382474.jpg?k=458be6259c1c15e709773dc32234677d4feacc97129dc1128ffb584d1d9c55bd&o=&hp=1', 4);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Cauca Viejo Fundadores', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/516384030.jpg?k=bfa35ceabd09eae073c1d8c07fbae6cbb9b755918ff846967b5f56df0a6ab83c&o=&hp=1', 4);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Las Lomas', 'https://images.getaroom-cdn.com/image/upload/s--H1rGTZQw--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1709411614/1add14322a559871cf25c8c6357ec5bf25bd9ba9?atc=e7cd1cfa', 5);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Las Lomas', 'https://images.getaroom-cdn.com/image/upload/s--sXeLDQwJ--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1682770664/935855b8b6e6973dc1795cb628cf67e3c3a6a540?atc=e7cd1cfa', 5);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Las Lomas', 'https://images.getaroom-cdn.com/image/upload/s--Pb0ZdGLk--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1665869709/940447773bd3a2f5b8bc4a0484803768a64fb373?atc=e7cd1cfa', 5);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Las Lomas', 'https://lh3.googleusercontent.com/p/AF1QipOvPcPUtbovG8QD8nSlihgvKSfXrO24Jmxyj-4=s680-w680-h510-rw', 5);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Rafael', 'https://cincohorizontes.com/wp-content/uploads/2024/11/IMG_1131.jpeg', 6);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Rafael', 'https://cincohorizontes.com/wp-content/uploads/2024/11/IMG_1139.jpeg', 6);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Rafael', 'https://cincohorizontes.com/wp-content/uploads/2024/11/IMG_1141.jpeg', 6);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Rafael', 'https://cincohorizontes.com/wp-content/uploads/2024/11/IMG_1140.jpeg', 6);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Rafael', 'https://cincohorizontes.com/wp-content/uploads/2024/11/IMG_1127.jpeg', 6);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel El Mirador', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/607035601.jpg?k=4f8eea4d7654930f3148f019a748d873eea5eb3656de1f81f9880334bb7d24a1&o=&hp=1', 7);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel El Mirador', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/607580473.jpg?k=6d16773d976fe7d921e82c83b5f7c14b96bb17e85069c8ed3690d1585430591a&o=&hp=1', 7);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel El Mirador', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/607035594.jpg?k=01961806b5cd27a390c06a0c590fe0e2a9f588924243964b31be5975df84ceec&o=&hp=1', 7);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel El Mirador', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/607958715.jpg?k=b1992c96196771cd1369de8b7b7e5fc42c9c4c36b0928c149a777640b398b0ae&o=&hp=1', 7);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Del Trópico', 'https://deltropicohotel.com/wp-content/uploads/2024/02/IMG_5976.jpg', 8);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Del Trópico', 'https://deltropicohotel.com/wp-content/uploads/2024/02/416361410_18405048442058539_8334299185065194660_n.jpg', 8);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel del Parque', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/165934344.jpg?k=f3442bc75bbeef318c27f0f9e6f321ddbfdab803daeeacc73f99020e1af15225&o=&hp=1', 9);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel del Parque', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/486552362.jpg?k=bde2d52267b22cab29994ac7c568af54962e333bb6eb4a5a8ad152ce9d0971a1&o=&hp=1', 9);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel del Parque', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/486552226.jpg?k=7f2473b93175c5c1f7a56b799fe248ccf7ea78f12b98f7c485775ad23818db78&o=', 9);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel del Parque', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/69032396.jpg?k=16548fc662b9e633e6bcf57f5833385b29a5abbdb78580b0a4e4e498d6cb6cbb&o=&hp=1', 9);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Roque', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/569886133.jpg?k=e9f8841859a12fa0383cc7b80c39b9ff079644d0e872804b401bdbdc1fc4b6c2&o=&hp=1', 10);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Roque', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/622923258.jpg?k=9de942a2676ed44d481e9066378c42f88b9ad46e56338460dbbd56fbbe53ac7e&o=&hp=1', 10);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Roque', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/569885907.jpg?k=4164b6b2af910396ce8fc920f696963dc9dcad0024c2650cc7282cdbcde992ee&o=&hp=1', 10);
+
 INSERT INTO images (title, url, id_product)
    VALUES ('Hotel San Roque', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/569885711.jpg?k=6e1936329f8e7c25ebf3602c13297ad6f099b3233c5f5cda16f3cc735ce93515&o=&hp=1', 10);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Levit Glamping Exterior Vista Lago 1', 'https://www.levitglamping.com/wp-content/uploads/2021/03/Super-Eclipse-8.jpg', 11);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Levit Glamping Exterior Vista Lago 2', 'https://www.levitglamping.com/wp-content/uploads/2021/03/Super-Eclipse-11.jpg', 11);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Levit Glamping Exterior General', 'https://www.levitglamping.com/wp-content/uploads/2023/04/Glamping-guatape-Super-Eclipse-5.jpg', 11);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Levit Glamping Jacuzzi', 'https://www.levitglamping.com/wp-content/uploads/2021/03/Super-Eclipse-12.jpg', 11);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Montecarlo Lodge Cubo Exterior 1', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/495123868.jpg?k=65c0197fae5db8c73f7427c088b4179a96535c905b6e3bf0b4abca4d6d1c9449&o=&hp=1', 12);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Montecarlo Lodge Cubo Exterior 2', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/495123886.jpg?k=2a96980c7c9c09224dbdf5d388374c0c0e3e7696c224589fd53dfd6dc8c14e0f&o=&hp=1', 12);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Montecarlo Lodge Vista Panorámica', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/287320054.jpg?k=8c87384c88a8bbc1282421e1e616a69aa1a678b7db338bba78959a3047b57bba&o=&hp=1', 12);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Montecarlo Lodge Interior', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/442190347.jpg?k=fc724729516d97982db5eb790aa07b61e6da60d0475b76896496c4102ba36147&o=&hp=1', 12);
+
 INSERT INTO images (title, url, id_product)
   VALUES ('Montecarlo Lodge Jacuzzi', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/304704943.jpg?k=a64af6bd2a14cd727637a181d9d7131286aeb72421f1e18e15dc45dbf266839a&o=&hp=1', 12);
 
@@ -927,7 +963,6 @@ INSERT INTO images (title, url, id_product)
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Sukha Glamping Área Común Exterior', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/480380610.jpg?k=2a0cbff9d3a7d3932c382fd6d40848040e1eaf836b563183bf2ef3f6075af235&o=&hp=1', 16);
-
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Los Canarios Piscina Natural', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/352113290.jpg?k=90ea5ea7776e1947fb2104cc5f0e103f0ec78ba7c7dca50550a2af8220ccb9e0&o=', 17);
@@ -1112,7 +1147,6 @@ INSERT INTO images (title, url, id_product)
 INSERT INTO images (title, url, id_product)
   VALUES ('Finca Hotel Rios Claros Vista General', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/506586984.jpg?k=e9397d2c2c07053c4702a85961e037c855854d6569e2e01972cb4291c0c0b725&o=&hp=1', 28);
 
-
 INSERT INTO images (title, url, id_product)
   VALUES ('Villa Jardín Fachada', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/634923793.jpg?k=ca6ed5a35e098515f4f9c41b27a66dad2092455690830a3f8008e49c555b9e85&o=', 29);
 
@@ -1127,7 +1161,6 @@ INSERT INTO images (title, url, id_product)
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Villa Jardín Interior General', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/634923705.jpg?k=cfc53fb1ccf49aa4930000bdffc1960f719b8c8dba3433bb021a78bd98f857cc&o=&hp=1', 29);
-
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Casa en las Montañas Sala', 'https://a0.muscache.com/im/pictures/miso/Hosting-21527257/original/2412ce0f-2d5c-486c-9c7c-56b1ebc4e7db.png?im_w=1200', 30);
@@ -1144,7 +1177,6 @@ INSERT INTO images (title, url, id_product)
 INSERT INTO images (title, url, id_product)
   VALUES ('Casa en las Montañas Cocina', 'https://a0.muscache.com/im/pictures/miso/Hosting-21527257/original/d25ef966-6ec8-48aa-8c6e-adec472b558f.png?im_w=720', 30);
 
--- IMÁGENES DE FINCA NAYA (ID 31)
 INSERT INTO images (title, url, id_product)
   VALUES ('Finca Naya Fachada', 'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NDI0MDg5MjE=/original/29d33ef8-4c36-44ac-bd4e-8d824a6bf231.jpeg?im_w=720', 31);
 
@@ -1159,7 +1191,6 @@ INSERT INTO images (title, url, id_product)
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Finca Naya Jardín', 'https://a0.muscache.com/im/pictures/acdde957-bd95-46d5-95f3-db97eb56699a.jpg?im_w=240', 31);
-
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Casa Colonial Santa Fe Fachada', 'https://a0.muscache.com/im/pictures/miso/Hosting-1063889573195406074/original/02faf4e7-6459-4ba5-a435-b1530f16a26b.jpeg?im_w=720', 32);
@@ -1204,13 +1235,294 @@ INSERT INTO images (title, url, id_product)
 --  POBLAR TABLA PRODUCTS_HAS_FEATURES
 -- ============================
 
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 1);
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 1);
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 1);
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 1);
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 1);
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 1);
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 1);
+
+-- Hotel Los Recuerdos (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 1); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 1); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 1); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 1); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 1); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 1); -- Lavadero
+
+-- Hotel Hacienda Balandú (5 estrellas) - 8 features (todas)
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 2); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 2); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 2); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 2); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 2); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 2); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 2); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 2); -- Estacionamiento gratuito
+
+-- Hotel San Ángel (3 estrellas) - 4 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 3); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 3); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 3); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 3); -- Estacionamiento gratuito
+
+-- Hotel Cauca Viejo Fundadores (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 4); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 4); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 4); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 4); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 4); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 4); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 4); -- Estacionamiento gratuito
+
+-- Hotel Las Lomas (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 5); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 5); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 5); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 5); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 5); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 5); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 5); -- Estacionamiento gratuito
+
+-- Hotel San Rafael (5 estrellas) - 8 features (todas)
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 6); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 6); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 6); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 6); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 6); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 6); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 6); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 6); -- Estacionamiento gratuito
+
+-- Hotel El Mirador (2 estrellas) - 3 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 7); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 7); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 7); -- Estacionamiento gratuito
+
+-- Hotel Del Trópico (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 8); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 8); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 8); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 8); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 8); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 8); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 8); -- Estacionamiento gratuito
+
+-- Hotel del Parque (3 estrellas) - 4 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 9); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 9); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 9); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 9); -- Estacionamiento gratuito
+
+-- Hotel San Roque (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 10); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 10); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 10); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 10); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 10); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 10); -- Cocina
+
+-- Levit Glamping (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 11); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 11); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 11); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 11); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 11); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 11); -- Estacionamiento gratuito
+
+-- Glamping Montecarlo Lodge (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 12); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 12); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 12); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 12); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 12); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 12); -- Estacionamiento gratuito
+
+-- Gulupa Ecolodge (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 13); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 13); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 13); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 13); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 13); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 13); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 13); -- Estacionamiento gratuito
+
+-- Nalua Glamping y Hotel (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 14); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 14); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 14); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 14); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 14); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 14); -- Estacionamiento gratuito
+
+-- Glamping Jericó, El Edén (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 15); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 15); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 15); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 15); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 15); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 15); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 15); -- Estacionamiento gratuito
+
+-- Sukha Glamping (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 16); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 16); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 16); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 16); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 16); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 16); -- Estacionamiento gratuito
+
+-- Cabaña Glamping Los Canarios (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 17); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 17); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 17); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 17); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 17); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 17); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 17); -- Estacionamiento gratuito
+
+-- Glamping El Tabor (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 18); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 18); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 18); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 18); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 18); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 18); -- Estacionamiento gratuito
+
+-- Glamping Flor del Monte (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 19); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 19); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 19); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 19); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 19); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 19); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 19); -- Estacionamiento gratuito
+
+-- Madeira Glamping (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 20); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 20); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 20); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 20); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 20); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 20); -- Estacionamiento gratuito
+
+-- Glamping Paraíso (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 21); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 21); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 21); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 21); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 21); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 21); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 21); -- Estacionamiento gratuito
+
+-- El Mirador de San Joaquín (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 22); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 22); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 22); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 22); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 22); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 22); -- Estacionamiento gratuito
+
+-- Hostería El Trébol (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 23); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 23); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 23); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 23); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 23); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 23); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 23); -- Estacionamiento gratuito
+
+-- Hostería El Paraíso Jardín (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 24); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 24); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 24); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 24); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 24); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 24); -- Estacionamiento gratuito
+
+-- Hostería Tonusco Campestre (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 25); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 25); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 25); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 25); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 25); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 25); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 25); -- Estacionamiento gratuito
+
+-- Hostería Puerta del Nus (3 estrellas) - 5 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 26); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 26); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 26); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 26); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 26); -- Estacionamiento gratuito
+
+-- Hostería La Medusa (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 27); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 27); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 27); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 27); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 27); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 27); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 27); -- Estacionamiento gratuito
+
+-- Finca Hotel Ríos Claros (4 estrellas) - 7 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 28); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 28); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 28); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 28); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 28); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 28); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 28); -- Estacionamiento gratuito
+
+-- Cabaña Villa Jardín (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 29); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 29); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 29); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 29); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 29); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 29); -- Estacionamiento gratuito
+
+-- Alojamiento entero: casa en Barbosa (4 estrellas) - 6 features
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 30); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 30); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 30); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 30); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 30); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 30); -- Estacionamiento gratuito
+
+-- Finca Naya - Fredonia (5 estrellas) - 8 features (todas)
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 31); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 31); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 31); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 31); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 31); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 31); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 31); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 31); -- Estacionamiento gratuito
+
+-- Casa Colonial en Santa Fe de Antioquia (5 estrellas) - 8 features (todas)
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 32); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 32); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 32); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 32); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 32); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 32); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 32); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 32); -- Estacionamiento gratuito
+
+-- Condominio moderno en El Carmen (5 estrellas) - 8 features (todas)
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 33); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 33); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 33); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 33); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 33); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 33); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 33); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 33); -- Estacionamiento gratuito
+
+-- Casa Finca en Marinilla (5 estrellas) - 8 features (todas)
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 34); -- Wifi
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 34); -- Aire acondicionado
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 34); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 34); -- Televisor
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 34); -- Apto mascotas
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 34); -- Lavadero
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 34); -- Piscina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 34); -- Estacionamiento gratuito
 
 INSERT INTO roles (name)
   VALUES ('Admin');

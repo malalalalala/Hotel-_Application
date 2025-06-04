@@ -90,16 +90,16 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
                         "/debug").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/roles/**","/users/**", "/reservations/**").hasAnyAuthority(ROLE_ADMIN)
                 // GET
                 .antMatchers(HttpMethod.GET,
                         "/categories/**", "/cities/**", "/features/**", "/images/**",
-                        "/products/**", "/reservations/**", "products/city/**", "products/category/**",
-                        "/findByDate/**", "/users/**")
+                        "/products/**", "products/city/**", "products/category/**",
+                        "/findByDate/**")
                 .permitAll()
-                .antMatchers(HttpMethod.GET, "/roles/**").hasAnyAuthority(ROLE_ADMIN)
 
                 // POST - (por ejemplo, admin no puede reservar, según pedido de PO)
-                .antMatchers(HttpMethod.POST, "/auth/login/**", "/users/**").permitAll()
+                .antMatchers(HttpMethod.POST,  "/users/**","/auth/login").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers(HttpMethod.POST,
                         "/categories/**", "/cities/**", "/features/**", "/images/**", "/products/**", "/roles/**")
@@ -134,8 +134,10 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200"));
-        //config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "https://parchearenantioquia.up.railway.app"));
+        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantioquia.up.railway.app",
+                "http://localhost:4200",
+                "https://hotel-application-production.up.railway.app/**",
+                "https://hotel-application-production.up.railway.app"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowCredentials(true);
         config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
@@ -148,8 +150,9 @@ public class SecurityConfig /* extends WebSecurityConfigurerAdapter */ {
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200"));
-        //config.setAllowedOrigins(Arrays.asList("https://parchearenantioquia.up.railway.app","http://localhost:4200"));
+        config.setAllowedOriginPatterns(Arrays.asList("https://parchearenantioquia.up.railway.app",
+                "http://localhost:4200",
+                "https://hotel-application-production.up.railway.app"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowCredentials(true);
         config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));

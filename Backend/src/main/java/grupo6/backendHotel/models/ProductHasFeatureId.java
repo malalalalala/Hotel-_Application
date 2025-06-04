@@ -20,6 +20,6 @@ public class ProductHasFeatureId implements Serializable {
     private Integer productId;
 
     @Column(name = "feature_id")
-    private Integer FeatureId;
+    private Integer featureId;
 
 }
