@@ -122,7 +122,7 @@ INSERT INTO products (title, short_description, policy, location, point, opinion
     'Sumérgete en la historia de Santa Fe.',
     'Estilo colonial, piscina para adultos, jacuzzi, solárium y restaurante.',
      6.5552,
-     75.8230,
+     -75.8230,
     'Consulta al hotel.',
     'Consulta al hotel.',
     1,
@@ -1203,293 +1203,260 @@ INSERT INTO images (title, url, id_product)
 --  POBLAR TABLA PRODUCTS_HAS_FEATURES
 -- ============================
 
--- Hotel Los Recuerdos (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 1); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 1); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 1); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 1); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 1); -- Estacionamiento gratuito
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 1); -- Lavadero
 
--- Hotel Hacienda Balandú (5 estrellas) - 8 features (todas)
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 2); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 2); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 2); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 2); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 2); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 2); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 2); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 2); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 1);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 1);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 1);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 1);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 1);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 1);
 
--- Hotel San Ángel (3 estrellas) - 4 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 3); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 3); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 3); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 3); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 2);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 2);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 2);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 2);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 2);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 2);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 2);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 2);
 
--- Hotel Cauca Viejo Fundadores (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 4); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 4); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 4); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 4); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 4); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 4); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 4); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 3);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 3);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 3);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 3);
 
--- Hotel Las Lomas (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 5); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 5); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 5); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 5); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 5); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 5); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 5); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 4);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 4);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 4);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 4);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 4);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 4);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 4);
 
--- Hotel San Rafael (5 estrellas) - 8 features (todas)
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 6); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 6); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 6); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 6); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 6); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 6); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 6); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 6); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 5);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 5);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 5);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 5);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 5);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 5);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 5);
 
--- Hotel El Mirador (2 estrellas) - 3 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 7); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 7); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 7); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 6);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 6);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 6);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 6);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 6);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 6);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 6);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 6);
 
--- Hotel Del Trópico (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 8); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 8); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 8); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 8); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 8); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 8); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 8); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 7);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 7);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 7);
 
--- Hotel del Parque (3 estrellas) - 4 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 9); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 9); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 9); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 9); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 8);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 8);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 8);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 8);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 8);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 8);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 8);
 
--- Hotel San Roque (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 10); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 10); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 10); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 10); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 10); -- Estacionamiento gratuito
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 10); -- Cocina
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 9);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 9);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 9);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 9);
 
--- Levit Glamping (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 11); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 11); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 11); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 11); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 11); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 11); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 10);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 10);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 10);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 10);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 10);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 10);
 
--- Glamping Montecarlo Lodge (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 12); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 12); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 12); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 12); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 12); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 12); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 11);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 11);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 11);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 11);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 11);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 11);
 
--- Gulupa Ecolodge (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 13); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 13); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 13); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 13); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 13); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 13); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 13); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 12);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 12);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 12);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 12);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 12);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 12);
 
--- Nalua Glamping y Hotel (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 14); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 14); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 14); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 14); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 14); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 14); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 13);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 13);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 13);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 13);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 13);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 13);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 13);
 
--- Glamping Jericó, El Edén (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 15); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 15); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 15); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 15); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 15); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 15); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 15); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 14);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 14);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 14);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 14);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 14);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 14);
 
--- Sukha Glamping (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 16); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 16); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 16); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 16); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 16); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 16); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 15);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 15);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 15);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 15);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 15);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 15);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 15);
 
--- Cabaña Glamping Los Canarios (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 17); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 17); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 17); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 17); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 17); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 17); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 17); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 16);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 16);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 16);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 16);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 16);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 16);
 
--- Glamping El Tabor (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 18); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 18); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 18); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 18); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 18); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 18); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 17);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 17);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 17);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 17);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 17);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 17);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 17);
 
--- Glamping Flor del Monte (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 19); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 19); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 19); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 19); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 19); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 19); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 19); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 18);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 18);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 18);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 18);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 18);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 18);
 
--- Madeira Glamping (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 20); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 20); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 20); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 20); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 20); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 20); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 19);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 19);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 19);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 19);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 19);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 19);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 19);
 
--- Glamping Paraíso (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 21); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 21); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 21); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 21); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 21); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 21); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 21); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 20);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 20);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 20);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 20);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 20);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 20);
 
--- El Mirador de San Joaquín (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 22); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 22); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 22); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 22); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 22); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 22); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 21);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 21);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 21);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 21);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 21);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 21);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 21);
 
--- Hostería El Trébol (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 23); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 23); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 23); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 23); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 23); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 23); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 23); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 22);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 22);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 22);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 22);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 22);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 22);
 
--- Hostería El Paraíso Jardín (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 24); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 24); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 24); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 24); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 24); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 24); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 23);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 23);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 23);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 23);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 23);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 23);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 23);
 
--- Hostería Tonusco Campestre (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 25); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 25); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 25); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 25); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 25); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 25); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 25); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 24);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 24);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 24);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 24);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 24);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 24);
 
--- Hostería Puerta del Nus (3 estrellas) - 5 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 26); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 26); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 26); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 26); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 26); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 25);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 25);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 25);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 25);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 25);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 25);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 25);
 
--- Hostería La Medusa (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 27); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 27); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 27); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 27); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 27); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 27); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 27); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 26);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 26);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 26);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 26);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 26);
 
--- Finca Hotel Ríos Claros (4 estrellas) - 7 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 28); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 28); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 28); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 28); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 28); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 28); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 28); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 27);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 27);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 27);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 27);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 27);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 27);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 27);
 
--- Cabaña Villa Jardín (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 29); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 29); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 29); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 29); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 29); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 29); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 28);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 28);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 28);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 28);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 28);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 28);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 28);
 
--- Alojamiento entero: casa en Barbosa (4 estrellas) - 6 features
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 30); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 30); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 30); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 30); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 30); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 30); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 29);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 29);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 29);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 29);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 29);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 29);
 
--- Finca Naya - Fredonia (5 estrellas) - 8 features (todas)
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 31); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 31); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 31); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 31); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 31); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 31); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 31); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 31); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 30);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 30);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 30);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 30);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 30);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 30);
 
--- Casa Colonial en Santa Fe de Antioquia (5 estrellas) - 8 features (todas)
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 32); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 32); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 32); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 32); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 32); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 32); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 32); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 32); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 31);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 31);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 31);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 31);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 31);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 31);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 31);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 31);
 
--- Condominio moderno en El Carmen (5 estrellas) - 8 features (todas)
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 33); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 33); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 33); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 33); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 33); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 33); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 33); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 33); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 32);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 32);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 32);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 32);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 32);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 32);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 32);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 32);
 
--- Casa Finca en Marinilla (5 estrellas) - 8 features (todas)
-INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 34); -- Wifi
-INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 34); -- Aire acondicionado
-INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 34); -- Cocina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 34); -- Televisor
-INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 34); -- Apto mascotas
-INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 34); -- Lavadero
-INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 34); -- Piscina
-INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 34); -- Estacionamiento gratuito
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 33);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 33);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 33);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 33);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 33);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 33);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 33);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 33);
+
+INSERT INTO products_has_features (feature_id, product_id) VALUES (1, 34);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (2, 34);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (3, 34);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (4, 34);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (5, 34);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (6, 34);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (7, 34);
+INSERT INTO products_has_features (feature_id, product_id) VALUES (8, 34);
 
 INSERT INTO roles (name)
   VALUES ('Admin');
