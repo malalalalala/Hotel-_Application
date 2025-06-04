@@ -2,6 +2,7 @@ package grupo6.backendHotel.repository;
 
 import grupo6.backendHotel.models.Feature;
 import grupo6.backendHotel.models.ProductHasFeature;
+import grupo6.backendHotel.models.ProductHasFeatureId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -11,7 +12,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
-public interface ProductHasFeatureRepository extends JpaRepository<ProductHasFeature, Integer> {
+public interface ProductHasFeatureRepository extends JpaRepository<ProductHasFeature, ProductHasFeatureId> {
 
     @Query("SELECT pf.feature FROM ProductHasFeature pf WHERE pf.product.id = ?1 ORDER BY pf.feature.id ASC")
     List<Feature> findByProductId(Integer productId);
