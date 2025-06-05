@@ -18,5 +18,4 @@ export const iconMap = {
   faShirt: faShirt,
   faPersonSwimming: faPersonSwimming,
   faCar: faCar
-  
 };
