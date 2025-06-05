@@ -126,7 +126,7 @@ const RecommendationCard = ({
               <NavLink to={`/products/${id}`}>MOSTRAR EN EL MAPA</NavLink>
             </div>
           </div>
-          {featureList??.map(
+          {featureList?.map(
             ({ icon }, i) =>
               icon && (
                 <FontAwesomeIcon
