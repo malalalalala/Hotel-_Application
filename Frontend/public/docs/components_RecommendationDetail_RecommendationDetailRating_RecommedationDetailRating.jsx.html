@@ -63,7 +63,7 @@ const RecommedationDetailRating = ({ item }) => {
             &lt;div className="recommendation_detail_container_points">
               &lt;div>
                 &lt;h4>{item?.opinion || ""}&lt;/h4>
-                {[...Array(item.star)].map((s, index) => {
+                {[...Array(item.star)]?.map((s, index) => {
                   return (
                     &lt;FontAwesomeIcon
                       key={index}
@@ -74,7 +74,7 @@ const RecommedationDetailRating = ({ item }) => {
                     />
                   );
                 })}
-                {[...Array(5 - item.star)].map((s, index) => {
+                {[...Array(5 - item.star)]?.map((s, index) => {
                   return (
                     &lt;FontAwesomeIcon
                       key={index}

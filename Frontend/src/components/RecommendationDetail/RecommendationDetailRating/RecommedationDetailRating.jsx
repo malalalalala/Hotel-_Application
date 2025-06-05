@@ -35,7 +35,7 @@ const RecommedationDetailRating = ({ item }) => {
             <div className="recommendation_detail_container_points">
               <div>
                 <h4>{item?.opinion || ""}</h4>
-                {[...Array(item.star)].map((s, index) => {
+                {[...Array(item.star)]?.map((s, index) => {
                   return (
                     <FontAwesomeIcon
                       key={index}
@@ -46,7 +46,7 @@ const RecommedationDetailRating = ({ item }) => {
                     />
                   );
                 })}
-                {[...Array(5 - item.star)].map((s, index) => {
+                {[...Array(5 - item.star)]?.map((s, index) => {
                   return (
                     <FontAwesomeIcon
                       key={index}

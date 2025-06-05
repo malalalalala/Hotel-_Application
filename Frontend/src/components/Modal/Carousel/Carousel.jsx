@@ -48,7 +48,7 @@ const Carousel = ({ images, toggleModal }) => {
       </h4>
 
       <div className="carousel_images_container">
-        {images.slice(0, 4).map((i, index) => {
+        {images.slice(0, 4)?.map((i, index) => {
           return (
             <img
               key={index}

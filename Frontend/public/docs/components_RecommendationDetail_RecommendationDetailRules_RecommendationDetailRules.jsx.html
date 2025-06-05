@@ -52,7 +52,7 @@ const RecommendationDetailRules = ({ item }) => {
         &lt;div className="knowing_row">
           &lt;div className="knowing_row_s">
             &lt;h2 style={{ padding: "1.5rem 0" }}>Normas de la casa&lt;/h2>
-            {item?.rules?.split("*").map((i, index) => (
+            {item?.rules?.split("*")?.map((i, index) => (
               &lt;p key={index} style={{ padding: "1rem 0" }}>
                 {i}
               &lt;/p>
@@ -60,7 +60,7 @@ const RecommendationDetailRules = ({ item }) => {
           &lt;/div>
           &lt;div className="knowing_row_s">
             &lt;h2 style={{ padding: "1.5rem 0" }}>Salud y seguridad&lt;/h2>
-            {item?.safety_security?.split("*").map((i, index) => (
+            {item?.safety_security?.split("*")?.map((i, index) => (
               &lt;p key={index} style={{ padding: "1rem 0" }}>
                 {i}
               &lt;/p>
@@ -68,7 +68,7 @@ const RecommendationDetailRules = ({ item }) => {
           &lt;/div>
           &lt;div className="knowing_row_s">
             &lt;h2 style={{ padding: "1.5rem 0" }}>Política de cancelación&lt;/h2>
-            {item?.policy?.split("*").map((i, index) => (
+            {item?.policy?.split("*")?.map((i, index) => (
               &lt;p key={index} style={{ padding: "1rem 0", maxWidth: "95%" }}>
                 {i}
               &lt;/p>

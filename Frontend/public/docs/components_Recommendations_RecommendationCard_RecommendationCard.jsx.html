@@ -112,7 +112,7 @@ const RecommendationCard = ({
                 {category?.toUpperCase()}
               &lt;/h5>
               {star > 0 ? (
-                [...Array(star)].map((s, index) => {
+                [...Array(star)]?.map((s, index) => {
                   return (
                     &lt;FontAwesomeIcon
                       key={index}

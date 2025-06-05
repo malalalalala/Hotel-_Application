@@ -15,7 +15,7 @@ const AutoComplete = ({ isVisible, suggestions, handleSuggestionClick }) => {
   return (
     <div className={`${isVisible ? "show suggestion-box" : "suggestion-box"}`}>
       <ul>
-        {suggestions.map(({ id, name, icon }, index) => {
+        {suggestions?.map(({ id, name, icon }, index) => {
           return (
             <li
               key={index}

@@ -24,7 +24,7 @@ const RecommendationDetailRules = ({ item }) => {
         <div className="knowing_row">
           <div className="knowing_row_s">
             <h2 style={{ padding: "1.5rem 0" }}>Normas de la casa</h2>
-            {item?.rules?.split("*").map((i, index) => (
+            {item?.rules?.split("*")?.map((i, index) => (
               <p key={index} style={{ padding: "1rem 0" }}>
                 {i}
               </p>
@@ -32,7 +32,7 @@ const RecommendationDetailRules = ({ item }) => {
           </div>
           <div className="knowing_row_s">
             <h2 style={{ padding: "1.5rem 0" }}>Salud y seguridad</h2>
-            {item?.safety_security?.split("*").map((i, index) => (
+            {item?.safety_security?.split("*")?.map((i, index) => (
               <p key={index} style={{ padding: "1rem 0" }}>
                 {i}
               </p>
@@ -40,7 +40,7 @@ const RecommendationDetailRules = ({ item }) => {
           </div>
           <div className="knowing_row_s">
             <h2 style={{ padding: "1.5rem 0" }}>Política de cancelación</h2>
-            {item?.policy?.split("*").map((i, index) => (
+            {item?.policy?.split("*")?.map((i, index) => (
               <p key={index} style={{ padding: "1rem 0", maxWidth: "95%" }}>
                 {i}
               </p>

@@ -28,7 +28,7 @@ const productReducer = (state, action) => {
     //   return cartContainProduct
     //     ? {
     //         ...state,
-    //         cart: state.cart.map((product) =>
+    //         cart: state.cart?.map((product) =>
     //           product.id === newProduct.id
     //             ? { ...product, quantity: product.quantity + 1 }
     //             : product
@@ -54,7 +54,7 @@ const productReducer = (state, action) => {
     //   return productDelete.quantity > 1
     //     ? {
     //         ...state,
-    //         cart: state.cart.map((product) =>
+    //         cart: state.cart?.map((product) =>
     //           product.id === action.payload
     //             ? { ...product, quantity: product.quantity - 1 }
     //             : product
