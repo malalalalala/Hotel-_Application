@@ -1,10 +1,32 @@
+# Build stage
 FROM node:16 as build
 WORKDIR /app
+
+# Copiar archivos de dependencias
 COPY package*.json ./
 RUN npm install --legacy-peer-deps
+
+# Copiar código fuente
 COPY . .
+
+# ¡CLAVE! Declarar ARGs para que Docker pueda usar las variables de Railway
+ARG VITE_BACKEND_URL
+ARG VITE_APP_MAP
+
+# DEBUG: Verificar que las variables lleguen (opcional - remover después)
+RUN echo "=== DEBUG BUILD TIME ==="
+RUN echo "VITE_BACKEND_URL: $VITE_BACKEND_URL"
+RUN echo "VITE_APP_MAP: $VITE_APP_MAP"
+RUN echo "========================"
+
+# Exportar como variables de entorno para el build
+ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
+ENV VITE_APP_MAP=$VITE_APP_MAP
+
+# Ejecutar el build (ahora con las variables disponibles)
 RUN npm run build
 
+# Production stage
 FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 
