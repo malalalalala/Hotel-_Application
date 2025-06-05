@@ -1,8 +1,7 @@
 import React from "react";
 import GoogleMaps from "simple-react-google-maps";
 
-//const API_MAPS = import.meta.env.VITE_APP_MAP;
-const API_MAPS = "AIzaSyD1w7-DUKWguYlcsiNeZY9heFVme73UcBI";
+const API_MAPS = import.meta.env.VITE_APP_MAP;
 
 /**
  * Map component for displaying a Google Map with a marker.

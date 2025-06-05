@@ -3,6 +3,10 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --legacy-peer-deps
 COPY . .
+
+ARG VITE_APP_MAP
+ENV VITE_APP_MAP=$VITE_APP_MAP
+
 RUN npm run build
 
 FROM nginx:alpine
