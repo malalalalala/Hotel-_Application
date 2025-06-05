@@ -112,7 +112,7 @@ const RecommendationCard = ({
                 {category?.toUpperCase()}
               &lt;/h5>
               {star > 0 ? (
-                [...Array(star)].map((s, index) => {
+                [...Array(star)]?.map((s, index) => {
                   return (
                     &lt;FontAwesomeIcon
                       key={index}
@@ -154,7 +154,7 @@ const RecommendationCard = ({
               &lt;NavLink to={`/products/${id}`}>MOSTRAR EN EL MAPA&lt;/NavLink>
             &lt;/div>
           &lt;/div>
-          {featureList?.map(
+          {featureList??.map(
             ({ icon }, i) =>
               icon &amp;&amp; (
                 &lt;FontAwesomeIcon

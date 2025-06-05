@@ -84,7 +84,7 @@ const RecommendationCard = ({
                 {category?.toUpperCase()}
               </h5>
               {star > 0 ? (
-                [...Array(star)].map((s, index) => {
+                [...Array(star)]?.map((s, index) => {
                   return (
                     <FontAwesomeIcon
                       key={index}
@@ -126,7 +126,7 @@ const RecommendationCard = ({
               <NavLink to={`/products/${id}`}>MOSTRAR EN EL MAPA</NavLink>
             </div>
           </div>
-          {featureList?.map(
+          {featureList??.map(
             ({ icon }, i) =>
               icon && (
                 <FontAwesomeIcon

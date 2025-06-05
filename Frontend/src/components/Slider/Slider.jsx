@@ -28,7 +28,7 @@ const Slider = ({ item }) => {
 
   return (
     <div className="slider_container_tablet">
-      {item?.imageList.map((i, index) => {
+      {item?.imageList?.map((i, index) => {
         return (
           <img
             className="slider_item"

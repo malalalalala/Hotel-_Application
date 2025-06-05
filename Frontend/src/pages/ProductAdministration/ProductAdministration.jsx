@@ -49,8 +49,8 @@ const ProductAdministration = () => {
   const { cities, categories } = useContext(GlobalContext);
   const { userInfo, logOut } = useContext(UserContext);
 
-  const categoryList = categories.map((category) => category.title).sort();
-  const cityList = cities.map((city) => city.name).sort();
+  const categoryList = categories?.map((category) => category.title).sort();
+  const cityList = cities?.map((city) => city.name).sort();
 
   const handleValueChange = (e) => {
     setNewProduct({
@@ -60,7 +60,7 @@ const ProductAdministration = () => {
   };
 
   const setArrayImageList = () => {
-    const newImageArray = componentImages.map((image, i) => {
+    const newImageArray = componentImages?.map((image, i) => {
       return {
         title: newProduct.title ? newProduct.title : `image_${i}`,
         url: image,
@@ -70,7 +70,7 @@ const ProductAdministration = () => {
   };
 
   const setArrayFeatureList = () => {
-    const newFeatureArray = componentAttributes.map((feature) => {
+    const newFeatureArray = componentAttributes?.map((feature) => {
       return {
         id: feature.iconId,
       };

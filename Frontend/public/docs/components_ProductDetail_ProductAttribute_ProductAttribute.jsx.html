@@ -69,7 +69,7 @@ const ProductAttribute = ({ componentAttributes, setComponentAttributes }) => {
       &lt;div className="product_container_atributes">
         &lt;h2>Agregar amenidades del alojamiento&lt;/h2>
         &lt;div className="product_container_atributes_add_icons">
-          {componentAttributes.map(({ iconName, iconValue, iconId }, index) => (
+          {componentAttributes?.map(({ iconName, iconValue, iconId }, index) => (
             &lt;AddAttribute
               key={index}
               values={{ iconName, iconValue, iconId }}

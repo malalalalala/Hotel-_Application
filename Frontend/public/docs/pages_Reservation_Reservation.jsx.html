@@ -251,7 +251,7 @@ const Reservation = () => {
                     &lt;div className="reservation_container_check_body">
                       &lt;h4>{item?.category.title}&lt;/h4>
                       &lt;h1>{item?.title}&lt;/h1>
-                      {[...Array(item?.star)].map((s, index) => {
+                      {[...Array(item?.star)]?.map((s, index) => {
                         return (
                           &lt;FontAwesomeIcon
                             key={index}

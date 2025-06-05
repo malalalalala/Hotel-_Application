@@ -32,7 +32,7 @@ const ProductImage = ({ componentImages, setComponentImages }) => {
   return (
     <div className="product_container_images">
       <h2>Cargar imágenes</h2>
-      {componentImages.map((elem, index) => (
+      {componentImages?.map((elem, index) => (
         <AddImage
           key={index}
           inputValue={elem}

@@ -67,7 +67,7 @@ const Select = ({
           {isOpen && (
             <div className="list_select_container">
               <ul className="list_select_ul">
-                {options.map((option) => (
+                {options?.map((option) => (
                   <li
                     value={option}
                     key={option}

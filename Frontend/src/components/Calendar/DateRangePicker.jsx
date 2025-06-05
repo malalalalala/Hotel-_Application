@@ -50,7 +50,7 @@ const DateRangePicker = ({
 
     const fetchReservationsByProductId = async (itemId) => {
       const reservations = await getReservationsByProductId(itemId);
-      reservations.data.map(({ check_in, check_out }) => {
+      reservations.data?.map(({ check_in, check_out }) => {
         const check_in_split = check_in.split("-");
         const check_out_split = check_out.split("-");
         return disabledRanges.push({
@@ -89,7 +89,7 @@ const DateRangePicker = ({
     }
 
     if ((range.from && range.to) != null) {
-      disabledDays.map(({ from, to }) => {
+      disabledDays?.map(({ from, to }) => {
         if (from > rangeArray[0] && to < rangeArray[1]) {
           setIsDisabledRange(true);
         }
