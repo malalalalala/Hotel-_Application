@@ -4,6 +4,7 @@ import {
   faKitchenSet,
   faTv,
   faPaw,
+  faShirt,
   faPersonSwimming,
   faCar
 } from "@fortawesome/free-solid-svg-icons";
@@ -14,6 +15,7 @@ export const iconMap = {
   faKitchenSet: faKitchenSet,
   faTv: faTv,
   faPaw: faPaw,
+  faShirt: faShirt,
   faPersonSwimming: faPersonSwimming,
   faCar: faCar
 };
