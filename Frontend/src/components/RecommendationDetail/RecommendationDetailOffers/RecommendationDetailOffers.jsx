@@ -3,29 +3,8 @@ import "./recommendationDetailOffers.scss";
 import Divider from "../../ui/Divider/Divider";
 import Fluid from "../../../components/ui/Fluid/Fluid";
 import IconItem from "../../ui/IconItem/IconItem";
-import {
-  faKitchenSet,
-  faCar,
-  faTv,
-  faPersonSwimming,
-  faSnowflake,
-  faPaw,
-  faWifi,
-  faMugSaucer,
-} from "@fortawesome/free-solid-svg-icons";
 
 const RecommendationDetailOffers = ({ item }) => {
-  const icons = [
-    faWifi,
-    faSnowflake,
-    faKitchenSet,
-    faTv,
-    faPaw,
-    faPersonSwimming,
-    faCar,
-    faMugSaucer,
-  ];
-
   return (
     <>
       <Fluid color="dark">
@@ -34,12 +13,12 @@ const RecommendationDetailOffers = ({ item }) => {
       <Divider />
       <Fluid color="dark">
         <div className="offers_row">
-          {item?.featureList?.map(({ name }, index) => {
+          {item?.featureList?.map((feature) => {
             return (
-              <div className="offers_column_s" key={name}>
+              <div className="offers_column_s" key={feature.id}>
                 <IconItem                  
-                  icon={icons[index]}
-                  offer={name ? name : "No ofrece"}
+                  icon={feature.icon}
+                  offer={feature.name ? feature.name : "No ofrece"}
                 />
               </div>
             );
