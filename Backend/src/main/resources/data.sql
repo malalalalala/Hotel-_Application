@@ -1531,10 +1531,10 @@ INSERT INTO roles (name)
   VALUES ('User');
 
 INSERT INTO users (name, last_name, email, password,role_id)
-  VALUES ('Bruno', 'Rodriguez', 'brodriguez@gmail.com', '$2a$12$zGAXSVRkhPwAzVuLhV2sJOQnyNFQxNBVobFlEUFdyer6qZMhpJ/EW',2);
+  VALUES ('Bruno','Rodriguez','brodriguez@gmail.com','$2a$12$zGAXSVRkhPwAzVuLhV2sJOQnyNFQxNBVobFlEUFdyer6qZMhpJ/EW',2);
 
 INSERT INTO users (name, last_name, email, password, role_id)
-  VALUES ('Laura', 'Ramos', 'lalo@gmail.com', '$2a$12$PAox1AJUWXrPnM.62kICguJk.ppd110tgTAU2lhvX/MD6fx78jQ0e', 1);
+  VALUES ('Laura','Ramos','lalo@gmail.com','$2a$12$PAox1AJUWXrPnM.62kICguJk.ppd110tgTAU2lhvX/MD6fx78jQ0e',1);
 
 
   --1234567
