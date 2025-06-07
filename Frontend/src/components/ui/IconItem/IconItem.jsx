@@ -14,10 +14,14 @@ import "../IconItem/iconItem.scss";
  */
 const IconItem = ({ icon, offer }) => {
   const realIcon = iconMap[icon];
+  console.log(`Icon string: ${icon}, Mapped icon:`, realIcon);
   return (
     <div className="icon_item_container">
-      {realIcon && <FontAwesomeIcon icon={realIcon} className="full" />}
-      <FontAwesomeIcon icon={icon} className="full" />
+      {realIcon ? (
+        <FontAwesomeIcon icon={realIcon} className="full" />
+      ) : (
+        <span>❓</span>
+      )}
       <h4 style={{ paddingLeft: "0.5rem" }}>{offer}</h4>
     </div>
   );
