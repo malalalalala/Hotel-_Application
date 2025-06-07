@@ -806,7 +806,7 @@ INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%204.jpg', 4);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%205.jpg, 4);
+  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%205.jpg', 4);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Las Lomas', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20las%20Lomas%201.jpg', 5);
@@ -1480,12 +1480,7 @@ INSERT INTO users (name, last_name, email, password,role_id)
 INSERT INTO users (name, last_name, email, password, role_id)
   VALUES ('Laura','Ramos','lalo@gmail.com','$2a$12$PAox1AJUWXrPnM.62kICguJk.ppd110tgTAU2lhvX/MD6fx78jQ0e',1);
 
-
-  --1234567
-
-
 INSERT INTO reservations (check_in, check_out, product_id, user_id)
-
   VALUES ('2022-11-20', '2022-11-30', 1, 1);
 
 
