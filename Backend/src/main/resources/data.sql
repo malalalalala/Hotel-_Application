@@ -752,427 +752,418 @@ INSERT INTO features (name, icon)
   VALUES ('Estacionamiento gratuito', 'faCar');
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Los Recuerdos ', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20los%20Recuerdos1.jpg', 1);
+  VALUES ('Hotel Los Recuerdos ', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20los%20Recuerdos1.jpg?raw=true', 1);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Los Recuerdos', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20los%20Recuerdos%205.jpg', 1);
+  VALUES ('Hotel Los Recuerdos', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20los%20Recuerdos%202.jpg?raw=true', 1);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Los Recuerdos', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20los%20Recuerdos%203.jpg', 1);
+  VALUES ('Hotel Los Recuerdos', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20los%20Recuerdos%203.jpg?raw=true', 1);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Los Recuerdos', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Levit%20Glamping%204.jpg', 1);
+  VALUES ('Hotel Los Recuerdos', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20los%20Recuerdos%204.jpg?raw=true', 1);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Los Recuerdos', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20los%20Recuerdos%205.jpg', 1);
+  VALUES ('Hotel Los Recuerdos', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20los%20Recuerdos%205.jpg?raw=true', 1);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Hacienda Balandú', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20%20Baland%C3%BA%201.jpg', 2);
+  VALUES ('Hotel Hacienda Balandú', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20%20Baland%C3%BA%201.jpg?raw=true', 2);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Hacienda Balandú', 'hhttps://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Baland%C3%BA%202.jpg', 2);
+  VALUES ('Hotel Hacienda Balandú', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Baland%C3%BA%202.jpg?raw=true', 2);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Hacienda Balandú', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Baland%C3%BA%204.jpg', 2);
+  VALUES ('Hotel Hacienda Balandú', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Baland%C3%BA%204.jpg?raw=true', 2);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Hacienda Balandú', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Baland%C3%BA%204.jpg', 2);
+  VALUES ('Hotel Hacienda Balandú', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Baland%C3%BA%204.jpg?raw=true', 2);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Hacienda Balandú', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Baland%C3%BA%205.jpg', 2);
+  VALUES ('Hotel Hacienda Balandú', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Baland%C3%BA%205.jpg?raw=true', 2);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%201.jpg', 3);
+  VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%201.jpg?raw=true', 3);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%202.jpg', 3);
+  VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%202.jpg?raw=true', 3);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%203.jpg', 3);
+  VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%203.jpg?raw=true', 3);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%204.jpeg', 3);
+  VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%204.jpg?raw=true', 3);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%201.jpg', 4);
+  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%201.jpg?raw=true', 4);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%202.webp', 4);
+  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%202.jpg?raw=true', 4);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%203.jpg', 4);
+  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%203.jpg?raw=true', 4);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%204.jpg', 4);
+  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%204.jpg?raw=true', 4);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%205.jpg, 4);
+  VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%205.jpg?raw=true', 4);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Las Lomas', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20las%20Lomas%201.jpg', 5);
+  VALUES ('Hotel Las Lomas', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20las%20Lomas%201.jpg?raw=true', 5);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Las Lomas', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20las%20Lomas%202.jpg', 5);
+  VALUES ('Hotel Las Lomas', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20las%20Lomas%202.jpg?raw=true', 5);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Las Lomas', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20las%20Lomas%203.jpg', 5);
+  VALUES ('Hotel Las Lomas', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20las%20Lomas%203.jpg?raw=true', 5);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Rafael', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Rafael%201.jpeg', 6);
+  VALUES ('Hotel San Rafael', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Rafael%201.jpeg?raw=true', 6);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Rafael', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Roque%202.jpg', 6);
+  VALUES ('Hotel San Rafael', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Roque%202.jpg?raw=true', 6);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Rafael', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Rafael%203.jpeg', 6);
+  VALUES ('Hotel San Rafael', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Rafael%203.jpeg?raw=true', 6);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Rafael', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Rafael%204.jpeg', 6);
+  VALUES ('Hotel San Rafael', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Rafael%204.jpeg?raw=true', 6);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel El Mirador', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20Mirador%201.jpg', 7);
+  VALUES ('Hotel El Mirador', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20Mirador%201.jpg?raw=true', 7);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel El Mirador', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20Mirador%202.jpg', 7);
+  VALUES ('Hotel El Mirador', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20Mirador%202.jpg?raw=true', 7);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel El Mirador', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20Mirador%203.jpg', 7);
+  VALUES ('Hotel El Mirador', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20Mirador%203.jpg?raw=true', 7);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel El Mirador', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20Mirador%204.jpg', 7);
+  VALUES ('Hotel El Mirador', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20Mirador%204.jpg?raw=true', 7);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Del Trópico', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Tropico%201.jpeg', 8);
+  VALUES ('Hotel Del Trópico', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Tropico%201.jpeg?raw=true', 8);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Del Trópico', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Tropico%202.jpg', 8);
+  VALUES ('Hotel Del Trópico', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Tropico%202.jpg?raw=true', 8);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Del Trópico', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Tropico%203.jpeg', 8);
+  VALUES ('Hotel Del Trópico', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Tropico%203.jpeg?raw=true', 8);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel Del Trópico', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Tropico%204.jpeg', 8);
+  VALUES ('Hotel Del Trópico', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Tropico%204.jpeg?raw=true', 8);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel del Parque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Parque%201.jpg', 9);
+  VALUES ('Hotel del Parque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Parque%201.jpg?raw=true', 9);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel del Parque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Parque%202.jpg', 9);
+  VALUES ('Hotel del Parque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Parque%202.jpg?raw=true', 9);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel del Parque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Parque%203.jpg', 9);
+  VALUES ('Hotel del Parque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20del%20Parque%203.jpg?raw=true', 9);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Roque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Roque%201.jpg', 10);
+  VALUES ('Hotel San Roque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Roque%201.jpg?raw=true', 10);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Roque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Roque%202.jpg', 10);
+  VALUES ('Hotel San Roque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Roque%202.jpg?raw=true', 10);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Roque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Roque%203.jpg', 10);
+  VALUES ('Hotel San Roque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Roque%203.jpg?raw=true', 10);
 
 INSERT INTO images (title, url, id_product)
-   VALUES ('Hotel San Roque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Roque%204.jpg', 10);
+   VALUES ('Hotel San Roque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Roque%204.jpg?raw=true', 10);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Levit Glamping Exterior Vista Lago 1', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Levit%20Glamping%20%201.jpg', 11);
+  VALUES ('Levit Glamping Exterior Vista Lago 1', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Levit%20Glamping%20%201.jpg?raw=true', 11);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Levit Glamping Exterior Vista Lago 2', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Levit%20Glamping%202.jpg', 11);
+  VALUES ('Levit Glamping Exterior Vista Lago 2', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Levit%20Glamping%202.jpg?raw=true', 11);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Levit Glamping Exterior General', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Levit%20Glamping%203.jpg', 11);
+  VALUES ('Levit Glamping Exterior General', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Levit%20Glamping%203.jpg?raw=true', 11);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Levit Glamping Jacuzzi', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Levit%20Glamping%205.jpg', 11);
+  VALUES ('Levit Glamping Jacuzzi', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Levit%20Glamping%205.jpg?raw=true', 11);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Montecarlo Lodge Cubo Exterior 1', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Montecarlo%201.jpg', 12);
+  VALUES ('Montecarlo Lodge Cubo Exterior 1', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Montecarlo%201.jpg?raw=true', 12);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Montecarlo Lodge Cubo Exterior 2', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Montecarlo%202.jpg', 12);
+  VALUES ('Montecarlo Lodge Cubo Exterior 2', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Montecarlo%202.jpg?raw=true', 12);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Montecarlo Lodge Vista Panorámica', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Montecarlo%203.jpg', 12);
+  VALUES ('Montecarlo Lodge Vista Panorámica', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Montecarlo%203.jpg?raw=true', 12);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Montecarlo Lodge Interior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Montecarlo%204.jpg', 12);
+  VALUES ('Montecarlo Lodge Interior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Montecarlo%204.jpg?raw=true', 12);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Montecarlo Lodge Jacuzzi', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/304704943.jpg?k=a64af6bd2a14cd727637a181d9d7131286aeb72421f1e18e15dc45dbf266839a&o=&hp=1', 12);
+  VALUES ('Gulupa Ecolodge Vista Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Gulupa%20Jardin%201.jpg?raw=true', 13);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Gulupa Ecolodge Vista Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Gulupa%20Jardin%201.jpg', 13);
+  VALUES ('Gulupa Ecolodge Habitación Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Gulupa%20Jardin%202.jpg?raw=true', 13);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Gulupa Ecolodge Habitación Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Gulupa%20Jardin%202.jpg', 13);
+  VALUES ('Gulupa Ecolodge Terraza Vista Montaña', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Gulupa%20Jardin%203.jpg?raw=true', 13);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Gulupa Ecolodge Terraza Vista Montaña', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Gulupa%20Jardin%203.jpg', 13);
+  VALUES ('Gulupa Ecolodge Interior Cabaña', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Gulupa%20Jardin%204.jpg?raw=true', 13);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Gulupa Ecolodge Interior Cabaña', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Gulupa%20Jardin%204.jpg', 13);
+  VALUES ('Gulupa Ecolodge Zona de Descanso', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Gulupa%20Jardin%205.jpg?raw=true', 13);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Gulupa Ecolodge Zona de Descanso', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Gulupa%20Jardin%205.jpg', 13);
+  VALUES ('Nalua Glamping Exterior 1', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Nalua%201.jpg?raw=true', 14);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Nalua Glamping Exterior 1', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Nalua%201.jpg', 14);
+  VALUES ('Nalua Glamping Terraza Noche', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Nalua%202.jpg?raw=true', 14);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Nalua Glamping Terraza Noche', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Nalua%202.jpg', 14);
+  VALUES ('Nalua Glamping Zona Verde', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Nalua%203.jpg?raw=true', 14);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Nalua Glamping Zona Verde', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Nalua%203.jpg', 14);
+  VALUES ('Nalua Glamping Interior Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Nalua%204.jpg?raw=true', 14);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Nalua Glamping Interior Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Nalua%204.jpg', 14);
+  VALUES ('Nalua Glamping Vista Noche', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Nalua%205.jpg?raw=true', 14);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Nalua Glamping Vista Noche', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Nalua%205.jpg', 14);
+  VALUES ('Glamping Jericó Fachada Día', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20El%20Eden%201.jpg?raw=true', 15);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Nalua Glamping Fachada Día', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/335451305.jpg?k=36cb4cf874373610e7e0262a3a971788ef8067daec20e0748c25e8f5efd12498&o=&hp=1', 14);
+  VALUES ('Glamping Jericó Fachada Alternativa', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20El%20Eden%202.jpg?raw=true', 15);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Glamping Jericó Fachada Día', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20El%20Eden%201.jpg', 15);
+  VALUES ('Glamping Jericó Jacuzzi Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20El%20Eden%203.jpg?raw=true', 15);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Glamping Jericó Fachada Alternativa', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20El%20Eden%202.jpg', 15);
+  VALUES ('Glamping Jericó Habitación Vista Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20El%20Eden%204.jpg?raw=true', 15);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Glamping Jericó Jacuzzi Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20El%20Eden%203.jpg', 15);
+  VALUES ('Sukha Glamping Vista Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Sukha%20Glamping%201.jpg?raw=true', 16);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Glamping Jericó Habitación Vista Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20El%20Eden%204.jpg', 15);
+  VALUES ('Sukha Glamping Habitación Panorámica', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Sukha%20Glamping%202.jpg?raw=true', 16);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Sukha Glamping Vista Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Sukha%20Glamping%201.jpg', 16);
+  VALUES ('Sukha Glamping Interior Noche', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Sukha%20Glamping%203.jpg?raw=true', 16);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Sukha Glamping Habitación Panorámica', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Sukha%20Glamping%202.jpg', 16);
+  VALUES ('Sukha Glamping Alojamiento Vista Bosque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Sukha%20Glamping%204.jpg?raw=true', 16);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Sukha Glamping Interior Noche', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Sukha%20Glamping%203.jpg', 16);
+  VALUES ('Los Canarios Piscina Natural', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Los%20Canarios%201.jpg?raw=true', 17);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Sukha Glamping Alojamiento Vista Bosque', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Sukha%20Glamping%204.jpg', 16);
+  VALUES ('Los Canarios Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Los%20Canarios%202.jpg?raw=true', 17);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Los Canarios Piscina Natural', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Los%20Canarios%201.jpg', 17);
+  VALUES ('Los Canarios Terraza', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Los%20Canarios%203.jpg?raw=true', 17);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Los Canarios Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Los%20Canarios%202.jpg', 17);
+  VALUES ('Los Canarios Área Común', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Los%20Canarios%204.jpg?raw=true', 17);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Los Canarios Terraza', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Los%20Canarios%203.jpg', 17);
+  VALUES ('Los Canarios Cabaña Vista', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Los%20Canarios%205.jpg?raw=true', 17);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Los Canarios Área Común', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Los%20Canarios%204.jpg', 17);
+  VALUES ('El Tabor Vista Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Glamping%20Tabor%201.0.jpg?raw=true', 18);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Los Canarios Cabaña Vista', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Los%20Canarios%205.jpg', 17);
+  VALUES ('El Tabor Mirador', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Glamping%20Tabor%201.jpg?raw=true', 18);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Tabor Vista Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Glamping%20Tabor%201.0.jpg', 18);
+  VALUES ('El Tabor Cabaña Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Glamping%20Tabor%202.jpg?raw=true', 18);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Tabor Mirador', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Glamping%20Tabor%201.jpg', 18);
+  VALUES ('Flor del Monte Piscina Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Flor%20del%20Monte%201.jpg?raw=true', 19);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Tabor Cabaña Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Glamping%20Tabor%202.jpg', 18);
+  VALUES ('Flor del Monte Zona Verde', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Flor%20del%20Monte%202.jpg?raw=true', 19);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Flor del Monte Piscina Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Flor%20del%20Monte%201.jpg', 19);
+  VALUES ('Flor del Monte Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Flor%20del%20Monte%203.jpg?raw=true', 19);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Flor del Monte Zona Verde', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Flor%20del%20Monte%202.jpg', 19);
+  VALUES ('Madeira Glamping Vista General', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Madeira%20Glamping%201.jpg?raw=true', 20);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Flor del Monte Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Flor%20del%20Monte%203.jpg', 19);
+  VALUES ('Madeira Glamping Exterior con Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Madeira%20Glamping%202.jpg?raw=true', 20);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Madeira Glamping Vista General', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Madeira%20Glamping%201.jpg', 20);
+  VALUES ('Madeira Glamping Noche', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Madeira%20Glamping%203.jpg?raw=true', 20);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Madeira Glamping Exterior con Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Madeira%20Glamping%202.jpg', 20);
+  VALUES ('Madeira Glamping Interiores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Madeira%20Glamping%204.jpg?raw=true', 20);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Madeira Glamping Noche', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Madeira%20Glamping%203.jpg', 20);
+  VALUES ('Madeira Glamping Sala con Vista', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Madeira%20Glamping%205.jpg?raw=true', 20);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Madeira Glamping Interiores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Madeira%20Glamping%204.jpg', 20);
+  VALUES ('Glamping Paraíso Vista Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%201.jpg?raw=true', 21);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Madeira Glamping Sala con Vista', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Madeira%20Glamping%205.jpg', 20);
+  VALUES ('Glamping Paraíso Vista Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%202.jpg?raw=true', 21);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Glamping Paraíso Vista Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%201.jpg', 21);
+  VALUES ('Glamping Paraíso Interior Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%203.jpg?raw=true', 21);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Glamping Paraíso Vista Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%202.jpg', 21);
+  VALUES ('Glamping Paraíso Piscina Nocturna', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%205.jpg?raw=true', 21);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Glamping Paraíso Interior Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%203.jpg', 21);
+  VALUES ('Glamping Paraíso Vista Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%205.jpg?raw=true', 21);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Glamping Paraíso Piscina Nocturna', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%205.jpg', 21);
+  VALUES ('El Mirador de San Joaquín Vista Jardín', 'hhttps://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%202.jpg?raw=true', 22);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Glamping Paraíso Vista Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%205.jpg', 21);
+  VALUES ('El Mirador de San Joaquín Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%201.jpg?raw=true', 22);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Mirador de San Joaquín Vista Jardín', 'hhttps://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%202.jpg', 22);
+  VALUES ('El Mirador de San Joaquín Cabaña Jacuzzi', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%203.jpg?raw=true', 22);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Mirador de San Joaquín Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%201.jpg', 22);
+  VALUES ('El Mirador de San Joaquín Interior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%204.jpg?raw=true', 22);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Mirador de San Joaquín Cabaña Jacuzzi', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%203.jpg', 22);
+  VALUES ('El Mirador de San Joaquín Balcón', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%205.jpg?raw=true', 22);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Mirador de San Joaquín Interior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%204.jpg', 22);
+  VALUES ('El Trébol Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%201.jpg?raw=true', 23);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Mirador de San Joaquín Balcón', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%205.jpg', 22);
+  VALUES ('El Trébol Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%202.jpg?raw=true', 23);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Trébol Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%201.jpg', 23);
+  VALUES ('El Trébol Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%203.jpg?raw=true', 23);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Trébol Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%202.jpg', 23);
+  VALUES ('El Trébol Vista general', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%204.jpg?raw=true', 23);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Trébol Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%203.jpg', 23);
+  VALUES ('El Trébol Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%205.jpg?raw=true', 23);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Trébol Vista general', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%204.jpg', 23);
-
-INSERT INTO images (title, url, id_product)
-  VALUES ('El Trébol Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%205.jpg', 23);
-
-INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería El Paraíso Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Paraiso%201.jpg', 24);
+  VALUES ('Hostería El Paraíso Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Paraiso%201.jpg?raw=true', 24);
 h
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería El Paraíso Restaurante', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Paraiso%202.jpg', 24);
+  VALUES ('Hostería El Paraíso Restaurante', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Paraiso%202.jpg?raw=true', 24);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería El Paraíso Comida', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Paraiso%203.jpg', 24);
+  VALUES ('Hostería El Paraíso Comida', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Paraiso%203.jpg?raw=true', 24);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería Tonusco Campestre Vista General', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Tonusco%201.jpg', 25);
+  VALUES ('Hostería Tonusco Campestre Vista General', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Tonusco%201.jpg?raw=true', 25);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería Tonusco Campestre Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Tonusco%202.jpg', 25);
+  VALUES ('Hostería Tonusco Campestre Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Tonusco%202.jpg?raw=true', 25);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería Tonusco Campestre Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Tonusco%203.jpg', 25);
+  VALUES ('Hostería Tonusco Campestre Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Tonusco%203.jpg?raw=true', 25);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería Puerta del Nus Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus%202.webp', 26);
+  VALUES ('Hostería Puerta del Nus Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus%202.webp?raw=true', 26);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería Puerta del Nus Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus%203.jpg', 26);
+  VALUES ('Hostería Puerta del Nus Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus%203.jpg?raw=true', 26);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería Puerta del Nus Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus%205.jpg', 26);
+  VALUES ('Hostería Puerta del Nus Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus%205.jpg?raw=true', 26);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería Puerta del Nus Zonas Verdes', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus.jpg', 26);
+  VALUES ('Hostería Puerta del Nus Zonas Verdes', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus.jpg?raw=true', 26);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería La Medusa Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20La%20Medusa%201.jpg', 27);
+  VALUES ('Hostería La Medusa Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20La%20Medusa%201.jpg?raw=true', 27);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería La Medusa Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20La%20Medusa%202.jpg', 27);
+  VALUES ('Hostería La Medusa Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20La%20Medusa%202.jpg?raw=true', 27);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería La Medusa Zonas Verdes', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20La%20Medusa%203.jpg', 27);
+  VALUES ('Hostería La Medusa Zonas Verdes', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20La%20Medusa%203.jpg?raw=true', 27);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería La Medusa Entrada Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20La%20Medusa%204.jpg', 27);
+  VALUES ('Hostería La Medusa Entrada Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20La%20Medusa%204.jpg?raw=true', 27);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Finca Hotel Rios Claros Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Hotel%20Rios%20Claros%201.jpg', 28);
+  VALUES ('Finca Hotel Rios Claros Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Hotel%20Rios%20Claros%201.jpg?raw=true', 28);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Finca Hotel Rios Claros Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Hotel%20Rios%20Claros%202.jpg', 28);
+  VALUES ('Finca Hotel Rios Claros Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Hotel%20Rios%20Claros%202.jpg?raw=true', 28);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Finca Hotel Rios Claros Jardines', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Hotel%20Rios%20Claros%203.jpg', 28);
+  VALUES ('Finca Hotel Rios Claros Jardines', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Hotel%20Rios%20Claros%203.jpg?raw=true', 28);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Finca Hotel Rios Claros Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Hotel%20Rios%20Claros%204.jpg', 28);
+  VALUES ('Finca Hotel Rios Claros Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Hotel%20Rios%20Claros%204.jpg?raw=true', 28);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Finca Hotel Rios Claros Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Hotel%20Rios%20Claros%205.jpg', 28);
+  VALUES ('Finca Hotel Rios Claros Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Imagenes2/Hotel%20Rios%20Claros%205.jpg?raw=true', 28);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Villa Jardín Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Santorini%20Colombiano%201.jpg', 29);
+  VALUES ('Villa Jardín Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Santorini%20Colombiano%201.jpg?raw=true', 29);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Villa Jardín Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Santorini%20Colombiano%202.jpg', 29);
+  VALUES ('Villa Jardín Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Santorini%20Colombiano%202.jpg?raw=true', 29);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Villa Jardín Vista Interna', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Santorini%20Colombiano%203.jpg', 29);
+  VALUES ('Villa Jardín Vista Interna', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Santorini%20Colombiano%203.jpg?raw=true', 29);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Villa Jardín Piscina Nocturna', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Santorini%20Colombiano%204.jpg', 29);
+  VALUES ('Villa Jardín Piscina Nocturna', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Santorini%20Colombiano%204.jpg?raw=true', 29);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Casa en las Montañas Sala', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Barbosa%201.avif', 30);
+  VALUES ('Casa en las Montañas Sala', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Barbosa%201.avif?raw=true', 30);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Casa en las Montañas Comedor', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Barbosa%202.avif', 30);
+  VALUES ('Casa en las Montañas Comedor', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Barbosa%202.avif?raw=true', 30);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Casa en las Montañas Dormitorio', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Barbosa%203.avif', 30);
+  VALUES ('Casa en las Montañas Dormitorio', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Barbosa%203.avif?raw=true', 30);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Casa en las Montañas Cocina', 'https://a0.muscache.com/im/pictures/miso/Hosting-21527257/original/d25ef966-6ec8-48aa-8c6e-adec472b558f.png?im_w=720', 30);
+  VALUES ('Finca Naya Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Fredonia%201.avif?raw=true', 31);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Finca Naya Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Fredonia%201.avif', 31);
+  VALUES ('Finca Naya Vista Panorámica', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Fredonia%202.avif?raw=true', 31);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Finca Naya Vista Panorámica', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Fredonia%202.avif', 31);
+  VALUES ('Finca Naya Sala', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Fredonia%203.avif?raw=true', 31);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Finca Naya Sala', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Fredonia%203.avif', 31);
+  VALUES ('Finca Naya Comedor', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Fredonia%204.avif?raw=true', 31);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Finca Naya Comedor', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Fredonia%204.avif', 31);
+  VALUES ('Finca Naya Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Fredonia%205.avif?raw=true', 31);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Finca Naya Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Fredonia%205.avif', 31);
+  VALUES ('Casa Colonial Santa Fe Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Santa%20Fe%201.webp?raw=true', 32);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Casa Colonial Santa Fe Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Santa%20Fe%201.webp', 32);
+  VALUES ('Casa Colonial Santa Fe Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Santa%20Fe%202.avif?raw=true', 32);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Casa Colonial Santa Fe Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Santa%20Fe%202.avif', 32);
+  VALUES ('Casa Colonial Santa Fe Cocina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Santa%20Fe%203.avif?raw=true', 32);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Casa Colonial Santa Fe Cocina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Airbnb%20Santa%20Fe%203.avif', 32);
+  VALUES ('Condominio El Carmen Sala Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20condo%201.avif?raw=true', 33);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Condominio El Carmen Sala Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20condo%201.avif', 33);
+  VALUES ('Condominio El Carmen Cocina Comedor', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20condo%202.avif?raw=true', 33);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Condominio El Carmen Cocina Comedor', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20condo%202.avif', 33);
+  VALUES ('Condominio El Carmen Habitación Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20condo%203.avif?raw=true', 33);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Condominio El Carmen Habitación Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20condo%203.avif', 33);
+  VALUES ('Casa Finca Marinilla Fachada Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Marinilla%202.avif?raw=true', 34);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Casa Finca Marinilla Fachada Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Marinilla%202.avif', 34);
+  VALUES ('Casa Finca Marinilla Jardín con Vista', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Marinilla%204.avif?raw=true', 34);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Casa Finca Marinilla Jardín con Vista', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Marinilla%204.avif', 34);
-
-INSERT INTO images (title, url, id_product)
-  VALUES ('Casa Finca Marinilla Sala Rústica', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Marinilla%205.avif', 34);
+  VALUES ('Casa Finca Marinilla Sala Rústica', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Marinilla%205.avif?raw=true', 34);
 
 
 -- ============================
