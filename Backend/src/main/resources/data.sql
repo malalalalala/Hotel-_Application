@@ -1064,13 +1064,13 @@ INSERT INTO images (title, url, id_product)
   VALUES ('Hostería Tonusco Campestre Habitación', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Tonusco%203.jpg?raw=true', 25);
 
 INSERT INTO images (title, url, id_product)
+  VALUES ('Hostería Puerta del Nus Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus%205.jpg?raw=true', 26);
+
+INSERT INTO images (title, url, id_product)
   VALUES ('Hostería Puerta del Nus Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus%202.webp?raw=true', 26);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hostería Puerta del Nus Entrada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus%203.jpg?raw=true', 26);
-
-INSERT INTO images (title, url, id_product)
-  VALUES ('Hostería Puerta del Nus Piscina', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus%205.jpg?raw=true', 26);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hostería Puerta del Nus Zonas Verdes', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20Puerta%20del%20Nus.jpg?raw=true', 26);
@@ -1155,6 +1155,9 @@ INSERT INTO images (title, url, id_product)
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Condominio El Carmen Habitación Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20el%20condo%203.avif?raw=true', 33);
+
+INSERT INTO images (title, url, id_product)
+  VALUES ('Casa Finca Marinilla Fachada Principal', 'https://raw.githubusercontent.com/AndresT3086/assetsHotel/refs/heads/main/imagenes/Marinilla%201.avif', 34);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Casa Finca Marinilla Fachada Principal', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Marinilla%202.avif?raw=true', 34);
