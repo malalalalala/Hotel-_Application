@@ -791,7 +791,7 @@ INSERT INTO images (title, url, id_product)
   VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%203.jpg?raw=true', 3);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%204.jpg?raw=true', 3);
+  VALUES ('Hotel San Ángel', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20San%20Angel%204.jpeg?raw=true', 3);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('Hotel Cauca Viejo Fundadores', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hotel%20Cauca%20Viejo%201.jpg?raw=true', 4);
@@ -1016,10 +1016,10 @@ INSERT INTO images (title, url, id_product)
   VALUES ('Glamping Paraíso Vista Jardín', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20Paraiso%205.jpg?raw=true', 21);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Mirador de San Joaquín Vista Jardín', 'hhttps://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%202.jpg?raw=true', 22);
+  VALUES ('El Mirador de San Joaquín Vista Jardín','https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%201.jpg?raw=true', 22);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Mirador de San Joaquín Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%201.jpg?raw=true', 22);
+  VALUES ('El Mirador de San Joaquín Exterior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%202.jpg?raw=true', 22);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('El Mirador de San Joaquín Cabaña Jacuzzi', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%203.jpg?raw=true', 22);
@@ -1028,7 +1028,7 @@ INSERT INTO images (title, url, id_product)
   VALUES ('El Mirador de San Joaquín Interior', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%204.jpg?raw=true', 22);
 
 INSERT INTO images (title, url, id_product)
-  VALUES ('El Mirador de San Joaquín Balcón', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%205.jpg?raw=true', 22);
+  VALUES ('El Mirador de San Joaquín Balcón', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Glamping%20el%20Mirador%20San%20Luis%204.jpg?raw=true', 22);
 
 INSERT INTO images (title, url, id_product)
   VALUES ('El Trébol Fachada', 'https://github.com/AndresT3086/assetsHotel/blob/main/imagenes/Hosteria%20el%20Trebol%201.jpg?raw=true', 23);
