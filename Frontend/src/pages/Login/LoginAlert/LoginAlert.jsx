@@ -10,6 +10,8 @@ const LoginAlert = () => {
     setAlertMessage(sessionStorage.getItem("loginAlertMessage"));
   }, []);
 
+  if (!alertMessage || alertMessage === "null") return null;
+
   return (
     <div className="loginAlert_container">
       <FontAwesomeIcon icon={faCircleExclamation} size="2xl" />
