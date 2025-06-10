@@ -28,7 +28,7 @@ public class NotificationService {
         // Configurar los miembros del grupo aquí
         // Cada persona debe haber configurado CallMeBot previamente
         this.groupMembers = Arrays.asList(
-                new GroupMember("+573015781171", "1173354")
+                new GroupMember("", "")
         );
     }
 
